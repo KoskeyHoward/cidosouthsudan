@@ -9,13 +9,13 @@
             <p class="fw-bold orange fs-5">Juba, South Sudan</p>
              </div>
              <div class="col-lg-1 border-end"></div>
-        <div class="col-lg-3 text-center">
-            <div class=""><i class="bi bi-telephone-fill orange fs-1"></i></div>
+        <div class="col-lg-3 text-center ms-5">
+            <div class=""><i class="bi bi-telephone-fill orange fs-1  text-center"></i></div>
             <h5>CALL US</h5>
             <p>Tel: +211922699189</p>
             <p class="fw-bold orange fs-5">+211920056225</p>
              </div>
-             <div class="col-lg-1 border-end"></div>
+             <div class="col-lg-1 border-end "></div>
         <div class="col-lg-3 text-center">
             <div class=""><i class="bi bi-envelope fs-1 orange"></i></div>
             <h5>CONTACT US</h5>
