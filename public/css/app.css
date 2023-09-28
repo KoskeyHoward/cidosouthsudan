@@ -1,0 +1,25 @@
+.font-size{
+    font-size: small;
+}
+.font-sizes{
+    font-size: small;
+}
+@media only screen and (max-width: 1072px) {
+    .font-size{
+        font-size: smaller;
+    }
+    .font-sizes{
+        font-size: smaller;
+    }
+  }
+  .orange{
+    color:#f58220;
+  }
+  .bg{
+    background-color:#f58220;
+    color:white;
+  }
+  .bg:hover{
+    background-color:#f58220;
+    color:white;
+  }

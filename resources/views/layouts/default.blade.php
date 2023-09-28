@@ -1,14 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>cido</title>
-    <link rel="stylesheet" href="{{asset('assets/style.css')}}"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-
-</head>
+@include('partial.head')
 <body>
     <header>
     <nav class="header bg-dark">
@@ -81,22 +71,12 @@
     </nav>
     </header>
 
-    <main>
+    <main class="min-vh-100">
         @yield('page-content')
     </main>
 
     <!-- footer  -->
-    <footer class="d-flex justify-content-around pt-3 pb-3 bg-black">
-      <div>
-        <h5 style="color: #f58220;"> &copy; CIDO South Sudan | All rights reserved</h5>
-      </div>
-      <div>
-        <a href="" class="fa fa-facebook" style="text-decoration: none;"></a>
-        <a href="" class="fa fa-twitter ms-4" style="text-decoration: none;"></a>
-      </div>
-    </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
-      
-    </script>
+  @include('partial.footer')
+    
 </body>
 </html>
