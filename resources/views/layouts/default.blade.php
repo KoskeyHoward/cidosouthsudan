@@ -26,12 +26,12 @@
             <!-- drawer body -->
             <div class="offcanvas-body fs-4 align-items-start ms-0 ps-0">
               <ul>
-              <li><a class="nav-link" href="/">HOME</a></li>
-              <li><a class="nav-link" href="/programs">PROGRAMS</a></li>
-              <li><a class="nav-link" href="/projects">PROJECTS</a></li>
-              <li><a class="nav-link" href="/projects">VOLUNTEERS</a></li>
-              <li><a class="nav-link" href="/about">ABOUT US</a></li>
-              <li><a class="nav-link" href="/contact">CONTACT</a></li>
+              <li><a href="/">HOME</a></li>
+              <li><a href="/programs">PROGRAMS</a></li>
+              <li><a href="/projects">PROJECTS</a></li>
+              <li><a href="/projects">VOLUNTEERS</a></li>
+              <li><a href="/about">ABOUT US</a></li>
+              <li><a href="/contact">CONTACT</a></li>
                 <!-- <div class="dropdown d-inline-block">
                   <a class=" dropdown-toggle text-light" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="text-decoration: none;">
                     More
