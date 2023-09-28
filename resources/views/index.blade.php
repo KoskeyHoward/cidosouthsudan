@@ -9,6 +9,7 @@
             <div class="carousel-item active c-item" data-bs-interval="10000">
               <img src="{{URL('images/cso.jpg')}}" class="d-block w-100 c-img" alt="...">
               <!-- <img src="images/carousel/home-1_slider-1_31.png"  class="img-slider" alt="slider"> -->
+              <div class="shade"></div>
               <div class="carousel-caption mt-4 d-md-block">
                   <p class="mt-5 fs-2" >Support To Local Solutions</p>
                   <h5 class="fw-bolder display-3" >Since 2013 we are helping people around South Sudan & Kenya</h5>
@@ -110,22 +111,20 @@
       </div>
     </section>
 
-    <section class="about-section-3">
+    <section class="about-section-3" style="background-color: #f58220;">
       <!-- who we are  -->
-      <div style="background-color: #f58220;">
-        <div class="container mb-4 pb-4">
-          <div class="row" style="height: 100%; object-fit: cover;">
+          <div class="row" style="height: 100%;">
             <!-- image  -->
-            <div class="col-md-6 mt-3 mb-md-0 mb-lg-0">
-              <div class="container c-wwa">
+            <div class="col-md-6 pt-2 pb-2 mb-md-0 mb-lg-0" style="height: 100%;">
+              <div class="container c-wwa" style="height: 100%;">
                 <img src="{{URL('images/SV-launch2.webp')}}" alt="who we are" style="width: 100%; height: 100%; ;object-fit: cover; border-radius: 8px;">
               </div>
             </div>
             <!-- who we are text  -->
-            <div class="col-md-6 mt-3 mb-md-0 mb-lg-0">
+            <div class="col-md-6 pt-2 pb-2 mb-md-0 mb-lg-0" style="height: 100%">
               <div class="container" style="height: 100%">
-                <div class="card">
-                  <div class="card-body" style="width: 100%;">
+                <div class="card" style="height: 100%">
+                  <div class="card-body" style="height: 100%">
                     <h5 class="card-title fs-1 mb-lg-4 mb-sm-3  mb-2">Who We Are</h5>
                     <p class="card-text text-secondary mb-lg-4 mb-2 mb-sm-3 fs-5">CIDO is a non-partisan, non-profit making organization conceived in 2013 and formally registered in South Sudan in 2016 to support local solutions on critical areas of social and economic development. The agency places emphasis on promotion of Peace and peaceful co-existence among communities as the benchmark for socio-economic prosperity. </p>
                     <p class="card-text text-secondary mb-lg-4 mb-sm-3 mb-2">CIDO exists to mobilize and organize communities to harness their resources, plan effectively and generate solutions for socio-economic advancement.</p>
@@ -135,7 +134,5 @@
               </div>
             </div>
           </div>
-        </div>
-    </div>
   </section>
 @endsection
