@@ -11,7 +11,7 @@
             <!-- drawer header(logo) -->
             <div class="offcanvas-header">
               <img src="{{URL('images/logo.png')}}" style="width: 100px;" class="offcanvas-title " id="offcanvasExampleLabel"/>
-              <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+              <button type="button" class="btn-close bg-success text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             </div>
             <!-- drawer body -->
             <div class="offcanvas-body fs-4 align-items-start ms-0 ps-0">
@@ -19,24 +19,24 @@
               <li><a href="/">HOME</a></li>
               <li><a href="/programs">PROGRAMS</a></li>
               <li><a href="/projects">PROJECTS</a></li>
-              <li><a href="/projects">VOLUNTEERS</a></li>
-              <li><a href="/about">ABOUT US</a></li>
-              <li><a href="/contact">CONTACT</a></li>
-                <!-- <div class="dropdown d-inline-block">
-                  <a class=" dropdown-toggle text-light" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="text-decoration: none;">
-                    More
+              <div class="dropdown d-inline-block ">
+                  <a class=" dropdown-toggle text-light" href="/volunteer" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="text-decoration: none;">
+                    VOLUNTEER
                   </a>
                   <ul class="dropdown-menu dropdown-menu-end bg-black">
-                    <li><a class="dropdown-item" href="about.html">About us</a></li>
-                    <li><a class="dropdown-item" href="mission.html">Our Mission</a></li>
-                    <li><a class="dropdown-item" href="team.html">Our Team</a></li>
+                    <li><a class="dropdown-item" href="/volunteer">Our volunteers</a></li>
+                    <li><a class="dropdown-item" href="/become-volunteer">Become a volunteer</a></li>
                   </ul>
-                </div> -->
+                </div>
+              <li><a href="/about">ABOUT US</a></li>
+              <li><a href="/contact">CONTACT</a></li>
+              <li class="donate text-light mt-2"><a href="/donationForm" class="btn bg-success"> DONATE</a></li>
+                
               </ul>
             </div>
           </div>
           <!-- logo -->
-          <a class="logo " href="index.html">
+          <a class="logo " href="/">
             <img src="{{URL('images/logo.png')}}" class="mt-1 mb-0" alt="logo" >
           </a>
         </div>
@@ -46,24 +46,22 @@
             <ul>
               <li><a href="/">HOME</a></li>
               <li><a href="/programs">PROGRAMS</a></li>
-              <li><a href="/projects">PROJECTS</a></li>
-              <li><a href="/projects">VOLUNTEERS</a></li>
+              <li class="me-4"><a href="/projects">PROJECTS</a></li>
+              <div class="dropdown d-inline-block">
+                  <a class=" dropdown-toggle text-light" href="/volunteer" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="text-decoration: none;">
+                    VOLUNTEER
+                  </a>
+                  <ul class="dropdown-menu dropdown-menu-end bg-black p-4">
+                    <li><a class="dropdown-item" href="/volunteer">Our volunteers</a></li>
+                    <li><a class="dropdown-item" href="/become-volunteer">Become a volunteer</a></li>
+                  </ul>
+                </div>
               <li><a href="/about">ABOUT US</a></li>
               <li><a href="/contact">CONTACT</a></li>
-              <!-- <div class="dropdown d-inline-block">
-                <a class=" dropdown-toggle text-light" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="text-decoration: none;">
-                  More
-                </a>
-                <ul class="dropdown-menu dropdown-menu-end bg-black">
-                  <li><a class="dropdown-item" href="about.html">About us</a></li>
-                  <li><a class="dropdown-item" href="mission.html">Our Mission</a></li>
-                  <li><a class="dropdown-item" href="team.html">Our Team</a></li>
-                </ul>
-              </div> -->
             </ul>
           </div>
           <div class="ms-3">
-            <li class="donate text-light"><a href=""><button class="" type="button"> DONATE</button></a></li>
+            <li class="donate text-light"><a href="/donationForm"><button class="" type="button"> DONATE</button></a></li>
           </div>
         </div>
       </div>

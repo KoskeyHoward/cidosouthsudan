@@ -21,91 +21,44 @@
           <p>Notably, South Sudan gained Independence in July 2011 and is one of the poorest countries in the world, faced with social, political and economic challenges. In order to address these challenges, CIDO relies on the strength of the knowledge of the local context and the way the people know each other and how they can use their relations to develop local capacities for socio-economic transformation. The core purpose of CIDO is to meet the needs and aspirations of communities, in both urban and rural setting, with special emphasis on conflict mitigation and resolution as a prerequisite to socio- economic prosperity. </p>
           <p>The organization is headed by an Executive Director and governed by a 7member Board of Directors who meets thrice a year and on ad hoc basis. </p>
           <p></p>
+        </div> 
+
+        <div class="row p-5 pb-2">
+            <!-- vision  -->
+            <div class="col-md-6">
+                <h2 class="orange">Our Vision</h2>
+                <p class="text-secondary">A society that is free ,just , peaceful and economically advanced</p>
+            </div>
+            <!-- goals and objectives  -->
+            <div class="col-md-6">
+                <h2 class="orange">Goals & Objectives</h2>
+                <p class="text-secondary">To work with the community in identifying needs and developing solutions together for a community led holistic transformation.</p>
+            </div>
         </div>
 
-        <div class="mv mb-4">
-          <!-- mission  -->
-          <div class="container row mission mb-4">
-            <!-- image  -->
-            <div class="col-md-6 mb-2 mb-md-0">
-              <img src="images/SNFI.jpeg" class="mission-img" alt="mission" width="200px">
-            </div>
-            <!-- text  -->
+        <div class="row p-5 pt-0">
+            <!-- mission  -->
             <div class="col-md-6">
-              <h2 class="text-start" style="color: #00A651;">Our Mission</h2>
-              <p class="text-black text-start">CIDO exists to mobilize and organize communities to harness their resources, plan effectively and generate solutions for socio-economic advancement.</p>
+                <h2 class="orange">Our Mission</h2>
+                <p class="text-secondary">CIDO exists to mobilize and organize communities to harness their resources, plan effectively and generate solutions for socio-economic advancement.</p>
             </div>
-          </div>
-
-          <!-- vision  -->
-          <div class="container row vision text-end mb-4">
-            <!-- text  -->
-            <div class="col-md-6 ">
-              <h2 class="text-start" style="color: #f58220;">Our Vision</h2>
-              <p class="text-light text-start">A society that is free ,just , peaceful and economically advanced</p>
+            <!-- specific objectives  -->
+            <div class="col-md-6 objectives">
+                <h4 class="orange">Specific Objectives</h4>
+                <ul class="text-secondary" >
+                    <li>To improve the capacity of the youth and women in support of socio-economic initiatives.</li>
+                    <li>To conduct research, lobbying and advocacy on and creation of social systems that serve socio-economic concerns and constructive resolution of conflict.</li>
+                    <li>To support communities affected by emergencies in response and recovery.</li>
+                </ul>
             </div>
-            <!-- image  -->
-            <div class="col-md-6">
-              <img src="images/Peacebuilding.jpeg" class="mission-img" alt="mission" width="200px">
-            </div>
-          </div>
-
-          <!-- objectives  -->
-          <div class="container row mission mb-4">
-            <!-- image  -->
-            <div class="col-md-6 mb-2 mb-md-0">
-              <img src="images/SNFI.jpeg" class="mission-img" alt="mission" width="200px">
-            </div>
-            <!-- text  -->
-            <div class="col-md-6">
-              <h2 class="text-start" style="color: #00A651;">Our Objectives</h2>
-              <ul>
-                <li>To improve the capacity of the Youth and women in creating local solutions for Socio-economic transformation. </li>
-                <li>To conduct research, lobbying and advocacy on and creation of social systems that serve socio-economic concerns.</li>
-                <li>To support communities affected by emergencies in response and recovery. </li>
-              </ul>
-            </div>
-          </div>
-
-          <!-- Core values  -->
-          <div class="container row vision text-end mb-4">
-            <!-- text  -->
-            <div class="col-md-6 ">
-              <h2 class="text-start" style="color: #f58220;">Core Values </h2>
-              <div class="values text-start d-flex justify-content-between">
-                <div>
-                  <p>Impartiability</p>
-                  <p>Human rights</p>
-                  <p>Justice</p>
-                </div>
-                <div>
-                  <p>Partnership</p>
-                  <p>Respect</p>
-                  <p>Diligence</p>
-                </div>
-                <div>
-                  <p>Integrity</p>
-                  <p>Accountability</p>
-                  <p>Transparency</p>
-                </div>
-              </div>
-            </div>
-            <!-- image  -->
-            <div class="col-md-6">
-              <img src="images/Peacebuilding.jpeg" class="mission-img" alt="mission" width="200px">
-            </div>
-            
-          </div>
         </div>
-
         
     </section>
 
     <!-- theme focus  -->
     <section>
-      <div class="theme-focus-title d-flex justify-content-center mb-4">
-        <h1 style="color: #00A651;">CORE THEMATIC </h1>
-        <h1 class="ms-3 text-black">FOCUS AREAS</h1>
+      <div class="theme-focus-title text-center mb-4">
+        <h1 style="color: #00A651;">CORE THEMATIC FOCUS AREAS</h1>
       </div>
 
       <div class="row theme-focus-about ps-5 pe-5 mb-4">
@@ -131,7 +84,7 @@
         </div>
       </div>
 
-      <div class="row text-center bg-secondary pt-3 pb-3">
+      <div class="row text-center bg-success pt-3 pb-3">
         <div class="col-md-3 mb-4 mb-md-0">
           <img src="images/volunteer.png" alt="volunteer">
           <h3 class="counter-count text-light">230</h3>
@@ -165,7 +118,6 @@
               <div class="card-body">
                 <h5 class="card-title">name</h5>
                 <p class="card-text">Role</p>
-                <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
               </div>  
           </div>
         </div>
@@ -175,7 +127,6 @@
               <div class="card-body">
                 <h5 class="card-title">name</h5>
                 <p class="card-text">Role</p>
-                <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
               </div>  
           </div>
         </div>
@@ -185,7 +136,6 @@
               <div class="card-body">
                 <h5 class="card-title">name</h5>
                 <p class="card-text">Role</p>
-                <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
               </div>  
           </div>
         </div>
@@ -195,12 +145,72 @@
               <div class="card-body">
                 <h5 class="card-title">name</h5>
                 <p class="card-text">Role</p>
-                <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
               </div>  
           </div>
         </div>
       </div>
     </section>
 
-
+    <!-- what people say -->
+    <section class="bg-secondary pb-4">
+        <h1 class="text-center text-black p-3">What People Say...</h1>
+        <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="container carousel-inner">
+                <!-- Testimonial Items -->
+                <div class="carousel-item active" data-bs-interval="30000">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="testimonial">
+                                <p>" Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis."</p>
+                                <p class="author">- John Doe</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="testimonial">
+                                <p>" Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis."</p>
+                                <p class="author">- Jane Smith</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="testimonial me-3">
+                                <p>" Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis."</p>
+                                <p class="author">- Mary Johnson</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item" data-bs-interval="30000">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="testimonial">
+                                <p>" Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis."</p>
+                                <p class="author">- Robert Wilson</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="testimonial">
+                                <p>" Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis."</p>
+                                <p class="author">- Sarah Brown</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="testimonial me-3">
+                                <p>" Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis."</p>
+                                <p class="author">- Michael Lee</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Add more testimonial items as needed -->
+            </div>
+            <a class="carousel-control-prev" href="#testimonialCarousel" role="button" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#testimonialCarousel" role="button" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </section>
 @endsection
