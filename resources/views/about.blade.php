@@ -19,7 +19,6 @@
           <p>CIDO is a non-partisan, non-profit making organization conceived in 2013 and formally registered in South Sudan in 2016 to support local solutions on critical areas of social and economic development. The agency places emphasis on promotion of Peace and peaceful co-existence among communities as the benchmark for socio-economic prosperity.  </p>
           <p>CIDO was formed by a group of female youth and women who were living in a protection of civilian site in South Sudan after the outbreak of the 2013 South Sudan political crisis that led to deaths of over 1 million people and displacement of over 5 million people. These women sat together and pondered over their predicament amidst thousands of vulnerable women and children and they desired change. There was need for a paradigm shift from the violent environment and the loss of human dignity. These heartfelt needs led to the formation of CIDO, an organization that believes youth and women capabilities to create a desired environment that enables social justice to thrive. CIDO believes in employing community-based approaches and community managed initiatives in achieving sustainable socio- economic prosperity. In nut shell a nation where everyone thrives and has hope for a better tomorrow. </p>
           <p>Notably, South Sudan gained Independence in July 2011 and is one of the poorest countries in the world, faced with social, political and economic challenges. In order to address these challenges, CIDO relies on the strength of the knowledge of the local context and the way the people know each other and how they can use their relations to develop local capacities for socio-economic transformation. The core purpose of CIDO is to meet the needs and aspirations of communities, in both urban and rural setting, with special emphasis on conflict mitigation and resolution as a prerequisite to socio- economic prosperity. </p>
-          <p>The organization is headed by an Executive Director and governed by a 7member Board of Directors who meets thrice a year and on ad hoc basis. </p>
           <p></p>
         </div> 
 
@@ -110,7 +109,8 @@
 
     <!-- team  -->
     <section>
-      <H1 class="text-black ms-4">Our Team</H1>
+      <H1 class="text-black ms-4 mt-3">Our Team</H1>
+      <h5 class="ms-4">The organization is headed by an Executive Director and governed by a 7member Board of Directors <br> who meets thrice a year and on ad hoc basis. </h5>
       <div class="row ps-4 pe-3 pt-3 pb-4 mb-4">
         <div class="col-md-3">
           <div class="card" style="width: 18rem;">

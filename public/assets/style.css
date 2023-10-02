@@ -244,6 +244,21 @@ button .programs-btn a{
     background-color: #f58220;
 }
 
+.cont-program{
+    background-color: #ececec;  
+    transition: box-shadow 1s;
+    margin: 0 auto;
+}
+
+.cont-program:hover{
+    box-shadow: 10px 10px 20px 10px grey, -10px -10px 20px -10px grey; 
+    border-bottom: 3px solid #f58220;
+}
+
+.cont-program:hover h5{
+    color: #f58220;
+}
+
 @media only screen and (max-width: 768px) {
     .logo img {
         margin-left: 32vw;
