@@ -2,12 +2,12 @@
 <body>
     <header>
     <nav class="header bg-dark">
-    <div class="container-fluid">
-      <div class="row d-flex justify-content-between align-items-center">
+    <div class="container-fluid c-nav">
+      <div class="row d-flex justify-content-between align-items-center ">
         <div class="col-auto">
           <!-- drawer -->
-          <a data-bs-toggle="offcanvas" href="#offcanvasDrawer" role="button" aria-controls="offcanvasExample" href="#"><i class="fa fa-bars text-light fs-2 d-md-none d-sm-inline-block d-lg-none d-xl-none"></i></a>
-          <div class="offcanvas offcanvas-start d-md-none d-lg-none d-xl-none bg-black" tabindex="-1" id="offcanvasDrawer" aria-labelledby="offcanvasExampleLabel">
+          <a data-bs-toggle="offcanvas" href="#offcanvasDrawer" role="button" aria-controls="offcanvasExample" href="#"><i class="fa fa-bars text-light fs-2 d-md-inline-block d-sm-inline-block d-lg-none d-xl-none"></i></a>
+          <div class="offcanvas offcanvas-start d-lg-none d-xl-none bg-black" tabindex="-1" id="offcanvasDrawer" aria-labelledby="offcanvasExampleLabel">
             <!-- drawer header(logo) -->
             <div class="offcanvas-header">
               <img src="{{URL('images/logo.png')}}" style="width: 100px;" class="offcanvas-title " id="offcanvasExampleLabel"/>
@@ -42,7 +42,7 @@
         </div>
         <!-- header right list  -->
         <div class="col-auto d-inline-flex ">
-          <div class="header-right-list d-md-block d-none d-lg-block d-xl-block">
+          <div class="header-right-list d-none d-lg-block d-xl-block">
             <ul>
               <li><a href="/">HOME</a></li>
               <li><a href="/programs">PROGRAMS</a></li>

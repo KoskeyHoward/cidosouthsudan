@@ -21,8 +21,8 @@
         </div>
 
         <div class="ps-5 pe-5">
-        <div class="row ps-4 pe-3 pt-3 pb-4 mb-4">
-          <div class="col-md-3">
+        <div class="row ps-4 pe-3 pt-3 pb-4 mb-4 ">
+          <div class="col-lg-4 mb-4 mb-lg-0 c-program">
             <div class="card" style="width: 18rem;">
                 <img src="images/Testimonial-icon.webp" class="card-img-top" alt="...">
                 <div class="card-body">
@@ -30,7 +30,7 @@
                 </div>  
             </div>
           </div>
-          <div class="col-md-3">
+          <div class="col-lg-4 mb-4 mb-lg-0 c-program">
             <div class="card" style="width: 18rem;">
                 <img src="images/Testimonial-icon.webp" class="card-img-top" alt="...">
                 <div class="card-body">
@@ -38,19 +38,11 @@
                 </div>  
             </div>
           </div>
-          <div class="col-md-3">
+          <div class="col-lg-4 mb-4 mb-lg-0 c-program">
             <div class="card" style="width: 18rem;">
                 <img src="images/Testimonial-icon.webp" class="card-img-top" alt="...">
                 <div class="card-body">
                   <h5 class="card-title">Thomas Reath</h5>
-                </div>  
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="card" style="width: 18rem;">
-                <img src="{{URL('images/Testimonial-icon.webp')}}" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Mary Jonson</h5>
                 </div>  
             </div>
           </div>
@@ -58,7 +50,7 @@
 
         
         <div class="row ps-4 pe-3 pt-3 pb-4 mb-4">
-          <div class="col-md-3">
+          <div class="col-lg-4 mb-4 mb-lg-0 c-program">
             <div class="card" style="width: 18rem;">
                 <img src="images/Testimonial-icon.webp" class="card-img-top" alt="...">
                 <div class="card-body">
@@ -66,7 +58,7 @@
                 </div>  
             </div>
           </div>
-          <div class="col-md-3">
+          <div class="col-lg-4 mb-4 mb-lg-0 c-program">
             <div class="card" style="width: 18rem;">
                 <img src="images/Testimonial-icon.webp" class="card-img-top" alt="...">
                 <div class="card-body">
@@ -74,19 +66,11 @@
                 </div>  
             </div>
           </div>
-          <div class="col-md-3">
+          <div class="col-lg-4 mb-4 mb-lg-0 c-program">
             <div class="card" style="width: 18rem;">
                 <img src="images/Testimonial-icon.webp" class="card-img-top" alt="...">
                 <div class="card-body">
                   <h5 class="card-title">Thomas Reath</h5>
-                </div>  
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="card" style="width: 18rem;">
-                <img src="{{URL('images/Testimonial-icon.webp')}}" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Mary Jonson</h5>
                 </div>  
             </div>
           </div>

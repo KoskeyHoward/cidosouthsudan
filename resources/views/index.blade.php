@@ -69,21 +69,19 @@
       </div>
     </section>
 
-    <section class="section-2">
+    <section class="section-2" style="margin: 0 auto;">
       <div class="below-hero text-center bg-black">
         <h1 class="slogan mb-4">Support to Local Solutions</h1>
       </div>
 
       <!-- who we are  -->
-          <div class="row about-section-3" style="background-color: #f58220;">
-            <!-- image  -->
-            <div class="col-md-6 pt-2 pb-2 mb-md-0 mb-lg-0" style="height: 100%;">
-              <div class="container c-wwa" style="height: 100%;">
-                <img src="{{URL('images/SV-launch2.webp')}}" alt="who we are" style="width: 100%; height:356px; ;object-fit: cover; border-radius: 8px;">
-              </div>
-            </div>
+      <div class="row" style="background-color: #f58220;">
+        <!-- image  -->
+        <div class="container col-md-6 pt-2 ps-4 pb-2 mb-md-0 mb-lg-0" style="height: 100%;">
+            <img src="{{URL('images/SV-launch2.webp')}}" alt="who we are" style="width: 100%; height:356px; ;object-fit: cover; border-radius: 8px;">
+        </div>
             <!-- who we are text  -->
-            <div class="col-md-6 pt-2 pb-2 mb-md-0 mb-lg-0" style="height: 100%">
+        <div class="col-md-6 pt-2 pb-2 mb-md-0 mb-lg-0" style="height: 100%">
               <div class="container" style="height: 100%">
                 <div class="card" style="height: 100%">
                   <div class="card-body" style="height: 100%">
@@ -95,44 +93,44 @@
                 </div>
               </div>
             </div>
-          </div>
+      </div>
 
-          <div class="row text-center p-4" style="background-color: #00A651;">
-            <div class="col-md-6 text-light mb-4 mb-md-0">
-              <h1>Since 2013 we are helping <br> people around the world.</h1>
+      <div class="row text-center p-4" style="background-color: #00A651;">
+        <div class="col-md-6 text-light mb-4 mb-md-0">
+          <h1>Since 2013 we are helping <br> people around the world.</h1>
+        </div>
+        <div class="col-md-6">
+          <div class="row">
+            <div class="col-md-4 mb-4 mb-md-0">
+              <img src="images/projects-100.png" alt="Projects" width="100px">
+              <h3 class="counter-count text-light">30+</h3>
+              <h5 class="text-black">Total Projects</h5>
             </div>
-            <div class="col-md-6">
-              <div class="row">
-                <div class="col-md-4 mb-4 mb-md-0">
-                  <img src="images/projects-100.png" alt="Projects" width="100px">
-                  <h3 class="counter-count text-light">30+</h3>
-                  <h5 class="text-black">Total Projects</h5>
-                </div>
-                <div class="col-md-4 mb-4 mb-md-0">
-                  <img src="images/people.png" alt="Projects" width="100px">
-                  <h3 class="counter-count text-light">3545+</h3>
-                  <h5 class="text-black">People Reached</h5>
-                </div>
-                <div class="col-md-4 mb-4 mb-md-0">
-                  <img src="images/causes.png" alt="Projects" width="100px">
-                  <h3 class="counter-count text-light">8</h3>
-                  <h5 class="text-black">Causes</h5>
-                </div>
-              </div>
+            <div class="col-md-4 mb-4 mb-md-0">
+              <img src="images/people.png" alt="Projects" width="100px">
+              <h3 class="counter-count text-light">3545+</h3>
+              <h5 class="text-black">People Reached</h5>
+            </div>
+            <div class="col-md-4 mb-4 mb-md-0">
+              <img src="images/causes.png" alt="Projects" width="100px">
+              <h3 class="counter-count text-light">8</h3>
+              <h5 class="text-black">Causes</h5>
             </div>
           </div>
+        </div>
+      </div>
     </section>
 
     <!-- programs  -->
     <section class="text-center p-5">
-      <div class="cido-programs mb-4 mb-md-0">
+      <div class="cido-programs mb-4 mb-lg-0">
         <h2> CIDO PROGRAMS</h2>
         <h5>Activities of CIDO currently covers Central Equitoria state (kajokeji, Lainya Juba and Yei) <br> with planned extension to Eastern Equitoria ( Torit and Ikotos), Upper Nile ( Panyikang, Tonga, Maban) <br> Jonglei state ( Pigi, and Ayod ).</h5>
       </div>
 
-      <div class="container">
+      <div class="container text-center">
       <div class="row mb-4 mt-4 text-center">
-            <div class="col-md-4 mb-4 mb-md-0">
+            <div class="col-lg-4 mb-4 mb-lg-0 c-program">
                 <div class="card" style="width: 19rem;">
                   <div class="image-container">
                     <div class="overlay d-inline-block" style="padding-top:55px;">
@@ -143,7 +141,7 @@
                   </div>
                 </div>                   
             </div>                
-            <div class="col-md-4 mb-4 mb-md-0">
+            <div class="col-lg-4 mb-4 mb-lg-0 c-program">
                 <div class="card" style="width: 19rem;">
                   <div class="image-container">
                     <div class="overlay d-inline-block" style="padding-top:55px;">
@@ -154,7 +152,7 @@
                   </div>
                 </div>                   
             </div>                
-            <div class="col-md-4 mb-4 mb-md-0">
+            <div class="col-lg-4 mb-4 mb-lg-0 c-program">
                 <div class="card" style="width: 19rem;">
                   <div class="image-container">
                     <div class="overlay d-inline-block" style="padding-top:55px;">
@@ -187,7 +185,7 @@
       </div>
 
       <div class="row">
-        <div class="col-md-6">
+        <div class="col-lg-6 mb-4 mb-lg-0">
           <div class="mb-3 pr-partner">
             <img src="{{asset('images/cido-ahec_staff.jpg')}}" alt="project">
           </div>
@@ -197,26 +195,24 @@
           </div>
         </div>
 
-        <div class="col-md-6 c-projects">
+        <div class="col-lg-6 c-projects">
           <div class="row mb-4">
-            <div class="col-md-6 mb-4 mb-md-0">
+            <div class="col-lg-6 mb-4 mb-lg-0">
               <div class="card" style="width: 19rem;">
                 <div class="image-container">
                   <div class="overlay">
                     <a class="text-light" href="#" style="text-decoration: none;"><h5 class="card-title">Power of integrated services in Akobo East</h5></a>
-                    <!-- <button class="button">View Project</button> -->
                   </div>
                   <img src="{{asset('images/four_1.jpeg')}}" alt="Your Image"id="zoomable-image">
                 </div>
               </div>
             </div>
             
-            <div class="col-md-6">
+            <div class="col-lg-6">
               <div class="card" style="width: 19rem;">
                 <div class="image-container">
                   <div class="overlay">
-                    <a class="text-light" href="#" style="text-decoration: none;"><h5 class="card-title">CIDO saves a Woman 3 days of labor pain in Akobo.</h5></a>
-                    <!-- <button class="button">View Project</button> -->
+                    <a class="text-light" href="#" style="text-decoration: none;"><h5 class="card-title">CIDO saves a Woman 3 days of labor pain in Akobo.</h5></a>                    
                   </div>
                   <img src="{{asset('images/SNFI.jpeg')}}" alt="Your Image"id="zoomable-image">
                 </div>
@@ -225,24 +221,22 @@
           </div>
 
           <div class="row mb-4">
-            <div class="col-md-6 mb-4 mb-md-0">
+            <div class="col-lg-6 mb-4 mb-lg-0">
               <div class="card" style="width: 19rem;">
                 <div class="image-container">
                   <div class="overlay">
-                    <a class="text-light" href="#" style="text-decoration: none;"><h5 class="card-title">"A Story like no other"</h5></a>
-                    <!-- <button class="button">View Project</button> -->
+                    <a class="text-light" href="#" style="text-decoration: none;"><h5 class="card-title">"A Story like no other"</h5></a>                    
                   </div>
                   <img src="{{asset('images/2023.jpg')}}" alt="Your Image"id="zoomable-image">
                 </div>
               </div>
             </div>
 
-            <div class="col-md-6">
+            <div class="col-lg-6">
               <div class="card" style="width: 19rem;">
                 <div class="image-container">
                   <div class="overlay">
                     <a class="text-light" href="#" style="text-decoration: none;"><h5 class="card-title">CIDO response to flood affected population in Pibor & Akobo counties in South Sudan.</h5></a>
-                    <!-- <button class="button">View Project</button> -->
                   </div>
                   <img src="{{asset('images/Np-CIDO.jpeg')}}" alt="Your Image"id="zoomable-image">
                 </div>

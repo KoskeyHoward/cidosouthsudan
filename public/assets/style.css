@@ -86,21 +86,6 @@ ul li a{
     overflow: hidden;
 }
 
-/* .c-item .img-slider{
-    position: absolute;
-    top: 70%;
-    left: 39%;
-    transform: translate(-50%, -50%);
-} */
-
-/* .img-slider{
-    position: absolute;
-    top: 70%;
-    left: 39%;
-    transform: translate(-50%, -50%);
-    transition: transform 0.2s ease;
-} */
-
 .c-img{
     height: 100%;
     object-fit: cover;
@@ -259,14 +244,15 @@ button .programs-btn a{
     color: #f58220;
 }
 
-@media only screen and (max-width: 768px) {
-    .logo img {
-        margin-left: 32vw;
-    }
+.row .c-contact{
+    margin-left: 50px;
+}
 
-    .header .header-right-list ul li .search-icon{
-        visibility: visible;
-    }
+@media only screen and (max-width: 768px) {
+    /* .logo{
+        margin-left: -8vw;
+        z-index: 10;
+    } */
 
     .donate button{
         display: none;
@@ -294,4 +280,23 @@ button .programs-btn a{
         background-color: transparent;
     }
     
+}
+
+@media only screen and (max-width: 1024px){
+
+    .logo img {
+        margin-left: 37vw;
+    }
+
+    .c-program .card{
+        margin: auto;
+    }
+
+    .c-projects .card{
+        margin: auto;
+    }
+
+    .row .c-contact{
+        margin: 0;
+    }
 }

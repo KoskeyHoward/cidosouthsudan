@@ -108,11 +108,11 @@
     </section>
 
     <!-- team  -->
-    <section>
+    <section class="text-center">
       <H1 class="text-black ms-4 mt-3">Our Team</H1>
       <h5 class="ms-4">The organization is headed by an Executive Director and governed by a 7member Board of Directors <br> who meets thrice a year and on ad hoc basis. </h5>
       <div class="row ps-4 pe-3 pt-3 pb-4 mb-4">
-        <div class="col-md-3">
+        <div class="col-lg-3 mb-4 mb-lg-0 c-program">
           <div class="card" style="width: 18rem;">
               <img src="images/Testimonial-icon.webp" class="card-img-top" alt="...">
               <div class="card-body">
@@ -121,7 +121,7 @@
               </div>  
           </div>
         </div>
-        <div class="col-md-3">
+        <div class="col-lg-3 mb-4 mb-lg-0 c-program">
           <div class="card" style="width: 18rem;">
               <img src="images/Testimonial-icon.webp" class="card-img-top" alt="...">
               <div class="card-body">
@@ -130,7 +130,7 @@
               </div>  
           </div>
         </div>
-        <div class="col-md-3">
+        <div class="col-lg-3 mb-4 mb-lg-0 c-program">
           <div class="card" style="width: 18rem;">
               <img src="images/Testimonial-icon.webp" class="card-img-top" alt="...">
               <div class="card-body">
@@ -139,7 +139,7 @@
               </div>  
           </div>
         </div>
-        <div class="col-md-3">
+        <div class="col-lg-3 c-program">
           <div class="card" style="width: 18rem;">
               <img src="{{URL('images/Testimonial-icon.webp')}}" class="card-img-top" alt="...">
               <div class="card-body">

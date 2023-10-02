@@ -9,7 +9,7 @@
             <p class="fw-bold orange fs-5">Juba, South Sudan</p>
              </div>
              <div class="col-lg-1 border-end"></div>
-        <div class="col-lg-3 text-center ms-5">
+        <div class="col-lg-3 text-center c-contact">
             <div class=""><i class="bi bi-telephone-fill orange fs-1  text-center"></i></div>
             <h5>CALL US</h5>
             <p>Tel: +211922699189</p>
@@ -36,7 +36,8 @@
                      
                       </div>
                 </div>
-                <div class="col-lg-6">  <div class="mb-3">
+                <div class="col-lg-6">  
+                  <div class="mb-3">
                     <label for="exampleInputPassword1" class="form-label">Your Email (required)</label>
                     <input type="email" class="form-control" id="exampleInputPassword1">
                   </div></div>
