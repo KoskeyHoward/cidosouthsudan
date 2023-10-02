@@ -1,10 +1,18 @@
 @extends('layouts.default')
 
 @section('page-content')
+    <div class="about-top mb-1">
+          <img src="images/cido.jpg" alt="board">
+          <div class="about-shade"></div>
+          <div class="about-top-text text-center">
+            <h1>Programs </h1>
+            <h3>Support to Local Solutions</h3>
+          </div>
+    </div>
     <div class="container pt-5">
         <div class="m-5">
             <div class="row">
-                <div class="col-lg-4">
+                <div class="col-lg-4 mb-4 mb-lg-0 c-program">
                     <div class="card" style="width: 19rem;">
                         <div class="image-container">
                             <div class="overlay">
@@ -22,7 +30,7 @@
                     </div>
                    
                 </div>
-                <div class="col-lg-4">
+                <div class="col-lg-4 mb-4 mb-lg-0 c-program">
                     <div class="card" style="width: 19rem;">
                         <div class="image-container">
                             <div class="overlay">
@@ -40,7 +48,7 @@
                     </div>
                    
                 </div>
-                <div class="col-lg-4">
+                <div class="col-lg-4 mb-4 mb-lg-0 c-program">
                     <div class="card" style="width: 19rem;">
                         <div class="image-container">
                             <div class="overlay">

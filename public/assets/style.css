@@ -44,10 +44,16 @@ ul li a{
     padding-bottom: 3px;
 }
 
+.dropdown-menu{
+    opacity: 0.6;
+    background-color: transparent;
+}
+
 .dropdown-menu .dropdown-item:hover{
     background-color: transparent;
-    border-bottom: white 1px solid;
-    color:white ;
+    /* border-bottom: #f58220 1px solid; */
+    color:#f58220 ;
+    opacity: 1;
 }
 
 .header-right-list ul li a:hover{
@@ -78,21 +84,6 @@ ul li a{
     height: 500px;
     position: relative;
     overflow: hidden;
-}
-
-/* .c-item .img-slider{
-    position: absolute;
-    top: 70%;
-    left: 39%;
-    transform: translate(-50%, -50%);
-} */
-
-.img-slider{
-    position: absolute;
-    top: 70%;
-    left: 39%;
-    transform: translate(-50%, -50%);
-    transition: transform 0.2s ease;
 }
 
 .c-img{
@@ -139,6 +130,7 @@ ul li a{
 }
 .carousel-caption P {
     color: #f58220;
+    
 }
 
 .carousel-caption .c-btn{
@@ -147,6 +139,7 @@ ul li a{
     padding: 2px 8px;
     opacity: 0.7;
     margin-top: 12px;
+    z-index: 5;
 }
 .carousel-caption .c-btn:hover{
     background-color: #00A651;
@@ -158,105 +151,13 @@ ul li a{
     text-decoration: none;
 }
 
-.carousel-indicators{
-    top: 0;
-}
-
-.theme-focus{
-    display: flex;
-    justify-content: center;
-    
-}
-
-.theme-focus .con-row{
-    height: 243px;
-    position: absolute;
-    border-radius: 12px;
-    top: 465px;
-    z-index: 10;
-}
-
-.focus-row{
-    height: 100%;
-    margin: 0;
-    padding: 0;
-}
-
-.focus-row .focus-col{
-    height: 100%;
-    margin: 0;
-    padding: 0;
-}
-
-.focus-col{
-    position: relative;
-}
-
-.focus-text{
-    position: absolute;
-    font-size:small;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: #000000;
-}
-
-.focus-img{
-    height: 100%;
-    object-fit: cover;  
-}
-
- .focus-col img:hover{
-    -webkit-animation: thing 10000ms;
-    -moz-animation: thing 10000ms;
-    animation: thing 10000ms;
-}
-
-.focus-col .foreground{
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0%;
-    opacity: 0.5;
-    background-color: #0ca053;
-}
-.focus-col .foreground-one{
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0%;
-    opacity: 0.5;
-    background-color: #f7821d;
-}
-.focus-col .foreground-two{
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0%;
-    opacity: 0.5;
-    background-color: #054624;
-}
-.focus-col .foreground-three{
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0%;
-    opacity: 0.5;
-    background-color: #5c2c02;
-}
-
 .below-hero{
-    padding-top: 49px;
     padding-bottom: 10px ;
 }
 
 .slogan{
-    padding-top: 100px;
+    padding-top: 20px;
     color: #f58220;
-}
-
-.about-section-3{
-    height: 470px;
 }
 
 .about-us{
@@ -293,99 +194,109 @@ ul li a{
     opacity: 0.7;
 }
 
-.mv .mission{
-    background-color: #f58220;
-    border-top-right-radius: 40px;
-    border-bottom-right-radius: 30px;
-    padding: 25px;
-    /* margin-left: 0;
-    margin-right: auto; */
-}
-
-.mv .mission img{
-    /* width: 100%; */
-    border-radius: 12px;
-    margin-left: 0;
-}
-
-.mv .vision{
-    background-color: #00A651;
-    border-top-left-radius: 40px;
-    border-bottom-left-radius: 30px;
-    padding: 25px;
-    margin-left: auto;
-    margin-right: 0;
-}
-
-.mission ul li{
-    list-style:circle;
-    color: #000000;
-}
-
-.mv .vision img{
-    /* width: 100%; */
-    border-radius: 12px;
-}
-
-.values p{
-    color: white;
-}
-
 .who-we-are p{
     color: #353535;
     text-align: justify;
     padding: 0 30px;
 }
 
+.objectives ul li{
+    list-style: circle;
+}
+
+.testimonial {
+    background-color: #dddcdc;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.author {
+    margin-top: 10px;
+    text-align: right;
+}
+
+.carousel-inner {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.carousel-control-prev, .carousel-control-next {
+    opacity: 10;
+    color: #f58220;
+}
+
+button .programs-btn a{
+    background-color: #f58220;
+}
+
+.cont-program{
+    background-color: #ececec;  
+    transition: box-shadow 1s;
+    margin: 0 auto;
+}
+
+.cont-program:hover{
+    box-shadow: 10px 10px 20px 10px grey, -10px -10px 20px -10px grey; 
+    border-bottom: 3px solid #f58220;
+}
+
+.cont-program:hover h5{
+    color: #f58220;
+}
+
+.row .c-contact{
+    margin-left: 50px;
+}
+
 @media only screen and (max-width: 768px) {
-    .logo img {
-        margin-left: 32vw;
-    }
-
-    .header .header-right-list ul li .search-icon{
-        visibility: visible;
-    }
-
-    .theme-focus{
-        width: 100%;        
-    }
-
-    .theme-focus .con-row{
-        height: 240px;
-        width: 100%;
-        position: absolute;
-        border-radius: 12px;
-        top: 563px;
+    /* .logo{
+        margin-left: -8vw;
         z-index: 10;
+    } */
+
+    .donate button{
+        display: none;
+    }
+
+    section .c-projects{
+        margin-left: 50px;
+    }
+    section .c-projects .row .col-12 a{
+        margin-left: -75px;
+    }
+
+    .pr-partner img{
+        width: 90vw;
+
+    }
+
+    .testimonial{
+        margin-bottom: 7px;
+        margin-left: 7px;
+    }
+
+    .dropdown-menu{
+        opacity: 1;
+        background-color: transparent;
     }
     
-    .focus-row .focus-col{
-        margin-bottom: 2px;
+}
+
+@media only screen and (max-width: 1024px){
+
+    .logo img {
+        margin-left: 37vw;
     }
 
-    .focus-img{
-        height: 100%;
-        width: 100%;
-        object-fit: cover;  
+    .c-program .card{
+        margin: auto;
     }
 
-    .focus-col{
-        position: relative;
-        border-left: 1px solid #f58220;
-        width: 100%;
+    .c-projects .card{
+        margin: auto;
     }
 
-    .focus-col .foreground{
-        height: 100%;
-        width: 100%;
-        position: absolute;
-        top: 0%;
-        opacity: 0.5;
-        background-color: #00A651;
+    .row .c-contact{
+        margin: 0;
     }
-
-    .below-hero{
-        padding-top: 900px;
-    }
-    
 }

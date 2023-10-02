@@ -37,6 +37,14 @@ Route::get('/volunteer', function () {
     return view('volunteer');
 })->name('volunteer');
 
+Route::get('/become-volunteer', function () {
+    return view('become-volunteer');
+})->name('become-volunteer');
+
+Route::get('/donationForm', function () {
+    return view('donationForm');
+})->name('donationForm');
+
 
 
 // Auth::routes();
