@@ -225,7 +225,7 @@
               <div class="card" style="width: 19rem;">
                 <div class="image-container">
                   <div class="overlay">
-                    <a class="text-light" href="#" style="text-decoration: none;"><h5 class="card-title">"A Story like no other"</h5></a>                    
+                    <a class="text-light" href="/story" style="text-decoration: none;"><h5 class="card-title">"A Story like no other"</h5></a>                    
                   </div>
                   <img src="{{asset('images/2023.jpg')}}" alt="Your Image"id="zoomable-image">
                 </div>

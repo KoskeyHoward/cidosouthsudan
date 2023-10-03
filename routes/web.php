@@ -25,6 +25,22 @@ Route::get('/projects', function () {
     return view('projects');
 })->name('projects');
 
+Route::get('/story', function () {
+    return view('story');
+})->name('story');
+
+Route::get('/mainstreaming-covid', function () {
+    return view('mainstreaming-covid');
+})->name('mainstreaming-covid');
+
+Route::get('/covid-training', function () {
+    return view('covid-training');
+})->name('covid-training');
+
+Route::get('/covid-awareness', function () {
+    return view('covid-awareness');
+})->name('covid-awareness');
+
 Route::get('/contact', function () {
     return view('contact');
 })->name('contact');

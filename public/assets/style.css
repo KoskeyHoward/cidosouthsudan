@@ -248,6 +248,19 @@ button .programs-btn a{
     margin-left: 50px;
 }
 
+.share .media-buttons{
+    display: flex;
+}
+
+.recent-projects a{
+    text-decoration: none;
+    color: #00A651;
+}
+
+.recent-projects a:hover{
+    color: #f58220;
+}
+
 @media only screen and (max-width: 768px) {
     /* .logo{
         margin-left: -8vw;
@@ -278,6 +291,18 @@ button .programs-btn a{
     .dropdown-menu{
         opacity: 1;
         background-color: transparent;
+    }
+
+    .row .col-lg-8 p .share-on::before{
+        content: "\a";
+        white-space: pre;
+    }
+
+    .share .media-buttons{
+        display:unset;
+    }
+    .share .media-buttons button{
+        margin-bottom: 8px;
     }
     
 }
