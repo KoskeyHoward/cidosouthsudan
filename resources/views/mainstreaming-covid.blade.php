@@ -99,16 +99,16 @@
                     <a class="mb-2" href="">CIDO RESPONSE TO FLOOD AFFECTED POPULATION</a>
                 </div>
                 <div class="mb-2">
-                    <a class="mb-2" href="">"A STORY LIKE NO OTHER"</a>
+                    <a class="mb-2" href="/story">"A STORY LIKE NO OTHER"</a>
                 </div>
                 <div class="mb-2">
-                    <a class="mb-2" href="">MAINSTREAMING COVID-19</a>
+                    <a class="mb-2" href="/mainstreaming-covid">MAINSTREAMING COVID-19</a>
                 </div>
                 <div class="mb-2">
-                    <a class="mb-2" href="">TRAINING ON COVID</a>
+                    <a class="mb-2" href="covid-training">TRAINING ON COVID</a>
                 </div>
                 <div >
-                    <a class="mb-2" href="">VIVID COVID AWARENESS</a>
+                    <a class="mb-2" href="covid-awareness">VIVID COVID AWARENESS</a>
                 </div>
             </div>
 
