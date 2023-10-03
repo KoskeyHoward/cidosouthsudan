@@ -44,6 +44,9 @@ Route::get('/become-volunteer', function () {
 Route::get('/donationForm', function () {
     return view('donationForm');
 })->name('donationForm');
+Route::get('/read-more', function () {
+    return view('read-more-projects');
+})->name('read-more');
 
 
 
