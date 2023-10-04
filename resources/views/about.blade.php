@@ -14,7 +14,7 @@
         </div>
 
         <!-- who we are  -->
-        <div class="who-we-are mb-4">
+        <div class="who-we-are p-5 pb-2">
           <h1 class="text-center text-black">WHO WE ARE</h1>
           <p>CIDO is a non-partisan, non-profit making organization conceived in 2013 and formally registered in South Sudan in 2016 to support local solutions on critical areas of social and economic development. The agency places emphasis on promotion of Peace and peaceful co-existence among communities as the benchmark for socio-economic prosperity.  </p>
           <p>CIDO was formed by a group of female youth and women who were living in a protection of civilian site in South Sudan after the outbreak of the 2013 South Sudan political crisis that led to deaths of over 1 million people and displacement of over 5 million people. These women sat together and pondered over their predicament amidst thousands of vulnerable women and children and they desired change. There was need for a paradigm shift from the violent environment and the loss of human dignity. These heartfelt needs led to the formation of CIDO, an organization that believes youth and women capabilities to create a desired environment that enables social justice to thrive. CIDO believes in employing community-based approaches and community managed initiatives in achieving sustainable socio- economic prosperity. In nut shell a nation where everyone thrives and has hope for a better tomorrow. </p>
@@ -60,7 +60,7 @@
         <h1 style="color: #00A651;">CORE THEMATIC FOCUS AREAS</h1>
       </div>
 
-      <div class="row theme-focus-about ps-5 pe-5 mb-4">
+      <div class="row theme-focus-about p-5 pt-3 mb-4">
         <div class="col-md-3 text-center mb-4 mb-md-0">
           <img src="images/settings_2881031.png" alt="Governance" width="70px">
           <h3>GOVERNANCE</h3>
@@ -83,7 +83,7 @@
         </div>
       </div>
 
-      <div class="row text-center bg-success pt-3 pb-3">
+      <div class="row text-center bg-success p-5">
         <div class="col-md-3 mb-4 mb-md-0">
           <img src="images/volunteer.png" alt="volunteer">
           <h3 class="counter-count text-light">230</h3>
@@ -109,8 +109,8 @@
 
     <!-- team  -->
     <section class="text-center">
-      <H1 class="text-black ms-4 mt-3">Our Team</H1>
-      <h5 class="ms-4">The organization is headed by an Executive Director and governed by a 7member Board of Directors <br> who meets thrice a year and on ad hoc basis. </h5>
+      <H1 class="text-black ms-4 pt-5">Our Team</H1>
+      <h5 class="p-3">The organization is headed by an Executive Director and governed by a 7member Board of Directors <br> who meets thrice a year and on ad hoc basis. </h5>
       <div class="row ps-4 pe-3 pt-3 pb-4 mb-4">
         <div class="col-lg-3 mb-4 mb-lg-0 c-program">
           <div class="card" style="width: 18rem;">
@@ -152,7 +152,7 @@
     </section>
 
     <!-- what people say -->
-    <section class="bg-secondary pb-4">
+    <section class="bg-secondary pb-5">
         <h1 class="text-center text-black p-3">What People Say...</h1>
         <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
             <div class="container carousel-inner">

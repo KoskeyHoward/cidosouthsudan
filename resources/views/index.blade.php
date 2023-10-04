@@ -95,7 +95,7 @@
             </div>
       </div>
 
-      <div class="row text-center p-4" style="background-color: #00A651;">
+      <div class="row text-center p-5" style="background-color: #00A651;">
         <div class="col-md-6 text-light mb-4 mb-md-0">
           <h1>Since 2013 we are helping <br> people around the world.</h1>
         </div>
@@ -178,7 +178,7 @@
     </section> -->
 
     <!-- projects  -->
-    <section class="text-center p-4 pb-1">
+    <section class="text-center p-4 pb-5">
       <div class="mb-4">
         <h2 class="orange">OUR PROJECTS</h2>
         <h5>We continue to reach out to as many people as possible by <br>extending our services which range from nutrition,access to justice, <br> adult literacy to women empowerement, health services and protection.</h5>
