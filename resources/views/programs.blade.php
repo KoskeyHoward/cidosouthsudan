@@ -28,8 +28,7 @@
 
                         </div>
                     </div>
-                   
-                </div>
+                    </div>
                 <div class="col-lg-4 mb-4 mb-lg-0 c-program">
                     <div class="card" style="width: 19rem;">
                         <div class="image-container">
