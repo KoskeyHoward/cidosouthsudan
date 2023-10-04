@@ -2,7 +2,7 @@
 
 @section('page-content')
     <div class="about-top mb-1">
-      <img src="images/volunteer-crl.jpg" alt="board">
+      <img src="{{URL('images/women-empowerment.jpg')}}" alt="board">
       <div class="about-shade"></div>
       <div class="about-top-text text-center">
         <h1>Projects </h1>

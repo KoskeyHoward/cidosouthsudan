@@ -25,6 +25,22 @@ Route::get('/projects', function () {
     return view('projects');
 })->name('projects');
 
+Route::get('/story', function () {
+    return view('story');
+})->name('story');
+
+Route::get('/mainstreaming-covid', function () {
+    return view('mainstreaming-covid');
+})->name('mainstreaming-covid');
+
+Route::get('/covid-training', function () {
+    return view('covid-training');
+})->name('covid-training');
+
+Route::get('/covid-awareness', function () {
+    return view('covid-awareness');
+})->name('covid-awareness');
+
 Route::get('/contact', function () {
     return view('contact');
 })->name('contact');
@@ -32,6 +48,18 @@ Route::get('/contact', function () {
 Route::get('/programs', function () {
     return view('programs');
 })->name('programs');
+
+Route::get('/peace-building', function () {
+    return view('peace-building');
+})->name('peace-building');
+
+Route::get('/women-rights', function () {
+    return view('women-rights');
+})->name('women-rights');
+
+Route::get('/health-and-nutrition', function () {
+    return view('health-and-nutrition');
+})->name('health-and-nutrition');
 
 Route::get('/volunteer', function () {
     return view('volunteer');

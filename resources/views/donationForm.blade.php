@@ -1,7 +1,7 @@
 @extends('layouts.default')
 @section('page-content')   
 <div class="about-top mb-1">
-          <img src="images/volunteer-crl.jpg" alt="board">
+          <img src="{{URL('images/children1.jpeg')}}" alt="board">
           <div class="about-shade"></div>
           <div class="about-top-text text-center">
             <h1>Donate </h1>
