@@ -16,7 +16,7 @@
                     <div class="card" style="width: 19rem;">
                         <div class="image-container">
                             <div class="overlay">
-                                <button class="button"><a class="btn" href="/peace-building">View Program</a></button>
+                                <a class="button btn">View Program</a>
                             </div>
                             <img src="{{asset('images/peacebuilding.jpeg')}}" alt="Your Image"id="zoomable-image">
                             </div>
@@ -34,7 +34,7 @@
                     <div class="card" style="width: 19rem;">
                         <div class="image-container">
                             <div class="overlay">
-                                <button class="button"><a class="btn" href="/women-rights">View Program</a></button>
+                                <a class="button btn">View Program</a>
                             </div>
                             <img src="{{asset('images/Livelihood.jpeg')}}" alt="Your Image"id="zoomable-image">
                             </div>
@@ -50,7 +50,7 @@
                     <div class="card" style="width: 19rem;">
                         <div class="image-container">
                             <div class="overlay">
-                                <button class="button">View Program</button>
+                                <a class="button btn">View Program</a>
                             </div>
                             <img src="{{asset('images/GL.jpeg')}}" alt="Your Image"id="zoomable-image">
                             </div>
@@ -69,7 +69,7 @@
                 <div class="card" style="width: 19rem;">
                         <div class="image-container">
                             <div class="overlay">
-                                <button class="button"><a class="btn" href="/health-and-nutrition">View Program</a></button>
+                                <a class="button btn">View Program</a>
                             </div>
                             <img src="{{asset('images/health-delivery.jpeg')}}" alt="Your Image"id="zoomable-image">
                             </div>
