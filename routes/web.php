@@ -49,6 +49,18 @@ Route::get('/programs', function () {
     return view('programs');
 })->name('programs');
 
+Route::get('/peace-building', function () {
+    return view('peace-building');
+})->name('peace-building');
+
+Route::get('/women-rights', function () {
+    return view('women-rights');
+})->name('women-rights');
+
+Route::get('/health-and-nutrition', function () {
+    return view('health-and-nutrition');
+})->name('health-and-nutrition');
+
 Route::get('/volunteer', function () {
     return view('volunteer');
 })->name('volunteer');

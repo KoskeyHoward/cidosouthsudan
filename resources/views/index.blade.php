@@ -135,7 +135,7 @@
                   <div class="image-container">
                     <div class="overlay d-inline-block" style="padding-top:55px;">
                       <h5 class="text-light mb-3">Peace and Security</h5>
-                        <button class="button">View Program</button>
+                        <button class="button"><a class="btn" href="/peace-building">View Program</a></button>
                     </div>
                     <img src="{{asset('images/peacebuilding.jpeg')}}" alt="Your Image"id="zoomable-image">
                   </div>
@@ -146,7 +146,7 @@
                   <div class="image-container">
                     <div class="overlay d-inline-block" style="padding-top:55px;">
                       <h5 class="text-light mb-3">Women Rights and Empowerment</h5>
-                        <button class="button">View Program</button>
+                        <button class="button"><a href="/women-rights">View Program</a></button>
                     </div>
                     <img src="{{asset('images/Livelihood.jpeg')}}" alt="Your Image"id="zoomable-image">
                   </div>
