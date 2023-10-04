@@ -79,9 +79,9 @@
 
                     </form>
                     <div class="d-flex my-5">
-                        <div class="flex-grow-1"><a href="" class="btn btn-outline-dark rounded-circle">Prev</a>
+                        <div class="flex-grow-1"><a href="" class="btn btn-outline-dark rounded-pill ">Prev</a>
                         </div>
-                        <div class=""><a href="" class="btn btn-outline-dark rounded-circle">Next</a></div>
+                        <div class=""><a href="" class="btn btn-outline-dark rounded-pill">Next</a></div>
                     </div>
                 </div>
             </div>
