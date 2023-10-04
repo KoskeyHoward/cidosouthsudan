@@ -9,7 +9,7 @@
             <h3>Support to Local Solutions</h3>
           </div>
     </div>
-    <div class="container pt-5">
+    <div class="container pt-3">
         <div class="m-5">
             <div class="row">
                 <div class="col-lg-4 mb-4 mb-lg-0 c-program">

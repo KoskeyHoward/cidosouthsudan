@@ -71,6 +71,7 @@
 
     <main class="min-vh-100">
         @yield('page-content')
+        <a class="go-top-btn" href="#"><i class="fa fa-arrow-up"></i></a>
     </main>
 
     <!-- footer  -->
