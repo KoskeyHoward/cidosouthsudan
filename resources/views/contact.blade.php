@@ -1,7 +1,7 @@
 @extends('layouts.default')
 @section('page-content')
 <div class="container p-5">
-    <div class="row ">
+    <div class="row mt-5">
         <div class="col-lg-3 text-center">
             <div class=""><i class="bi bi-house orange fs-1"></i></div>
             <h5>VISIT US</h5>
