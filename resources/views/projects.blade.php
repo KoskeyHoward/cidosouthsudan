@@ -11,21 +11,21 @@
     </div>
 
     <div class="row text-center mb-4 mt-3">
-      <div class="col-md-3 cont-program p-4 mb-4 mb-md-0">
+      <div class="col-md-3 cont-project p-4 mb-4 mb-md-0">
         <h5 class="fw-normal">"A STORY LIKE NO OTHER"</h5>
         <P> <i class="bi bi-folder orange"></i> Shelter/Non-Food items <i class="bi bi-chat orange"></i>  Leave a comment</P>
         <p>For years South Sudanese have been displaced by conflicts and the only place they can find safety is either...</p>
         <a class="orange" href="/story" style="text-decoration: none;">READ MORE</a>
       </div>
 
-      <div class="col-md-3 cont-program p-4 mb-4 mb-md-0">
+      <div class="col-md-3 cont-project p-4 mb-4 mb-md-0">
         <h5 class="fw-normal">MAINSTREAMING COVID 19 FOR HUMANITARIAN FRONT-LINE WORKERS IN YEI.</h5>
         <P> <i class="bi bi-folder orange"></i> Civic Education, Health Services, Uncategorized  <br><i class="bi bi-chat orange"></i>  Leave a comment</P>
         <p>Corona virus still remains a huge topic on global stage. Thousands are feared to have died already, new cases...</p>
         <a class="orange" href="/mainstreaming-covid" style="text-decoration: none;">READ MORE</a>
       </div>
 
-      <div class="col-md-3 cont-program p-4">
+      <div class="col-md-3 cont-project p-4">
         <h5 class="fw-normal">CIDO CONDUCTS TRAINING ON COVID 19.</h5>
         <P> <i class="bi bi-folder orange"></i> Civic Education, Health Services <br> <i class="bi bi-chat orange"></i>  Leave a comment</P>
         <p>In a bid to sensitize the general public on the risks associated with the deadly corona virus  known as...</p>
@@ -35,21 +35,21 @@
 
 
     <div class="row text-center mb-4">
-      <div class="col-md-3 cont-program p-4 mb-4 mb-md-0">
+      <div class="col-md-3 cont-project p-4 mb-4 mb-md-0">
         <h5 class="fw-normal">CIDO’S STAFFS OBSERVES VIVID COVID 19 AWARENESS AT ALL TIMES.</h5>
         <P> <i class="bi bi-folder orange"></i> Civic Education, Health Services <i class="bi bi-chat orange"></i>  Leave a comment</P>
         <p> CIDO’s Staff using her own pen for signing in attendance book on entrance to the office while observing...</p>
         <a class="orange" href="covid-awareness" style="text-decoration: none;">READ MORE</a>
       </div>
 
-      <div class="col-md-3 cont-program p-4 mb-4 mb-md-0">
+      <div class="col-md-3 cont-project p-4 mb-4 mb-md-0">
         <h5 class="fw-normal">CIDO ADVANCING HEALTH SERVICES THROUGH MOBILE CLINIC.</h5>
         <P> <i class="bi bi-folder orange"></i> Health Services  <i class="bi bi-chat orange"></i>  Leave a comment</P>
         <p>In partnership with South Sudan Humanitarian Fund (SSHF), CIDO deployed health personnel on ground to enhance the provision of...</p>
         <a class="orange" href="" style="text-decoration: none;">READ MORE</a>
       </div>
 
-      <div class="col-md-3 cont-program p-4">
+      <div class="col-md-3 cont-project p-4">
         <h5 class="fw-normal">SCALING UP NUTRITION THROUGH OUTREACHES!</h5>
         <P> <i class="bi bi-folder orange"></i> Nutrition <br> <i class="bi bi-chat orange"></i>  Leave a comment</P>
         <p>Through its partnership with Scaling Up Nutrition Civil Society Alliance (SUN CSA), CIDO has been able to mobilize, organize...</p>

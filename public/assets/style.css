@@ -200,6 +200,33 @@ ul li a{
     padding: 0 30px;
 }
 
+.section-2 .learn-btn{
+    background-color: #f58220;
+    margin: 0;
+    border: 0 solid white;
+    padding: 5px;
+    border-radius: 8px;
+}
+.section-2 .learn-btn:hover {
+    background-color: #00A651;
+}
+
+.programs .programs-btn{
+    background-color: #f58220;
+    border: 0 solid white;
+    padding: 8px 10px;
+    border-radius: 8px;
+}
+.programs .programs-btn:hover {
+    background-color: #00A651;
+}
+.projects .project-btn{
+    background-color: #f58220;
+}
+.projects .project-btn:hover {
+    background-color: #00A651;
+}
+
 .objectives ul li{
     list-style: circle;
 }
@@ -225,22 +252,18 @@ ul li a{
     color: #f58220;
 }
 
-button .programs-btn a{
-    background-color: #f58220;
-}
-
-.cont-program{
+.cont-project{
     background-color: #ececec;  
     transition: box-shadow 1s;
     margin: 0 auto;
 }
 
-.cont-program:hover{
+.cont-project:hover{
     box-shadow: 10px 10px 20px 10px grey, -10px -10px 20px -10px grey; 
     border-bottom: 3px solid #f58220;
 }
 
-.cont-program:hover h5{
+.cont-project:hover h5{
     color: #f58220;
 }
 
