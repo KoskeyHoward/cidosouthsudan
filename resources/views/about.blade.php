@@ -14,7 +14,7 @@
         </div>
 
         <!-- who we are  -->
-        <div class="who-we-are p-5 pb-2">
+        <div class="who-we-are pb-2">
           <h1 class="text-center text-black">WHO WE ARE</h1>
           <p>CIDO is a non-partisan, non-profit making organization conceived in 2013 and formally registered in South Sudan in 2016 to support local solutions on critical areas of social and economic development. The agency places emphasis on promotion of Peace and peaceful co-existence among communities as the benchmark for socio-economic prosperity.  </p>
           <p>CIDO was formed by a group of female youth and women who were living in a protection of civilian site in South Sudan after the outbreak of the 2013 South Sudan political crisis that led to deaths of over 1 million people and displacement of over 5 million people. These women sat together and pondered over their predicament amidst thousands of vulnerable women and children and they desired change. There was need for a paradigm shift from the violent environment and the loss of human dignity. These heartfelt needs led to the formation of CIDO, an organization that believes youth and women capabilities to create a desired environment that enables social justice to thrive. CIDO believes in employing community-based approaches and community managed initiatives in achieving sustainable socio- economic prosperity. In nut shell a nation where everyone thrives and has hope for a better tomorrow. </p>
@@ -77,7 +77,7 @@
           <p>Adult Literacy, Basic Education, Nutrition.</p>
         </div>
         <div class="col-md-3 text-center mb-4 mb-md-0">
-          <img src="images/balance.gif" alt="HUMAN RIGHTS">
+          <img src="images/human-rights.jpg" alt="HUMAN RIGHTS">
           <h3>HUMAN RIGHTS</h3>
           <p>Human Rights Advocacy, Protection, Women Empowerment.</p>
         </div>

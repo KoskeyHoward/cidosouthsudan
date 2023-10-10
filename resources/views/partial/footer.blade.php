@@ -4,7 +4,7 @@
         <div class="col-lg-3">
             <h6 class="text-uppercase" style="color:#f06f17">About Cido</h6>
             <p class='font-size'>CIDO was formed by a group of female youth and women who were living in a protection of civilian site in South Sudan after the outbreak of the 2013 South Sudan political crisis that lead to deaths of over 1 million people and displacement of over 5 million people. These women sat together and pondered over the scenarios around them and the disadvantages of instability and they desired change.</p>
-    </div>
+        </div>
         <div class="col-lg-3">
             <h6 class="text-uppercase" style="color:#f06f17">Recent Projects</h6>
             <div class="d-flex justify-content-start">
