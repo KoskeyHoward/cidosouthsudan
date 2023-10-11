@@ -20,8 +20,7 @@
           </div>
         </div>
 
-        <div class="ps-5 pe-5">
-        <div class="row ps-4 pe-3 pt-3 pb-4 mb-4 ">
+        <div class="row  mb-4 ">
           <div class="col-lg-4 mb-4 mb-lg-0 c-program">
             <div class="card" style="width: 18rem;">
                 <img src="images/Testimonial-icon.webp" class="card-img-top" alt="...">
@@ -49,7 +48,7 @@
         </div>
 
         
-        <div class="row ps-4 pe-3 pt-3 pb-4 mb-4">
+        <div class="row mb-4">
           <div class="col-lg-4 mb-4 mb-lg-0 c-program">
             <div class="card" style="width: 18rem;">
                 <img src="images/Testimonial-icon.webp" class="card-img-top" alt="...">
@@ -74,6 +73,5 @@
                 </div>  
             </div>
           </div>
-        </div>
         </div>
 @endsection

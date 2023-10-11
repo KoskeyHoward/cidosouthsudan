@@ -6,11 +6,11 @@
                 <h4 class="text-uppercase title">"A story like no other"</h4>
                 <div class="d-flex fw-lighter">
                     <p><i class="bi bi-chat"></i> Leave a Comment</p>
-                    <p class="ms-md-3">Share on</p>
-                    <p class="ms-md-3"><i class="bi bi-facebook"></i></p>
-                    <p class="ms-md-3"><i class="bi bi-twitter-x"></i></p>
-                    <p class="ms-md-3"><i class="bi bi-google"></i></p>
-                    <p class="ms-md-3"><i class="bi bi-pinterest"></i></p>
+                    <p class="ms-2">Share on</p>
+                    <p class="ms-2"><i class="bi bi-facebook"></i></p>
+                    <p class="ms-2"><i class="bi bi-twitter-x"></i></p>
+                    <p class="ms-2"><i class="bi bi-google"></i></p>
+                    <p class="ms-2"><i class="bi bi-pinterest"></i></p>
                 </div>
                 <hr>
                 <p>

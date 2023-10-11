@@ -14,15 +14,14 @@
         </div>
 
         <!-- who we are  -->
-        <div class="who-we-are pb-2">
+        <div class="who-we-are">
           <h1 class="text-center text-black">WHO WE ARE</h1>
           <p>CIDO is a non-partisan, non-profit making organization conceived in 2013 and formally registered in South Sudan in 2016 to support local solutions on critical areas of social and economic development. The agency places emphasis on promotion of Peace and peaceful co-existence among communities as the benchmark for socio-economic prosperity.  </p>
           <p>CIDO was formed by a group of female youth and women who were living in a protection of civilian site in South Sudan after the outbreak of the 2013 South Sudan political crisis that led to deaths of over 1 million people and displacement of over 5 million people. These women sat together and pondered over their predicament amidst thousands of vulnerable women and children and they desired change. There was need for a paradigm shift from the violent environment and the loss of human dignity. These heartfelt needs led to the formation of CIDO, an organization that believes youth and women capabilities to create a desired environment that enables social justice to thrive. CIDO believes in employing community-based approaches and community managed initiatives in achieving sustainable socio- economic prosperity. In nut shell a nation where everyone thrives and has hope for a better tomorrow. </p>
           <p>Notably, South Sudan gained Independence in July 2011 and is one of the poorest countries in the world, faced with social, political and economic challenges. In order to address these challenges, CIDO relies on the strength of the knowledge of the local context and the way the people know each other and how they can use their relations to develop local capacities for socio-economic transformation. The core purpose of CIDO is to meet the needs and aspirations of communities, in both urban and rural setting, with special emphasis on conflict mitigation and resolution as a prerequisite to socio- economic prosperity. </p>
-          <p></p>
         </div> 
 
-        <div class="row p-5 pb-2">
+        <div class="row p-5 pb-1 pt-2">
             <!-- vision  -->
             <div class="col-md-6">
                 <h2 class="orange">Our Vision</h2>
@@ -85,22 +84,22 @@
 
       <div class="row text-center bg-success p-5">
         <div class="col-md-3 mb-4 mb-md-0">
-          <img src="images/volunteer.png" alt="volunteer">
+          <img src="{{URL('images/volunteer.png')}}" alt="volunteer">
           <h3 class="counter-count text-light">230</h3>
           <h3 class="text-black">Volunteers</h3>
         </div>
         <div class="col-md-3 mb-4 mb-md-0">
-          <img src="images/philanthropy-100.png" alt="Donations" width="100px">
+          <img src="{{URL('images/philanthropy-100.png')}}" alt="Donations" width="100px">
           <h3 class="counter-count text-light">95425</h3>
           <h3 class="text-black">Donations</h3>
         </div>
         <div class="col-md-3 mb-4 mb-md-0">
-          <img src="images/projects-100.png" alt="Projects" width="100px">
+          <img src="{{URL('images/projects-100.png')}}" alt="Projects" width="100px">
           <h3 class="counter-count text-light">47</h3>
           <h3 class="text-black">Projects</h3>
         </div>
         <div class="col-md-3 mb-4 mb-md-0">
-          <img src="images/awards-100.png" alt="Awards" width="100px">
+          <img src="{{URL('images/awards-100.png')}}" alt="Awards" width="100px">
           <h3 class="counter-count text-light">10</h3>
           <h3 class="text-black">Awards</h3>
         </div>
@@ -114,7 +113,7 @@
       <div class="row ps-4 pe-3 pt-3 pb-4 mb-4">
         <div class="col-lg-3 mb-4 mb-lg-0 c-program">
           <div class="card" style="width: 18rem;">
-              <img src="images/Testimonial-icon.webp" class="card-img-top" alt="...">
+              <img src="{{URL('images/Testimonial-icon.webp')}}" class="card-img-top" alt="...">
               <div class="card-body">
                 <h5 class="card-title">name</h5>
                 <p class="card-text">Role</p>
@@ -123,7 +122,7 @@
         </div>
         <div class="col-lg-3 mb-4 mb-lg-0 c-program">
           <div class="card" style="width: 18rem;">
-              <img src="images/Testimonial-icon.webp" class="card-img-top" alt="...">
+              <img src="{{URL('images/Testimonial-icon.webp')}}" class="card-img-top" alt="...">
               <div class="card-body">
                 <h5 class="card-title">name</h5>
                 <p class="card-text">Role</p>
@@ -132,7 +131,7 @@
         </div>
         <div class="col-lg-3 mb-4 mb-lg-0 c-program">
           <div class="card" style="width: 18rem;">
-              <img src="images/Testimonial-icon.webp" class="card-img-top" alt="...">
+              <img src="{{URL('images/Testimonial-icon.webp')}}" class="card-img-top" alt="...">
               <div class="card-body">
                 <h5 class="card-title">name</h5>
                 <p class="card-text">Role</p>
@@ -158,7 +157,7 @@
             <div class="container carousel-inner">
                 <!-- Testimonial Items -->
                 <div class="carousel-item active" data-bs-interval="30000">
-                    <div class="row">
+                    <div class="row ps-5 pe-5">
                         <div class="col-md-4">
                             <div class="testimonial">
                                 <p>" Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis."</p>
@@ -172,7 +171,7 @@
                             </div>
                         </div>
                         <div class="col-md-4">
-                            <div class="testimonial me-3">
+                            <div class="testimonial">
                                 <p>" Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis."</p>
                                 <p class="author">- Mary Johnson</p>
                             </div>
@@ -180,7 +179,7 @@
                     </div>
                 </div>
                 <div class="carousel-item" data-bs-interval="30000">
-                    <div class="row">
+                    <div class="row ps-5 pe-5">
                         <div class="col-md-4">
                             <div class="testimonial">
                                 <p>" Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis."</p>
@@ -194,7 +193,7 @@
                             </div>
                         </div>
                         <div class="col-md-4">
-                            <div class="testimonial me-3">
+                            <div class="testimonial">
                                 <p>" Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis."</p>
                                 <p class="author">- Michael Lee</p>
                             </div>

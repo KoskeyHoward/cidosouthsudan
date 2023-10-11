@@ -14,14 +14,14 @@
             <h5>CALL US</h5>
             <p>Tel: +211922699189</p>
             <p class="fw-bold orange fs-5">+211920056225</p>
-             </div>
+          </div>
              <div class="col-lg-1 border-end "></div>
-        <div class="col-lg-3 text-center">
+        <div class="col-lg-3 text-center ">
             <div class=""><i class="bi bi-envelope fs-1 orange"></i></div>
             <h5>CONTACT US</h5>
             <p>Send us email</p>
             <p class="fw-bold orange fs-5">info@cidosouthsudan.org</p>
-             </div>
+        </div>
              {{-- <div class="col-lg-1 border-end"></div> --}}
         
     </div>

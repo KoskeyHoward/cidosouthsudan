@@ -7,7 +7,7 @@
           <div class="carousel-inner">
               <!-- image1 -->
             <div class="carousel-item active c-item" data-bs-interval="10000">
-              <img src="{{URL('images/cso.jpg')}}" class="d-block w-100 c-img" alt="...">
+              <img src="{{URL('images/cso.jpg')}}" class="d-block w-100 c-img" alt="cido">
               <div class="shade"></div>
               <div class="carousel-caption top-0 mt-4 d-md-block">
                   <p class="mt-5 fs-2" >Support To Local Solutions</p>
@@ -20,9 +20,9 @@
             </div>
             <!-- image2 -->
             <div class="carousel-item c-item" data-bs-interval="7000">
-              <img src="{{URL('images/cido.jpg')}}" class="d-block w-100 c-img" alt="...">
+              <img src="{{URL('images/cido.jpg')}}" class="d-block w-100 c-img" alt="cido-projects">
               <div class="shade"></div>
-              <div class="carousel-caption top-0 mt-4 d-md-block">
+              <div class="carousel-caption top-0 mt-5 d-md-block">
                   <p class="mt-5 fs-2" >We are Creating A Brighter Tomorrow</p>
                   <h5 class="fw-bolder display-3" >Make Someone's Life by Giving of Yours.</h5>
                   <button class="btn btn-lg c-btn" type="button"><a href="/projects">View Our Projects</a></button>
@@ -30,9 +30,9 @@
               </div>
               <!-- image3 -->
             <div class="carousel-item c-item" data-bs-interval="7000">
-              <img src="{{URL('images/volunteer-crl.jpg')}}" class="d-block w-100 c-img" alt="...">
+              <img src="{{URL('images/volunteer-crl.jpg')}}" class="d-block w-100 c-img" alt="volunteer-at-cido">
               <div class="shade"></div>
-              <div class="carousel-caption top-0 mt-4 d-md-block">
+              <div class="carousel-caption top-0 mt-5 d-md-block">
                   <p class="mt-5 fs-2" >Rebuilding Lives for Futures</p>
                   <h5 class="fw-bolder display-3" >There is no Big Thing Than Your Concern</h5>
                   <button class="btn btn-lg c-btn" type="button"><a href="/become-volunteer">Volunteer</a></button>
@@ -40,9 +40,9 @@
             </div>
             <!-- image4 -->
             <div class="carousel-item c-item" data-bs-interval="7000">
-              <img src="{{URL('images/women-empowerment.jpg')}}" class="d-block w-100 c-img" alt="...">
+              <img src="{{URL('images/women-empowerment.jpg')}}" class="d-block w-100 c-img" alt="donate">
               <div class="shade"></div>
-              <div class="carousel-caption top-0 mt-4 d-md-block">
+              <div class="carousel-caption top-0 mt-5 d-md-block">
                   <p class="mt-5 fs-2" >Support To Local Solutions</p>
                   <h5 class="fw-bolder display-3" >Since 2013 we are helping people around South Sudan.</h5>
                   <a href="/donationForm" class="btn btn-lg c-btn">Donate</a>
@@ -78,7 +78,7 @@
       <div class="row" style="background-color: #00A651;">
         <!-- image  -->
         <div class="container col-md-6 pt-2 ps-4 pb-2 mb-md-0 mb-lg-0" style="height: 100%;">
-            <img src="{{URL('images/SV-launch2.webp')}}" alt="who we are" style="width: 100%; height:356px; ;object-fit: cover; border-radius: 8px;">
+            <img class="who-img" src="{{URL('images/SV-launch2.webp')}}" alt="who we are" >
         </div>
             <!-- who we are text  -->
         <div class="col-md-6 pt-2 pb-2 mb-md-0 mb-lg-0" style="height: 100%">
@@ -102,17 +102,17 @@
         <div class="col-md-6">
           <div class="row">
             <div class="col-md-4 mb-4 mb-md-0">
-              <img src="images/projects-100.png" alt="Projects" width="100px">
+              <img src="{{URL('images/projects-100.png')}}" alt="Projects" width="100px">
               <h3 class="counter-count text-light">30+</h3>
               <h5 class="text-black">Total Projects</h5>
             </div>
             <div class="col-md-4 mb-4 mb-md-0">
-              <img src="images/people.png" alt="Projects" width="100px">
+              <img src="{{URL('images/people.png')}}" alt="people-reached" width="100px">
               <h3 class="counter-count text-light">3545+</h3>
               <h5 class="text-black">People Reached</h5>
             </div>
             <div class="col-md-4 mb-4 mb-md-0">
-              <img src="images/causes.png" alt="Projects" width="100px">
+              <img src="{{URL('images/causes.png')}}" alt="causes" width="100px">
               <h3 class="counter-count text-light">8</h3>
               <h5 class="text-black">Causes</h5>
             </div>
@@ -131,35 +131,35 @@
       <div class="container text-center">
       <div class="row mb-4 mt-4 text-center">
             <div class="col-lg-4 mb-4 mb-lg-0 c-program">
-                <div class="card" style="width: 19rem;">
-                  <div class="image-container">
+                <div class="card" style="width: 100%;">
+                  <div class="image-container" style="width: 100%;">
                     <div class="overlay d-inline-block" style="padding-top:55px;">
                       <h5 class="text-light mb-3">Peace and Security</h5>
                       <a class="btn button" href="/peace-building">View Program</a>
                     </div>
-                    <img src="{{asset('images/peacebuilding.jpeg')}}" alt="Your Image"id="zoomable-image">
+                    <img src="{{URL('images/peacebuilding.jpeg')}}" alt="peace and security"id="zoomable-image">
                   </div>
                 </div>                   
             </div>                
             <div class="col-lg-4 mb-4 mb-lg-0 c-program">
-                <div class="card" style="width: 19rem;">
-                  <div class="image-container">
+                <div class="card" style="width: 100%;">
+                  <div class="image-container" style="width: 100%;">
                     <div class="overlay d-inline-block" style="padding-top:55px;">
                       <h5 class="text-light mb-3">Women Rights and Empowerment</h5>
                       <a class="btn button" href="/women-rights">View Program</a>
                     </div>
-                    <img src="{{asset('images/Livelihood.jpeg')}}" alt="Your Image"id="zoomable-image">
+                    <img src="{{URL('images/Livelihood.jpeg')}}" alt="women's rights and empowerment"id="zoomable-image">
                   </div>
                 </div>                   
             </div>                
             <div class="col-lg-4 mb-4 mb-lg-0 c-program">
-                <div class="card" style="width: 19rem;">
-                  <div class="image-container">
+                <div class="card" style="width: 100%;">
+                  <div class="image-container" style="width: 100%;">
                     <div class="overlay d-inline-block" style="padding-top:55px;">
                       <h5 class="text-light mb-3">Access to Justice</h5>
                         <button class="button">View Program</button>
                     </div>
-                    <img src="{{asset('images/GL.jpeg')}}" alt="Your Image"id="zoomable-image">
+                    <img src="{{URL('images/GL.jpeg')}}" alt="access to justice"id="zoomable-image">
                   </div>
                 </div>                   
             </div>                
@@ -178,10 +178,10 @@
     </section> -->
 
     <!-- projects  -->
-    <section class="text-center p-4 pb-1 projects">
+    <section class="text-center pb-1 projects">
       <div class="mb-4">
         <h2 class="orange">OUR PROJECTS</h2>
-        <h5>We continue to reach out to as many people as possible by <br>extending our services which range from nutrition,access to justice, <br> adult literacy to women empowerement, health services and protection.</h5>
+        <h5>We continue to reach out to as many people as possible by extending our services which range from nutrition,access to justice, <br> adult literacy to women empowerement, health services and protection.</h5>
       </div>
 
       <div class="row">
@@ -203,7 +203,7 @@
                   <div class="overlay">
                     <a class="text-light" href="#" style="text-decoration: none;"><h5 class="card-title">Power of integrated services in Akobo East</h5></a>
                   </div>
-                  <img src="{{asset('images/four_1.jpeg')}}" alt="Your Image"id="zoomable-image">
+                  <img src="{{asset('images/four_1.jpeg')}}" alt="project"id="zoomable-image">
                 </div>
               </div>
             </div>
@@ -214,7 +214,7 @@
                   <div class="overlay">
                     <a class="text-light" href="#" style="text-decoration: none;"><h5 class="card-title">CIDO saves a Woman 3 days of labor pain in Akobo.</h5></a>                    
                   </div>
-                  <img src="{{asset('images/SNFI.jpeg')}}" alt="Your Image"id="zoomable-image">
+                  <img src="{{asset('images/SNFI.jpeg')}}" alt="project"id="zoomable-image">
                 </div>
               </div>
             </div>
@@ -227,7 +227,7 @@
                   <div class="overlay">
                     <a class="text-light" href="/story" style="text-decoration: none;"><h5 class="card-title">"A Story like no other"</h5></a>                    
                   </div>
-                  <img src="{{asset('images/2023.jpg')}}" alt="Your Image"id="zoomable-image">
+                  <img src="{{asset('images/2023.jpg')}}" alt="project"id="zoomable-image">
                 </div>
               </div>
             </div>
@@ -238,14 +238,14 @@
                   <div class="overlay">
                     <a class="text-light" href="#" style="text-decoration: none;"><h5 class="card-title">CIDO response to flood affected population in Pibor & Akobo counties in South Sudan.</h5></a>
                   </div>
-                  <img src="{{asset('images/Np-CIDO.jpeg')}}" alt="Your Image"id="zoomable-image">
+                  <img src="{{asset('images/Np-CIDO.jpeg')}}" alt="project"id="zoomable-image">
                 </div>
               </div>
             </div>
           </div>
 
           <!-- more projects  -->
-          <div class="row">
+          <div class="row mb-4 mb-md-0">
             <div class="col-12">
             <button class="btn project-btn"><a href="/projects" style="text-decoration: none; color:white;"> More projects >></a></button>
             </div>

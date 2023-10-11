@@ -10,7 +10,7 @@
     </div>
 
     <div class="p-5 text-center">
-        <img class="mb-3" src="{{URL('images/health-delivery.jpeg')}}" alt="peace-and-security" width="">
+        <img class="mb-3" src="{{URL('images/health-delivery.jpeg')}}" alt="health and nutrition" width="100%">
         <p>CIDO is working in close collaboration with the ministry of Health to deliver basic health packages and reduce malnutrition in various counties of South Sudan.</p>
     </div>
 

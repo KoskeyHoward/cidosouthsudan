@@ -5,25 +5,38 @@
             <h6 class="text-uppercase" style="color:#f06f17">About Cido</h6>
             <p class='font-size'>CIDO was formed by a group of female youth and women who were living in a protection of civilian site in South Sudan after the outbreak of the 2013 South Sudan political crisis that lead to deaths of over 1 million people and displacement of over 5 million people. These women sat together and pondered over the scenarios around them and the disadvantages of instability and they desired change.</p>
         </div>
-        <div class="col-lg-3">
+        <div class="col-lg-3 f-recent mb-3 mb-md-0">
             <h6 class="text-uppercase" style="color:#f06f17">Recent Projects</h6>
-            <div class="d-flex justify-content-start">
-                <img src="https://web.archive.org/web/20221209094222im_/https://cidosouthsudan.org/wp-content/uploads/2022/10/cido-ahec_staff-100x75.jpg" alt="">
-                <p class="ms-lg-3 font-size">CIDO Partners with IntraHealth
-                </p>
+            <div >
+                <a href="">CIDO RESPONSE TO FLOOD AFFECTED POPULATION</a>
             </div>
-            <div class="row">
-                <div class="col-lg-6"> </div>
-                <div class="col-lg-6"></div>
+            <div>
+                <a href="/story">"A STORY LIKE NO OTHER"</a>
             </div>
-            <div class="d-flex ">
-                <a class="post-title-color nav-link font-sizes  me-3" href="https://web.archive.org/web/20221209094222/https://cidosouthsudan.org/power-of-integrated-services-in-akobo-east/">Power of Integrated Services i</a>
-                <a class="post-title-color nav-link font-sizes " href="https://web.archive.org/web/20221209094222/https://cidosouthsudan.org/cido-saves-a-woman-3-days-of-labor-pain-in-akobo/">CIDO SAVES A WOMAN 3 DAYS OF L</a>
+            <div>
+                <a href="/mainstreaming-covid">MAINSTREAMING COVID-19</a>
+            </div>
+            <div>
+                <a href="/covid-training">TRAINING ON COVID</a>
+            </div>
+            <div >
+                <a href="/covid-training">VIVID COVID AWARENESS</a>
             </div>
     </div>
-        <div class="col-lg-3">
+        <div class="col-lg-3 f-recent mb-3 mb-md-0">
             <h6 class="text-uppercase" style="color:#f06f17">Recent causes</h6>
-            <p class='font-size'>CIDO was formed by a group of female youth and women who were living in a protection of civilian site in South Sudan after the outbreak of the 2013 South Sudan political crisis that lead to deaths of over 1 million people and displacement of over 5 million people. These women sat together and pondered over the scenarios around them and the disadvantages of instability and they desired change.</p>
+            <div >
+                <a href="/peace-building">PEACE AND SECURITY</a>
+            </div>
+            <div>
+                <a href="/women-rights">WOMEN RIGHTS AND EMPOWERMENT</a>
+            </div>
+            <div>
+                <a href="">ACCESS TO JUSTICE</a>
+            </div>
+            <div>
+                <a href="/health-and-nutrition">HEALTH AND NUTRITION</a>
+            </div>
     </div>
         <div class="col-lg-3">
             <h6 class="text-uppercase" style="color:#f06f17">Contact Information</h6>
@@ -33,9 +46,8 @@
 </div>
 </div>
 </div>
-<footer class="d-flex justify-content-around pt-3 pb-3 bg-black">
-
-    <div>
+<footer class="pt-3 pb-3">
+    <div class="mb-3 mb-md-0">
       <h5 style="color: #f58220;"> &copy; CIDO South Sudan | All rights reserved</h5>
     </div>
     <div class="d-flex">

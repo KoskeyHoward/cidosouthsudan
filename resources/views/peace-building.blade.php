@@ -10,7 +10,7 @@
     </div>
 
     <div class="p-5 text-center">
-        <img class="mb-3" src="{{URL('images/peace-and-security.jpg')}}" alt="peace-and-security">
+        <img class="mb-3" src="{{URL('images/peace-and-security.jpg')}}" alt="peace-and-security" width="100%">
         <p>CIDO works with the relevant national and international actors to promote peaceful co-existence among communities <br> through active engagement of stakeholders in peace processes.</p>
     </div>
 

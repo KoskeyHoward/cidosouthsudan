@@ -10,7 +10,7 @@
       </div>
     </div>
 
-    <div class="row text-center mb-4 mt-3">
+    <div class="row text-center p-4 pb-0">
       <div class="col-md-3 cont-project p-4 mb-4 mb-md-0">
         <h5 class="fw-normal">"A STORY LIKE NO OTHER"</h5>
         <P> <i class="bi bi-folder orange"></i> Shelter/Non-Food items <i class="bi bi-chat orange"></i>  Leave a comment</P>
@@ -34,7 +34,7 @@
     </div>
 
 
-    <div class="row text-center mb-4">
+    <div class="row text-center p-4">
       <div class="col-md-3 cont-project p-4 mb-4 mb-md-0">
         <h5 class="fw-normal">CIDO’S STAFFS OBSERVES VIVID COVID 19 AWARENESS AT ALL TIMES.</h5>
         <P> <i class="bi bi-folder orange"></i> Civic Education, Health Services <i class="bi bi-chat orange"></i>  Leave a comment</P>

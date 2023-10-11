@@ -11,7 +11,7 @@
             <!-- drawer header(logo) -->
             <div class="offcanvas-header">
               <img src="{{URL('images/logo.png')}}" style="width: 100px;" class="offcanvas-title " id="offcanvasExampleLabel"/>
-              <button type="button" class="btn-close bg-success text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+              <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             </div>
             <!-- drawer body -->
             <div class="offcanvas-body fs-4 align-items-start ms-0 ps-0">
@@ -37,7 +37,7 @@
           </div>
           <!-- logo -->
           <a class="logo " href="/">
-            <img src="{{URL('images/logo.png')}}" class="mt-1 mb-0" alt="logo" >
+            <img src="{{URL('images/logo.png')}}" alt="logo" >
           </a>
         </div>
         <!-- header right list  -->

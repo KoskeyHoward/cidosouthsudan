@@ -10,7 +10,7 @@
     </div>
 
     <div class="p-5 text-center">
-        <img class="mb-3" src="{{URL('images/women-empowerment.jpg')}}" alt="peace-and-security">
+        <img class="mb-3" src="{{URL('images/women-empowerment.jpg')}}" alt="womens-rights" width="100%">
         <p>Under the protection Department, CIDO responds to cases of Gender 
             based violence through direct support, <br>case management , 
             Psycho-social support and gender mainstreaming.</p>

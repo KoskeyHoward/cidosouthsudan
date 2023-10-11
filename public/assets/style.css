@@ -2,21 +2,27 @@ html{
     scroll-behavior: smooth;
 }
 
-.body{
-    margin: 0;
+html body{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden; 
 }
 
 .go-top-btn{
     position: fixed;
     width: 50px;
     height: 50px;
-    background: #00A651;
-    bottom: 40px;
-    right: 50px;
+    background: #f58220;
+    bottom: 10px;
+    right: 0px;
     text-decoration: none;
     text-align: center;
     line-height: 50px;
-    color: white;
+    color: #000;
+    border-top-left-radius: 18px;
+    border-bottom-left-radius: 18px;
     font-size: 22px;
 }
 a{
@@ -40,6 +46,10 @@ ul li a{
     opacity: 0.9;
 }
 
+.header .c-nav{
+    vertical-align: middle;
+}
+
 .logo img{
     width: 100px;
 }
@@ -52,6 +62,13 @@ ul li a{
 
 .header-right-list ul li a{
     color: white;
+}
+
+.offcanvas-header button{
+    background-color: #00A651;
+}
+.offcanvas-header button:hover{
+    background-color: #f58220;
 }
 
 .offcanvas-body ul li a{
@@ -198,7 +215,7 @@ ul li a{
 
 .about-top-text{
     position: absolute;
-    top: 40%;
+    top: 55%;
     left: 50%;
     color: #f58220;
     transform: translate(-50%, -50%);
@@ -289,10 +306,6 @@ ul li a{
     color: #f58220;
 }
 
-.row .c-contact{
-    margin-left: 50px;
-}
-
 .share .media-buttons{
     display: flex;
 }
@@ -306,29 +319,51 @@ ul li a{
     color: #f58220;
 }
 
-@media only screen and (max-width: 768px) {
-    .go-top-btn{
-        bottom: 80px;
-    }
+footer{
+    display: flex;
+    justify-content: space-between;
+    background-color: #000000;
+    padding-right: 80px;
+    padding-left: 20px;
+}
 
+.f-recent a{
+    text-decoration: none;
+    color: white;
+}
+
+.f-recent a:hover{
+    color: #00A651;
+}
+
+@media (min-width: 320px) {
+    .logo img {
+        margin-left: 27vw;
+    }
     .donate button{
         display: none;
     }
 
-    section .c-projects{
-        margin-left: 50px;
+    .c-program .card{
+        margin: auto;
     }
+    .c-projects .card{
+        margin: auto;
+    }
+
     section .c-projects .row .col-12 a{
-        margin-left: -75px;
+        margin: auto;
     }
 
     .pr-partner img{
         width: 90vw;
-
     }
 
     .who-we-are{
-        padding: 20x;
+        padding: 8px;
+    }
+    .section-2 .who-img{
+        width: 97%;
     }
 
     .testimonial{
@@ -352,13 +387,28 @@ ul li a{
     .share .media-buttons button{
         margin-bottom: 8px;
     }
+
+    .row .c-contact{
+        margin: 0;
+    }
+
+    footer{
+        display: block;
+        padding-right: 50px;
+        padding-left: 20px;
+    }
     
 }
 
-@media only screen and (max-width: 1024px){
+@media (min-width: 600px){
 
     .logo img {
-        margin-left: 37vw;
+        margin-left: 39vw;
+    }
+
+    .section-2 .who-img{
+        width: 100%;
+        height: 100%;
     }
 
     .c-program .card{
@@ -372,4 +422,41 @@ ul li a{
     .row .c-contact{
         margin: 0;
     }
+}
+
+@media (min-width:1024px){
+    .logo img{
+        margin-left: unset;
+    }
+    .donate button{
+        display: unset;
+    }
+    .section-2 .who-img{
+        width: 100%; 
+        height:356px; 
+        object-fit: cover; 
+        border-radius: 8px;
+    }
+    .pr-partner img{
+        width: 45vw;
+    }
+
+    .row .c-contact{
+        margin-left: 50px;
+    }
+
+}
+
+@media
+only screen and (-webkit-min-device-pixel-ratio: 1.5),
+only screen and (-o-min-device-pixel-ratio: 3/2),
+only screen and (min--moz-device-pixel-ratio: 1.5),
+only screen and (min-device-pixel-ratio: 1.5){
+
+  html,
+  body{
+    width:100%;
+    overflow-x:hidden;
+  }
+
 }
