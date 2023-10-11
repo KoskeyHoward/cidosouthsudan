@@ -101,19 +101,19 @@
         </div>
         <div class="col-md-6">
           <div class="row">
-            <div class="col-md-4 mb-4 mb-md-0">
+            <div class="col-md-4 mb-4 mb-md-0 counter">
               <img src="{{URL('images/projects-100.png')}}" alt="Projects" width="100px">
-              <h3 class="counter-count text-light">30+</h3>
+              <h3 class="count text-light" data-target="30">0</h3>
               <h5 class="text-black">Total Projects</h5>
             </div>
-            <div class="col-md-4 mb-4 mb-md-0">
+            <div class="col-md-4 mb-4 mb-md-0 counter">
               <img src="{{URL('images/people.png')}}" alt="people-reached" width="100px">
-              <h3 class="counter-count text-light">3545+</h3>
+              <h3 class="count text-light" data-target="3545">0</h3>
               <h5 class="text-black">People Reached</h5>
             </div>
-            <div class="col-md-4 mb-4 mb-md-0">
+            <div class="col-md-4 mb-4 mb-md-0 counter">
               <img src="{{URL('images/causes.png')}}" alt="causes" width="100px">
-              <h3 class="counter-count text-light">8</h3>
+              <h3 class="count text-light" data-target="8">0</h3>
               <h5 class="text-black">Causes</h5>
             </div>
           </div>
@@ -252,5 +252,29 @@
           </div>
         </div>
       </div>
-    </section>   
+    </section>  
+
+    <script>
+      const counters = document.querySelectorAll('.count');
+      const speed = 200;
+
+      counters.forEach((counter) => {
+      const target = Number(counter.getAttribute('data-target'));
+      let count = 0;
+      const increment = Math.ceil(target / speed);
+
+      function updateCount() {
+        count += increment;
+        if (count < target) {
+            counter.innerText = count;
+            requestAnimationFrame(updateCount);
+        } else {
+            counter.innerText = target;
+        }
+      }
+
+      updateCount();
+    });
+
+    </script>
 @endsection
