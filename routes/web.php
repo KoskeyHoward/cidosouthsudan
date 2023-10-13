@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ContactController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -78,3 +79,7 @@ Route::get('/donationForm', function () {
 Route::get('/read-more', function () {
     return view('read-more-projects');
 })->name('read-more');
+
+//contact routes
+
+Route::post('/contact', [ContactController::class, 'store'])->name('contact.store');

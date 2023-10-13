@@ -23,36 +23,42 @@
             <p class="fw-bold orange fs-5">info@cidosouthsudan.org</p>
         </div>
              {{-- <div class="col-lg-1 border-end"></div> --}}
-        
+
     </div>
-    <form class="border border-success rounded-4 mt-5">
+    @if(session('success'))
+        <div class="alert alert-success">
+            {{ session('success') }}
+        </div>
+    @endif
+    <form  method="POST" action="{{ route('contact.store') }}"class="border border-success rounded-4 mt-5">
+       @csrf
         <div class="m-5">
 
             <div class="row">
                 <div class="col-lg-6">
                     <div class="mb-3">
-                        <label for="exampleInputEmail1" class="form-label">Your Name (required)</label>
-                        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                     
+                        <label for="exampleInputEmail1" class="form-label">Your Name </label>
+                        <input type="text"  required name="name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+
                       </div>
                 </div>
-                <div class="col-lg-6">  
+                <div class="col-lg-6">
                   <div class="mb-3">
-                    <label for="exampleInputPassword1" class="form-label">Your Email (required)</label>
-                    <input type="email" class="form-control" id="exampleInputPassword1">
+                    <label for="exampleInputPassword1" class="form-label">Your Email</label>
+                    <input type="email" required name="email" class="form-control" id="exampleInputPassword1">
                   </div></div>
             </div>
-           
-          
+
+
             <div class="mb-3">
               <label for="exampleInputPassword1" class="form-label">Subject</label>
-              <input type="text" class="form-control" id="exampleInputPassword1">
+              <input type="text" name="subject" class="form-control" id="exampleInputPassword1">
             </div>
             <div class="mb-3">
-              <label for="exampleInputPassword1" class="form-label">Your Message</label>
-              <textarea type="text" class="form-control" id="exampleInputPassword1"></textarea>
+              <label for="message" class="form-label">Your Message</label>
+              <textarea type="text" required  id="message" name="message" class="form-control" ></textarea>
             </div>
-           
+
             <button type="submit" class="btn bg">Send</button>
         </div>
       </form>
