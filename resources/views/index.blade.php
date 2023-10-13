@@ -15,7 +15,7 @@
                   <span class=""></span>
                   <button class="btn btn-lg c-btn" type="button"><a href="/programs">View Programs</a></button>
                   <!-- <a class="btn btn-lg c-btn" href="/programs">View Our Programs</a> -->
-                  
+
                 </div>
             </div>
             <!-- image2 -->
@@ -26,7 +26,7 @@
                   <p class="mt-5 fs-2" >We are Creating A Brighter Tomorrow</p>
                   <h5 class="fw-bolder display-3" >Make Someone's Life by Giving of Yours.</h5>
                   <button class="btn btn-lg c-btn" type="button"><a href="/projects">View Our Projects</a></button>
-                </div>   
+                </div>
               </div>
               <!-- image3 -->
             <div class="carousel-item c-item" data-bs-interval="7000">
@@ -46,7 +46,7 @@
                   <p class="mt-5 fs-2" >Support To Local Solutions</p>
                   <h5 class="fw-bolder display-3" >Since 2013 we are helping people around South Sudan.</h5>
                   <a href="/donationForm" class="btn btn-lg c-btn">Donate</a>
-                  
+
                 </div>
             </div>
           </div>
@@ -137,10 +137,10 @@
                       <h5 class="text-light mb-3">Peace and Security</h5>
                       <a class="btn button" href="/peace-building">View Program</a>
                     </div>
-                    <img src="{{URL('images/peacebuilding.jpeg')}}" alt="peace and security"id="zoomable-image">
+                    <img src="{{asset('images/Peacebuilding.jpeg')}}" alt="peace and security"id="zoomable-image">
                   </div>
-                </div>                   
-            </div>                
+                </div>
+            </div>
             <div class="col-lg-4 mb-4 mb-lg-0 c-program">
                 <div class="card" style="width: 100%;">
                   <div class="image-container" style="width: 100%;">
@@ -148,10 +148,10 @@
                       <h5 class="text-light mb-3">Women Rights and Empowerment</h5>
                       <a class="btn button" href="/women-rights">View Program</a>
                     </div>
-                    <img src="{{URL('images/Livelihood.jpeg')}}" alt="women's rights and empowerment"id="zoomable-image">
+                    <img src="{{asset('images/Livelihood.jpeg')}}" alt="women's rights and empowerment"id="zoomable-image">
                   </div>
-                </div>                   
-            </div>                
+                </div>
+            </div>
             <div class="col-lg-4 mb-4 mb-lg-0 c-program">
                 <div class="card" style="width: 100%;">
                   <div class="image-container" style="width: 100%;">
@@ -161,8 +161,8 @@
                     </div>
                     <img src="{{URL('images/GL.jpeg')}}" alt="access to justice"id="zoomable-image">
                   </div>
-                </div>                   
-            </div>                
+                </div>
+            </div>
           </div>
       </div>
 
@@ -207,12 +207,12 @@
                 </div>
               </div>
             </div>
-            
+
             <div class="col-lg-6">
               <div class="card" style="width: 19rem;">
                 <div class="image-container">
                   <div class="overlay">
-                    <a class="text-light" href="#" style="text-decoration: none;"><h5 class="card-title">CIDO saves a Woman 3 days of labor pain in Akobo.</h5></a>                    
+                    <a class="text-light" href="#" style="text-decoration: none;"><h5 class="card-title">CIDO saves a Woman 3 days of labor pain in Akobo.</h5></a>
                   </div>
                   <img src="{{asset('images/SNFI.jpeg')}}" alt="project"id="zoomable-image">
                 </div>
@@ -225,7 +225,7 @@
               <div class="card" style="width: 19rem;">
                 <div class="image-container">
                   <div class="overlay">
-                    <a class="text-light" href="/story" style="text-decoration: none;"><h5 class="card-title">"A Story like no other"</h5></a>                    
+                    <a class="text-light" href="/story" style="text-decoration: none;"><h5 class="card-title">"A Story like no other"</h5></a>
                   </div>
                   <img src="{{asset('images/2023.jpg')}}" alt="project"id="zoomable-image">
                 </div>
@@ -252,5 +252,5 @@
           </div>
         </div>
       </div>
-    </section>   
+    </section>
 @endsection
