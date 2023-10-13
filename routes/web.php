@@ -78,9 +78,3 @@ Route::get('/donationForm', function () {
 Route::get('/read-more', function () {
     return view('read-more-projects');
 })->name('read-more');
-
-
-
-
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
