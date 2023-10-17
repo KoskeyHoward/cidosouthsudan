@@ -83,24 +83,24 @@
       </div>
 
       <div class="row text-center bg-success p-5">
-        <div class="col-md-3 mb-4 mb-md-0">
+        <div class="col-md-3 mb-4 mb-md-0 counter">
           <img src="{{URL('images/volunteer.png')}}" alt="volunteer">
-          <h3 class="counter-count text-light">230</h3>
+          <h3 class="count text-light" data-target="230">0</h3>
           <h3 class="text-black">Volunteers</h3>
         </div>
-        <div class="col-md-3 mb-4 mb-md-0">
+        <div class="col-md-3 mb-4 mb-md-0 counter">
           <img src="{{URL('images/philanthropy-100.png')}}" alt="Donations" width="100px">
-          <h3 class="counter-count text-light">95425</h3>
+          <h3 class="count text-light" data-target="95425">0</h3>
           <h3 class="text-black">Donations</h3>
         </div>
-        <div class="col-md-3 mb-4 mb-md-0">
+        <div class="col-md-3 mb-4 mb-md-0 counter">
           <img src="{{URL('images/projects-100.png')}}" alt="Projects" width="100px">
-          <h3 class="counter-count text-light">47</h3>
+          <h3 class="count text-light" data-target="47">0</h3>
           <h3 class="text-black">Projects</h3>
         </div>
-        <div class="col-md-3 mb-4 mb-md-0">
+        <div class="col-md-3 mb-4 mb-md-0 counter">
           <img src="{{URL('images/awards-100.png')}}" alt="Awards" width="100px">
-          <h3 class="counter-count text-light">10</h3>
+          <h3 class="count text-light" data-target="10">0</h3>
           <h3 class="text-black">Awards</h3>
         </div>
       </div>
@@ -212,4 +212,28 @@
             </a>
         </div>
     </section>
+
+    <script>
+      const counters = document.querySelectorAll('.count');
+      const speed = 200;
+
+      counters.forEach((counter) => {
+      const target = Number(counter.getAttribute('data-target'));
+      let count = 0;
+      const increment = Math.ceil(target / speed);
+
+      function updateCount() {
+        count += increment;
+        if (count < target) {
+            counter.innerText = count;
+            requestAnimationFrame(updateCount);
+        } else {
+            counter.innerText = target;
+        }
+      }
+
+      updateCount();
+    });
+
+    </script>
 @endsection
