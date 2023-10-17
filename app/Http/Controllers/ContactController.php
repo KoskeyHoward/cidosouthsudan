@@ -31,23 +31,23 @@ class ContactController extends Controller
     {
         //
         $request->validate([
-                               'name' => 'required',
-                               'email' => 'required|email',
-                               'subject' => 'required',
-                               'message' => 'required',
-                           ]);
+            'name' => 'required',
+            'email' => 'required|email',
+            'subject' => 'required',
+            'message' => 'required',
+        ]);
 
         $data = $request->all();
 
         // Store the form data in the database
         $submission = new Contact([
-                                                    'name' => $request->input('name'),
-                                                    'email' => $request->input('email'),
-                                                    'subject' => $request->input('subject'),
-                                                    'message' => $request->input('message'),
-                                                ]);
+            'name' => $request->input('name'),
+            'email' => $request->input('email'),
+            'subject' => $request->input('subject'),
+            'message' => $request->input('message'),
+        ]);
 
-        if ($submission->save()){
+        if ($submission->save()) {
             // Send an email to the admin
             Mail::send('emails.contact', ['data' => $data], function ($message) use ($data) {
                 $message->to('info@cidosouthsudan.org');
@@ -59,7 +59,6 @@ class ContactController extends Controller
         }
 
         return redirect()->back()->with('error', 'Your message could not be sent.');
-
     }
 
     /**
