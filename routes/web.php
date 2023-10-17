@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ContactController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -79,8 +80,6 @@ Route::get('/read-more', function () {
     return view('read-more-projects');
 })->name('read-more');
 
+//contact routes
 
-
-
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::post('/contact', [ContactController::class, 'store'])->name('contact.store');
