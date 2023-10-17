@@ -83,3 +83,7 @@ Route::get('/read-more', function () {
 //contact routes
 
 Route::post('/contact', [ContactController::class, 'store'])->name('contact.store');
+
+Route::get('/health', function () {
+    return response()->json(['status' => 'success']);
+});
