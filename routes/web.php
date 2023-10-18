@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\volunteerApplicationController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -83,3 +84,4 @@ Route::get('/read-more', function () {
 //contact routes
 
 Route::post('/contact', [ContactController::class, 'store'])->name('contact.store');
+Route::post('/become-volunteer', [volunteerApplicationController::class, 'apply'])->name('volunteer.apply');
