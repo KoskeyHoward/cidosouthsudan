@@ -16,21 +16,21 @@
         <!-- who we are  -->
         <div class="who-we-are">
           <h1 class="text-center text-black">WHO WE ARE</h1>
-          <p>CIDO is a non-partisan, non-profit making organization conceived in 2013 and formally registered in South Sudan in 2016 to support local solutions on critical areas of social and economic development. The agency places emphasis on promotion of Peace and peaceful co-existence among communities as the benchmark for socio-economic prosperity.  </p>
-          <p>CIDO was formed by a group of female youth and women who were living in a protection of civilian site in South Sudan after the outbreak of the 2013 South Sudan political crisis that led to deaths of over 1 million people and displacement of over 5 million people. These women sat together and pondered over their predicament amidst thousands of vulnerable women and children and they desired change. There was need for a paradigm shift from the violent environment and the loss of human dignity. These heartfelt needs led to the formation of CIDO, an organization that believes youth and women capabilities to create a desired environment that enables social justice to thrive. CIDO believes in employing community-based approaches and community managed initiatives in achieving sustainable socio- economic prosperity. In nut shell a nation where everyone thrives and has hope for a better tomorrow. </p>
-          <p>Notably, South Sudan gained Independence in July 2011 and is one of the poorest countries in the world, faced with social, political and economic challenges. In order to address these challenges, CIDO relies on the strength of the knowledge of the local context and the way the people know each other and how they can use their relations to develop local capacities for socio-economic transformation. The core purpose of CIDO is to meet the needs and aspirations of communities, in both urban and rural setting, with special emphasis on conflict mitigation and resolution as a prerequisite to socio- economic prosperity. </p>
+          <p class="fs-5">CIDO is a non-partisan, non-profit making organization conceived in 2013 and formally registered in South Sudan in 2016 to support local solutions on critical areas of social and economic development. The agency places emphasis on promotion of Peace and peaceful co-existence among communities as the benchmark for socio-economic prosperity.  </p>
+          <p class="fs-5">CIDO was formed by a group of female youth and women who were living in a protection of civilian site in South Sudan after the outbreak of the 2013 South Sudan political crisis that led to deaths of over 1 million people and displacement of over 5 million people. These women sat together and pondered over their predicament amidst thousands of vulnerable women and children and they desired change. There was need for a paradigm shift from the violent environment and the loss of human dignity. These heartfelt needs led to the formation of CIDO, an organization that believes youth and women capabilities to create a desired environment that enables social justice to thrive. CIDO believes in employing community-based approaches and community managed initiatives in achieving sustainable socio- economic prosperity. In nut shell a nation where everyone thrives and has hope for a better tomorrow. </p>
+          <p class="fs-5">Notably, South Sudan gained Independence in July 2011 and is one of the poorest countries in the world, faced with social, political and economic challenges. In order to address these challenges, CIDO relies on the strength of the knowledge of the local context and the way the people know each other and how they can use their relations to develop local capacities for socio-economic transformation. The core purpose of CIDO is to meet the needs and aspirations of communities, in both urban and rural setting, with special emphasis on conflict mitigation and resolution as a prerequisite to socio- economic prosperity. </p>
         </div> 
 
         <div class="row p-5 pb-1 pt-2">
             <!-- vision  -->
             <div class="col-md-6">
                 <h2 class="orange">Our Vision</h2>
-                <p class="text-secondary">A society that is free ,just , peaceful and economically advanced</p>
+                <p class="text-secondary fs-5">A society that is free ,just , peaceful and economically advanced</p>
             </div>
             <!-- goals and objectives  -->
             <div class="col-md-6">
                 <h2 class="orange">Goals & Objectives</h2>
-                <p class="text-secondary">To work with the community in identifying needs and developing solutions together for a community led holistic transformation.</p>
+                <p class="text-secondary fs-5">To work with the community in identifying needs and developing solutions together for a community led holistic transformation.</p>
             </div>
         </div>
 
@@ -38,12 +38,12 @@
             <!-- mission  -->
             <div class="col-md-6">
                 <h2 class="orange">Our Mission</h2>
-                <p class="text-secondary">CIDO exists to mobilize and organize communities to harness their resources, plan effectively and generate solutions for socio-economic advancement.</p>
+                <p class="text-secondary fs-5">CIDO exists to mobilize and organize communities to harness their resources, plan effectively and generate solutions for socio-economic advancement.</p>
             </div>
             <!-- specific objectives  -->
             <div class="col-md-6 objectives">
                 <h4 class="orange">Specific Objectives</h4>
-                <ul class="text-secondary" >
+                <ul class="text-secondary fs-5" >
                     <li>To improve the capacity of the youth and women in support of socio-economic initiatives.</li>
                     <li>To conduct research, lobbying and advocacy on and creation of social systems that serve socio-economic concerns and constructive resolution of conflict.</li>
                     <li>To support communities affected by emergencies in response and recovery.</li>
@@ -151,7 +151,7 @@
     </section>
 
     <!-- what people say -->
-    <section class="bg-secondary pb-5">
+    <section class="bg-success pb-5">
         <h1 class="text-center text-black p-3">What People Say...</h1>
         <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
             <div class="container carousel-inner">

@@ -75,27 +75,24 @@
       </div>
 
       <!-- who we are  -->
-      <div class="row" style="background-color: #00A651;">
         <!-- image  -->
-        <div class="container col-md-6 pt-2 ps-4 pb-2 mb-md-0 mb-lg-0" style="height: 100%;">
+        <!-- <div class="container col-md-6 pt-2 ps-4 pb-2 mb-md-0 mb-lg-0" style="height: 100%;">
             <img class="who-img" src="{{URL('images/SV-launch2.webp')}}" alt="who we are" >
-        </div>
-            <!-- who we are text  -->
-        <div class="col-md-6 pt-2 pb-2 mb-md-0 mb-lg-0" style="height: 100%">
-              <div class="container" style="height: 100%">
-                <div class="card" style="height: 100%">
-                  <div class="card-body" style="height: 100%">
-                    <h5 class="card-title fs-1 mb-lg-3 mb-sm-3  mb-2">Who We Are</h5>
-                    <p class="card-text text-secondary mb-lg-4 mb-2 mb-sm-3 fs-5">CIDO is a non-partisan, non-profit making organization conceived in 2013 and formally registered in South Sudan in 2016 to support local solutions on critical areas of social and economic development. The agency places emphasis on promotion of Peace and peaceful co-existence among communities as the benchmark for socio-economic prosperity. </p>
-                    <p class="card-text text-swcondary mb-lg-4 mb-2 mb-sm-3 fs-6"></p>
-                    <button type="button" class="learn-btn align-content-center mb-lg-3 mb-0"><a href="/about" style="text-decoration: none;" class="card-link text-light p-2">Learn More</a></button>
+        </div> -->
+
+        <!-- who we are text  -->
+        <div class=" p-5 pb-3" style="height: 100%">
+              <div class="container text-center" style="height: 100%">
+                  <div class="" style="height: 100%">
+                    <h5 class=" fs-1 mb-lg-3 mb-sm-3  mb-2" style="color: #00A651;">Who We Are</h5>
+                    <p class="text-dark mb-2 fs-5">CIDO is a non-partisan, non-profit making organization conceived in 2013 and formally registered in South Sudan in 2016 to support local solutions on critical areas of social and economic development. The agency places emphasis on promotion of Peace and peaceful co-existence among communities as the benchmark for socio-economic prosperity. </p>
+                    <button type="button" class="learn-btn align-content-center mt-3"><a href="/about" style="text-decoration: none;" class="card-link text-light p-2">Learn More</a></button>
                   </div>
-                </div>
+                
               </div>
             </div>
-      </div>
 
-      <div class="row text-center p-5" style="background-color: #00A651;">
+      <!-- <div class="row text-center p-5" style="background-color: #00A651;">
         <div class="col-md-6 text-light mb-4 mb-md-0">
           <h1>Since 2013 we are helping <br> people around the world.</h1>
         </div>
@@ -118,14 +115,14 @@
             </div>
           </div>
         </div>
-      </div>
+      </div> -->
     </section>
 
     <!-- programs  -->
-    <section class="text-center p-5 programs">
+    <section class="text-center p-5 pb-3 programs">
       <div class="cido-programs mb-4 mb-lg-0">
-        <h2 class="orange"> CIDO PROGRAMS</h2>
-        <h5>Activities of CIDO currently covers Central Equitoria state (kajokeji, Lainya Juba and Yei) <br> with planned extension to Eastern Equitoria ( Torit and Ikotos), Upper Nile ( Panyikang, Tonga, Maban) <br> Jonglei state ( Pigi, and Ayod ).</h5>
+        <h2 style="color: #00A651;"> CIDO PROGRAMS</h2>
+        <p class="text-dark fs-5">Activities of CIDO currently covers Central Equitoria state (kajokeji, Lainya Juba and Yei) <br> with planned extension to Eastern Equitoria ( Torit and Ikotos), Upper Nile ( Panyikang, Tonga, Maban) <br> Jonglei state ( Pigi, and Ayod ).</p>
       </div>
 
       <div class="container text-center">
@@ -168,6 +165,54 @@
 
       <button class="btn programs-btn"> <a href="/programs" style="text-decoration: none; color: white;"> More Programs >></a></button>
     </section>
+    <!-- projects  -->
+    <section class="text-center p-5 programs">
+      <div class="mb-4">
+        <h2 style="color: #00A651;">OUR PROJECTS</h2>
+        <p class="text-dark fs-5">We continue to reach out to as many people as possible by extending our services which range from nutrition,access to justice, <br> adult literacy to women empowerement, health services and protection.</p>
+      </div>
+
+      <div class="container text-center">
+      <div class="row mb-4 mt-4 text-center">
+            <div class="col-lg-4 mb-4 mb-lg-0 c-program">
+                <div class="card" style="width: 100%;">
+                  <div class="image-container" style="width: 100%;">
+                    <div class="overlay d-inline-block" style="padding-top:55px;">
+                      <h5 class="text-light mb-3">A story like no other</h5>
+                      <a class="btn button" href="/story">View Project</a>
+                    </div>
+                    <img src="{{asset('images/2023.jpg')}}" alt="a story like no other" id="zoomable-image">
+                  </div>
+                </div>
+            </div>
+            <div class="col-lg-4 mb-4 mb-lg-0 c-program">
+                <div class="card" style="width: 100%;">
+                  <div class="image-container" style="width: 100%;">
+                    <div class="overlay d-inline-block" style="padding-top:55px;">
+                      <h5 class="text-light mb-3">Power of integrated services in Akobo East</h5>
+                      <a class="btn button" href="/story">View Project</a>
+                    </div>
+                    <img src="{{asset('images/four_1.jpeg')}}" alt="cido-project" id="zoomable-image">
+                  </div>
+                </div>
+            </div>
+            <div class="col-lg-4 mb-4 mb-lg-0 c-program">
+                <div class="card" style="width: 100%;">
+                  <div class="image-container" style="width: 100%;">
+                    <div class="overlay d-inline-block" style="padding-top:55px;">
+                      <h5 class="text-light mb-3">CIDO saves a Woman 3 days of labor pain in Akobo.</h5>
+                      <a class="btn button" href="/story">View Project</a>
+                    </div>
+                    <img src="{{asset('images/SNFI.jpeg')}}" alt="cido-project" id="zoomable-image">
+                  </div>
+                </div>
+            </div>
+            
+          </div>
+      </div>
+
+      <button class="btn programs-btn"> <a href="/projects" style="text-decoration: none; color: white;"> More Projects >></a></button>
+    </section>
 
     <!-- team  -->
     <!-- <section class="text-center">
@@ -178,9 +223,9 @@
     </section> -->
 
     <!-- projects  -->
-    <section class="text-center pb-1 projects">
+    <!-- <section class="text-center pb-1 projects">
       <div class="mb-4">
-        <h2 class="orange">OUR PROJECTS</h2>
+        <h2 style="color: #00A651;">OUR PROJECTS</h2>
         <h5>We continue to reach out to as many people as possible by extending our services which range from nutrition,access to justice, <br> adult literacy to women empowerement, health services and protection.</h5>
       </div>
 
@@ -244,8 +289,8 @@
             </div>
           </div>
 
-          <!-- more projects  -->
-          <div class="row mb-4 mb-md-0">
+           <!-- more projects -->
+          <!-- <div class="row mb-4 mb-md-0">
             <div class="col-12">
             <button class="btn project-btn"><a href="/projects" style="text-decoration: none; color:white;"> More projects >></a></button>
             </div>
@@ -253,7 +298,7 @@
         </div>
       </div>
 
-    </section>  
+    </section>   --> 
 
     <script>
       const counters = document.querySelectorAll('.count');

@@ -1,4 +1,4 @@
-<div class="text-white pt-4 px-1" style="background-color: #2E2F31">
+<div class="text-white p-3 pt-4 px-1" style="background-color: #2E2F31">
 <div class="container-fluid">
     <div class="row">
         <div class="col-lg-3">

@@ -256,6 +256,7 @@ ul li a{
     padding: 8px 10px;
     border-radius: 8px;
 }
+
 .programs .programs-btn:hover {
     background-color: #00A651;
 }
@@ -263,6 +264,22 @@ ul li a{
     background-color: #f58220;
 }
 .projects .project-btn:hover {
+    background-color: #00A651;
+}
+
+.d-flex .programs-btn{
+    background-color: #f58220;
+    border: 0 solid white;
+    padding: 8px 10px;
+    border-radius: 8px;
+}
+
+.d-flex .programs-btn a{
+    text-decoration: none ;
+    color: white;
+}
+
+.d-flex .programs-btn:hover {
     background-color: #00A651;
 }
 
