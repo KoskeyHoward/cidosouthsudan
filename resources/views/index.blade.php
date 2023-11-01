@@ -11,7 +11,7 @@
               <div class="shade"></div>
               <div class="carousel-caption top-0 mt-4 d-md-block">
                   <p class="mt-5 fs-2" >Support To Local Solutions</p>
-                  <h5 class="fw-bolder display-3" >Since 2013 we are helping people around South Sudan & Kenya</h5>
+                  <h5 class="fw-bolder display-3" >Since 2013 we are helping people within East Africa (South Sudan & Kenya)</h5>
                   <span class=""></span>
                   <button class="btn btn-lg c-btn" type="button"><a href="/programs">View Programs</a></button>
                   <!-- <a class="btn btn-lg c-btn" href="/programs">View Our Programs</a> -->
@@ -44,7 +44,7 @@
               <div class="shade"></div>
               <div class="carousel-caption top-0 mt-5 d-md-block">
                   <p class="mt-5 fs-2" >Support To Local Solutions</p>
-                  <h5 class="fw-bolder display-3" >Since 2013 we are helping people around South Sudan.</h5>
+                  <h5 class="fw-bolder display-3" >Since 2013 we are helping people within East Africa (South Sudan & Kenya)</h5>
                   <a href="/donationForm" class="btn btn-lg c-btn">Donate</a>
 
                 </div>
@@ -324,4 +324,3 @@
 
     </script>
 @endsection
-

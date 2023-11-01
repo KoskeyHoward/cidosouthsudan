@@ -81,6 +81,49 @@ Route::get('/read-more', function () {
     return view('read-more-projects');
 })->name('read-more');
 
+Route::get('/dashboard', function (){
+    return view('dashboard');
+})->name('dashboard');
+
+Route::get('/dash-programs', function (){
+    return view('dash-programs');
+})->name('dash-programs');
+
+Route::get('/dash-program', function (){
+    return view('dash-program');
+})->name('dash-program');
+
+Route::get('/edit-dashprograms', function (){
+    return view('/edit-dashprograms');
+})->name('/edit-dashprograms');
+
+Route::get('/new-program', function (){
+    return view('/new-program');
+})->name('/new-program');
+
+Route::get('/user-management', function (){
+    return view('/user-management');
+})->name('/user-management');
+
+Route::get('/new-user', function (){
+    return view('/new-user');
+})->name('/new-user');
+
+Route::get('/dash-project', function (){
+    return view('dash-project');
+})->name('dash-project');
+
+Route::get('/dash-projects', function (){
+    return view('dash-projects');
+})->name('dash-projects');
+
+Route::get('/new-project', function (){
+    return view('/new-project');
+})->name('/new-project');
+
+Route::get('/edit-dashprojects', function (){
+    return view('/edit-dashprojects');
+})->name('/edit-dashprojects');
 //contact routes
 
 Route::post('/contact', [ContactController::class, 'store'])->name('contact.store');
