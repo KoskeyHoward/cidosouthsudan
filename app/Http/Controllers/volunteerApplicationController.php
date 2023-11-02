@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 use App\Models\volunteer;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
+use RealRashid\SweetAlert\Facades\Alert;
+
 
 class volunteerApplicationController extends Controller
 {
@@ -11,22 +13,33 @@ class volunteerApplicationController extends Controller
         //validate the form data
         $request->validate([
             'name'=> 'required',
-            'email'=> 'required|email',
+            'email'=> 'required|email|max:255',
             'phone_number'=> 'required',
             'gender'=> 'required',
-            'profession'=> 'required',
+            'profession'=> 'required|string|max:255'
         ]);
 
         //create an application form in the database
-        $applicationForm = new volunteer;
-        $applicationForm->name = $request->name;
-        $applicationForm->email = $request->email;
-        $applicationForm->phone_number = $request->phone_number;
-        $applicationForm->gender = $request->gender;
-        $applicationForm->profession = $request->prfession;
-        $applicationForm->save();
+        $applicationForm = new volunteer([
+            
+            'name' => $request->input('name'),
+            'email' => $request->input('email'),
+            'phone_number' => $request->input('phone_number'),
+            'gender' => $request->input('gender'),
+            'profession' => $request->input('profession')
+        ]);
+        ;
 
-        //return a response
-        return redirect('/become-volunteer')->with('Your application has been submitted successfully!');
+        if ($applicationForm->save()) {
+            // Send an email to the admin
+           
+            return redirect()->back()->with('success','Your application has been submitted successfully!');
+        }
+        else{
+            //return a response
+            return redirect()->back()->with('error', 'Your message could not be sent.');
+            
+        }
+       
     }
 }
