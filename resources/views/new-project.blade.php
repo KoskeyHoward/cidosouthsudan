@@ -1,24 +1,22 @@
 @include('dashboard.dash-head')
 <body>
-    <header class="d-flex justify-content-between ps-5 p-4 pb-0" id="head">
-        <div class="header-left d-flex">
+    <header class="" id="head">
+        <div class="header-left">
             <!-- logo  -->
             <div class="logo text-center">
                 <a href=""><img class="mt-4" src="{{URL('images/CIDO-logo.png')}}" alt="cido-logo"></a>
             </div>
             <!-- dashboard/title  -->
-            <div class=" text-light p-5 ps-4">
+            <div class=" text-light p-4 pt-5">
                 <h3>Programs</h3>
                 <p>Dashboard / <span style="color: #BFC7F4;">Projects / Project</span></p>
             </div>
         </div>
         <!-- profile  -->
-        <div class="profile text-light p-5">
-            <p><i class="fa fa-user"></i> Super Admin <i class="fa fa-caret-down"></i></p>
-        </div>
+        @include('dashboard.dash-drawer')
     </header>
     <!-- content  -->
-    <div class="content d-flex pt-0 p-5 pe-2">
+    <div class="content">
         <!-- side-bar  -->
         <div class="sidebar pt-4 ps-5 pe-5">
             <ul class="text-light">
@@ -29,8 +27,8 @@
             </ul>
         </div>
 
-        <main style="width: 75%;">
-            <div class="card ms-4 " style="border: none;">
+        <main class="programs-main p-4 pt-0">
+            <div class="card" style="border: none;">
                 <div class="pb-4 p-5">
                     <h3>Create Project</h3>
                     <p>These are projects provided by CIDO.</p>
@@ -62,5 +60,6 @@
         </main>
 
     </div>
+    @include('dashboard.dash-footer')
 </body>
 </html>

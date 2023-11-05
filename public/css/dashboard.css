@@ -3,6 +3,7 @@ html{
 }
 
 html body{
+    display: block;
     width: 100%;
     min-height: 100vh;
     margin: 0px;
@@ -18,15 +19,22 @@ body header{
     /* background-color: #5E72E4; */
     height: 155px;
     top: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+header .header-left{
+    display: flex;
 }
 header .header-left .logo{
-    width: 311px;
+    /* width: 311px;
     height: 100%;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
     box-shadow: 0px 1px 3px;
     background-color: white;
-    border-bottom: 2px solid #E7E7E7;
+    border-bottom: 2px solid #E7E7E7; */
+    display: none;
 }
 
 header .logo a img{
@@ -45,9 +53,27 @@ ul li a{
     font-size: large;
 }
 
+
+.offcanvas-header button{
+    background-color: #ECF4F5;
+}
+.offcanvas-header button:hover{
+    background-color: #f58220;
+}
+
+.offcanvas-body ul li a{
+    color: white;
+}
+
+.offcanvas-body ul li a:hover{
+    color: #ECF4F5;
+    border-bottom: 1px #ECF4F5 solid;
+    padding-bottom: 3px;
+}
+
 .content .sidebar{
     width: 311px;
-    height: 73vh;
+    height: 86vh;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
     box-shadow: 0px 1px 3px;
@@ -104,4 +130,96 @@ ul li a{
 .pages p a:hover{
     border-bottom: 1px solid #F58220;
     color: #F58220;
+}
+
+/* phones */
+@media (min-width: 320px){
+    /* .content{
+        margin: auto;
+        width: 100%;
+    } */
+    .card{
+        margin: auto;
+        width: 100%;
+        margin-top: 12px;
+    }
+    .content .sidebar{
+        display: none;
+    }
+    body {
+        display: block;
+    }
+    body header .header-left{
+        display: block;
+    }
+    .programs-main{
+        width: 100%;
+    }
+    .programs-main .card{
+        padding: 16px;
+    }
+}
+/* tablets  */
+@media (min-width: 600px){
+    body header{
+        display: flex;
+    }
+}
+/* large screens  */
+@media (min-width:1024px){
+    body header {
+        display: flex;
+        padding: 24px;
+        padding-left: 48px;
+        padding-bottom: 0;
+    }
+    body header .header-left{
+        display: flex;
+    }
+    header .header-left .logo{
+        width: 311px;
+        height: 100%;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        box-shadow: 0px 1px 3px;
+        background-color: white;
+        border-bottom: 2px solid #E7E7E7;
+        display: unset;
+    }
+
+    header .logo a img{
+        margin: auto;
+        width: 60%;
+    }
+    .content{
+        padding: 48px;
+        padding-top: 0;
+        padding-right: 8px;
+        display: flex;
+    }
+    .content .sidebar{
+        display: block;
+    }
+    .main .stats .card{
+        margin: unset;
+        width: 215px;
+        margin-left: 5px;
+    }
+    .programs-main{
+        width: 75%;
+    }
+    .programs-main .card{
+        padding: 24px;
+    }
+
+    .programs-main .top{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .page-numbers{
+        display: flex;
+        justify-content: space-between;
+    }
+    
 }
