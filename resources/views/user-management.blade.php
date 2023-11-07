@@ -9,7 +9,7 @@
             <!-- dashboard/title  -->
             <div class=" text-light p-5 ps-4">
                 <h3>Programs</h3>
-                <p>Dashboard / <span style="color: #BFC7F4;">Users</span></p>
+                <p><a href="/dashboard" style="color: #BFC7F4;">Dashboard / </a><a href="/user-management" class="text-light">Users</a></p>
             </div>
         </div>
         <!-- profile  -->
@@ -43,7 +43,7 @@
 
                     <div>
                         <div class="mb-3 mt-2">
-                            <button class="btn p-2" style="background-color: #F58220;"><a href="/new-user" style="text-decoration: none; color:white;">ADD NEW</a></button>
+                            <button class="btn p-2" style="background-color: #F58220;"><a href="/new-user" style="text-decoration: none; color:white;">ADD USER</a></button>
                         </div>
                         <form class="box">
                             <i class="fa fa-search" aria-hidden="true"></i>
@@ -68,26 +68,26 @@
                             <td scope="row"><a href="">Ann Doe</a></td>
                             <td>ann@gmail.com</td>
                             <td>Admin</td>
-                            <td><a href="">Edit</a> <i class="fa fa-trash"><a href=""></a></i></td>
+                            <td><a href=""><i class="fa fa-edit me-3"></i></a> <a href=""><i class="fa fa-trash"></i></a></td>
                         </tr>
 
                         <tr>
                             <td scope="row"><a href="">John Doe</a></td>
                             <td>john@gmail.com</td>
                             <td>Admin</td>
-                            <td><a href="">Edit</a> <i class="fa fa-trash"><a href=""></a></i></td>
+                            <td><a href=""><i class="fa fa-edit me-3"></i></a> <a href=""><i class="fa fa-trash"></i></a></td>
                         </tr>
                         <tr>
                             <td scope="row"><a href="">Ann Doe</a></td>
                             <td>ann@gmail.com</td>
                             <td>Admin</td>
-                            <td><a href="">Edit</a> <i class="fa fa-trash"><a href=""></a></i></td>
+                            <td><a href=""><i class="fa fa-edit me-3"></i></a> <a href=""><i class="fa fa-trash"></i></a></td>
                         </tr>
                         <tr>
                             <td scope="row"><a href="">John Doe</a></td>
                             <td>john@gmail.com</td>
                             <td>Admin</td>
-                            <td><a href="">Edit</a> <i class="fa fa-trash"><a href=""></a></i></td>
+                            <td><a href=""><i class="fa fa-edit me-3"></i></a> <a href=""><i class="fa fa-trash"></i></a></td>
                         </tr>
                         
                     </tbody>

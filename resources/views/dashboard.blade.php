@@ -22,8 +22,9 @@
             <ul class="text-light">
                 <li><a href="/dashboard"><i class="material-icons active">speed</i> Dashboard</a></li>
                 <li><a href="/dash-programs"><i class="material-icons">layers</i> Programs</a></li>
-                <li><a href="/user-management"><i class="material-icons">person</i> User Management</a></li>                
                 <li><a href="/dash-projects"><i class="material-icons">layers</i> Projects</a></li>
+                <li><a href="/user-management"><i class="material-icons">person</i> Users</a></li>
+                <li><a href="/dash-volunteers"><i class="material-icons">person</i> volunteers</a></li>
             </ul>
         </div>
 
@@ -35,8 +36,8 @@
                     <div class="col-md-6 card" >
                         <div class="card-body d-flex justify-content-between">
                             <div>
-                                <h5 class="card-title text-secondary">DONATIONS</h5>
-                                <h6 class="card-subtitle mb-2 fs-3 fw-bold text-body-secondary">$2,000</h6>
+                                <h5 class="card-title text-secondary">USERS</h5>
+                                <h6 class="card-subtitle mb-2 fs-3 fw-bold text-body-secondary">79</h6>
                                 <p class="card-text"> <span>+55%</span> since yesterday</p>
                             </div> 
                             <div class="card-icon">

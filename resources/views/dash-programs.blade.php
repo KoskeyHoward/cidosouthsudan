@@ -9,7 +9,7 @@
             <!-- dashboard/title  -->
             <div class=" text-light p-4 pt-5">
                 <h3>Programs</h3>
-                <p>Dashboard / <span style="color: #BFC7F4;">Programs</span></p>
+                <p><a href="/dashboard" style="color: #BFC7F4;">Dashboard / </a><a href="/dash-programs" class="text-light">Programs</a></p>
             </div>
         </div>
         <!-- profile  -->
@@ -32,7 +32,7 @@
                 <h3 class="p-3 ps-0">Programs</h3>
                 <div class="top ">
                     <div>
-                        <div class="card p-2 pb-0 text-light" style="background-color: #5E72E4; border:none;">
+                        <div class="card p-2 pb-0 text-light" style="background-color: #00A651; border:none;">
                             <h4>200</h4>
                             <p>PROGRAMS</p>
                         </div>
@@ -43,7 +43,7 @@
 
                     <div>
                         <div class="mb-3 mt-2">
-                            <button class="btn p-3" style="background-color: #F58220;"><a href="/new-program" style="text-decoration: none; color:white;">ADD NEW PROGRAM</a></button>
+                            <button class="btn p-3" style="background-color: #F58220;"><a href="/new-program" style="text-decoration: none; color:white;">ADD PROGRAM</a></button>
                         </div>
                         <form class="box">
                             <i class="fa fa-search" aria-hidden="true"></i>
@@ -67,35 +67,35 @@
                             <td scope="row"><a href="/dash-program">Women Rights and...</a></td>
                             <td>CIDO is working in...</td>
                             <td>30/10/2023</td>
-                            <td><a href="/edit-dashprograms">Edit</a> <i class="fa fa-trash"><a href=""></a></i></td>
+                            <td><a href="/edit-dashprograms"><i class="fa fa-edit me-3"></i></a> <a href=""><i class="fa fa-trash"></i></a></td>
                         </tr>
 
                         <tr>
                             <td scope="row"><a href="/dash-program">Access To Justice</a></td>
                             <td>CIDO is working in...</td>
                             <td>30/10/2023</td>
-                            <td><a href="/edit-dashprograms">Edit</a> <i class="fa fa-trash"><a href=""></a></i></td>
+                            <td><a href="/edit-dashprograms"><i class="fa fa-edit me-3"></i></a> <a href=""><i class="fa fa-trash"></i></a></td>
                         </tr>
 
                         <tr>
                             <td scope="row"><a href="/dash-program">Peace and Security</a></td>
                             <td>CIDO is working in...</td>
                             <td>30/10/2023</td>
-                            <td><a href="/edit-dashprograms">Edit</a> <i class="fa fa-trash"><a href=""></a></i></td>
+                            <td><a href="/edit-dashprograms"><i class="fa fa-edit me-3"></i></a> <a href=""><i class="fa fa-trash"></i></a></td>
                         </tr>
 
                         <tr>
                             <td scope="row"><a href="/dash-program">Health and Nutrition</a></td>
                             <td>CIDO is working in...</td>
                             <td>30/10/2023</td>
-                            <td><a href="/edit-dashprograms">Edit</a> <i class="fa fa-trash"><a href=""></a></i></td>
+                            <td><a href="/edit-dashprograms"><i class="fa fa-edit me-3"></i></a> <a href=""><i class="fa fa-trash"></i></a></td>
                         </tr>
 
                         <tr>
                             <td scope="row"><a href="/dash-program">Women Empowerement</a></td>
                             <td>CIDO is working in...</td>
                             <td>30/10/2023</td>
-                            <td><a href="/edit-dashprograms">Edit</a> <i class="fa fa-trash"><a href=""></a></i></td>
+                            <td><a href="/edit-dashprograms"><i class="fa fa-edit me-3"></i></a> <a href=""><i class="fa fa-trash"></i></a></td>
                         </tr>
                         
                     </tbody>

@@ -9,7 +9,7 @@
             <!-- dashboard/title  -->
             <div class=" text-light p-4 pt-5">
                 <h3>Programs</h3>
-                <p>Dashboard / <span style="color: #BFC7F4;">User</span></p>
+                <p><a href="/dashboard" style="color: #BFC7F4;">Dashboard / </a><a href="/user-management" style="color: #BFC7F4;">User / </a><a href="/new-user" class="text-light">new-user</a></p>
             </div>
         </div>
         <!-- profile  -->
