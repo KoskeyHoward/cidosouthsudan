@@ -9,7 +9,10 @@
             <!-- dashboard/title  -->
             <div class=" text-light p-4 pt-5">
                 <h3>Projects</h3>
-                <p>Dashboard / <span style="color: #BFC7F4;">Project / Project</span></p>
+                
+                <p><a href="/dashboard" style="color: #BFC7F4;">Dashboard / </a><a href="/dash-projects" style="color: #BFC7F4;">Projects /</a>
+                <!-- <a href="/dash-project" class="text-light">Project</a> -->
+            </p>
             </div>
         </div>
         <!-- profile  -->
@@ -20,10 +23,11 @@
         <!-- side-bar  -->
         <div class="sidebar pt-4 ps-5 pe-5">
             <ul class="text-light">
-                <li><a href="/dashboard"><i class="material-icons">speed</i> Dashboard</a></li>
+                <li><a href="/dashboard"><i class="material-icons active">speed</i> Dashboard</a></li>
                 <li><a href="/dash-programs"><i class="material-icons">layers</i> Programs</a></li>
-                <li><a href="/user-management"><i class="material-icons">person</i> User Management</a></li>                
                 <li><a href="/dash-projects"><i class="material-icons">layers</i> Projects</a></li>
+                <li><a href="/user-management"><i class="material-icons">person</i> Users</a></li>
+                <li><a href="/dash-volunteers"><i class="material-icons">person</i> volunteers</a></li>
             </ul>
         </div>
 
@@ -36,19 +40,27 @@
                     </div>   
                     
                     <div class="card p-4 mb-3">
+                    @if(isset($project))                        
                         <div class="top">
                             <div>
-                                <img src="{{URL('images/CIDO-logo.png')}}" alt="" width="210px">
+                                <img src="{{asset('images/projects/'.$project->project_image)}}" alt="project" width="210px">
                             </div>
+                            
                             <div class="ms-5 mt-3">
-                                <h3>Access to justice</h3>
-                                <p>CIDO works with a team of lawyers and paralegals to ensure that vulnerable communities access Justice through Legal information and counselling, pro Bono services...</p>
+                            
+                                <h3>{{$project->title}}</h3>
+                                <p>{{$project->description}}</p>
                                 <div class="page-numbers">
-                                    <p class="text-secondary"> Date created May 22, 2022</p>
-                                    <button class="btn bg-light"> <a href=""><i class="fa fa-trash"></i> Remove</a></button>
+                                    <p class="text-secondary">Duration:  {{$project->start_date}} To {{$project->end_date}}</p>
+                                    <button class="btn bg-light"> <a href="{{url('delete-project/'.$project->id)}}"><i class="fa fa-trash"></i> Remove</a></button>
                                 </div>
+                            
                             </div>
+                            
                         </div>
+                    @else
+                        <p>No projects available.</p>
+                    @endif
                     </div>
             </div>
         </main>

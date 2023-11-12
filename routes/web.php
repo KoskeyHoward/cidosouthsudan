@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\programController;
+use App\Http\Controllers\projectsController;
 use App\Http\Controllers\volunteerApplicationController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -82,49 +84,16 @@ Route::get('/read-more', function () {
 })->name('read-more');
 
 Route::get('/dashboard', function (){
-    return view('dashboard');
+    return view('/admin.dashboard');
 })->name('dashboard');
 
-Route::get('/dash-programs', function (){
-    return view('dash-programs');
-})->name('dash-programs');
-
-Route::get('/dash-program', function (){
-    return view('dash-program');
-})->name('dash-program');
-
-Route::get('/edit-dashprograms', function (){
-    return view('/edit-dashprograms');
-})->name('/edit-dashprograms');
-
-Route::get('/new-program', function (){
-    return view('/new-program');
-})->name('/new-program');
-
 Route::get('/user-management', function (){
-    return view('/user-management');
+    return view('/admin.user-management');
 })->name('/user-management');
 
 Route::get('/new-user', function (){
-    return view('/new-user');
+    return view('/admin.new-user');
 })->name('/new-user');
-
-Route::get('/dash-project', function (){
-    return view('dash-project');
-})->name('dash-project');
-
-Route::get('/dash-projects', function (){
-    return view('dash-projects');
-})->name('dash-projects');
-
-Route::get('/new-project', function (){
-    return view('/new-project');
-})->name('/new-project');
-
-Route::get('/edit-dashprojects', function (){
-    return view('/edit-dashprojects');
-})->name('/edit-dashprojects');
-//contact routes
 
 Route::post('/contact', [ContactController::class, 'store'])->name('contact.store');
 
@@ -133,3 +102,31 @@ Route::post('/become-volunteer', [volunteerApplicationController::class, 'apply'
 Route::get('/health', function () {
     return response()->json(['status' => 'success']);
 });
+
+//admin-project route
+Route::get('dash-projects', [projectsController::class, 'index']);
+
+Route::get('dash-project', [projectsController::class, 'indexproject']);
+Route::get('dash-projectItem/{id}', [projectsController::class, 'indexproject']);
+
+Route::get('new-project', [projectsController::class, 'create']);
+Route::post('new-project', [projectsController::class, 'store']);
+
+Route::get('edit-project/{id}', [projectsController::class, 'edit']);
+Route::put('update-project/{id}', [projectsController::class, 'update']);
+
+Route::get('delete-project/{id}', [projectsController::class, 'destroy']);
+
+//admin-program routes
+Route::get('dash-programs', [programController::class, 'index']);
+
+Route::get('dash-program', [programController::class, 'indexprogram']);
+Route::get('dash-programItem/{id}', [programController::class, 'indexprogram']);
+
+Route::get('new-program', [programController::class, 'create']);
+Route::post('new-program', [programController::class, 'store']);
+
+Route::get('edit-program/{id}', [programController::class, 'edit']);
+Route::put('update-program/{id}', [programController::class, 'update']);
+
+Route::get('delete-program/{id}', [programController::class, 'destroy']);

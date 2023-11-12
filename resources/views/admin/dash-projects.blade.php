@@ -20,10 +20,11 @@
         <!-- side-bar  -->
         <div class="sidebar pt-4 ps-5 pe-5">
             <ul class="text-light">
-                <li><a href="/dashboard"><i class="material-icons">speed</i> Dashboard</a></li>
+                <li><a href="/dashboard"><i class="material-icons active">speed</i> Dashboard</a></li>
                 <li><a href="/dash-programs"><i class="material-icons">layers</i> Programs</a></li>
-                <li><a href="/user-management"><i class="material-icons">person</i> User Management</a></li>                
                 <li><a href="/dash-projects"><i class="material-icons">layers</i> Projects</a></li>
+                <li><a href="/user-management"><i class="material-icons">person</i> Users</a></li>
+                <li><a href="/dash-volunteers"><i class="material-icons">person</i> volunteers</a></li>
             </ul>
         </div>
 
@@ -53,53 +54,38 @@
                 </div>
 
                 <div class="table-responsive mt-3">
-                <table class="table table-hover table-bordered border-secondary">
-                    <thead class="table-active">
-                        <tr>
-                            <th scope="col">Project Name</th>
-                            <th scope="col">Description</th>
-                            <th scope="col">Date Created</th>
-                            <th scope="col">Action</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td scope="row"><a href="/dash-project">Women Rights and...</a></td>
-                            <td>CIDO is working in...</td>
-                            <td>30/10/2023</td>
-                            <td><a href="/edit-dashprojects"><i class="fa fa-edit me-3"></i></a> <a href=""><i class="fa fa-trash"></i></a></td>
-                        </tr>
-
-                        <tr>
-                            <td scope="row"><a href="/dash-project">Access To Justice</a></td>
-                            <td>CIDO is working in...</td>
-                            <td>30/10/2023</td>
-                            <td><a href="/edit-dashprojects"><i class="fa fa-edit me-3"></i></a> <a href=""><i class="fa fa-trash"></i></a></td>
-                        </tr>
-
-                        <tr>
-                            <td scope="row"><a href="/dash-project">Peace and Security</a></td>
-                            <td>CIDO is working in...</td>
-                            <td>30/10/2023</td>
-                            <td><a href="/edit-dashprojects"><i class="fa fa-edit me-3"></i></a> <a href=""><i class="fa fa-trash"></i></a></td>
-                        </tr>
-
-                        <tr>
-                            <td scope="row"><a href="/dash-project">Health and Nutrition</a></td>
-                            <td>CIDO is working in...</td>
-                            <td>30/10/2023</td>
-                            <td><a href="/edit-dashprojects"><i class="fa fa-edit me-3"></i></a> <a href=""><i class="fa fa-trash"></i></a></td>
-                        </tr>
-
-                        <tr>
-                            <td scope="row"><a href="/dash-project">Women Empowerement</a></td>
-                            <td>CIDO is working in...</td>
-                            <td>30/10/2023</td>
-                            <td><a href="/edit-dashprojects"><i class="fa fa-edit me-3"></i></a> <a href=""><i class="fa fa-trash"></i></a></td>
-                        </tr>
-                        
-                    </tbody>
-                </table>
+                        <div class="">
+                            <h2>projects</h2>
+                        </div>
+                        <div class="">
+                            <table class="table table-bodered table-striped">
+                                <thead>
+                                    <tr>
+                                        <!-- <th>ID</th> -->
+                                        <th>Title</th>
+                                        <th>Description</th>
+                                        <!-- <th>Image</th> -->
+                                        <th> Start Date</th>
+                                        <th> End Date</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach($project as $item)
+                                    
+                                    <tr> 
+                                        <!-- <td> {{$item->id}}</td> -->
+                                        <td><a href="{{url('dash-projectItem/'.$item->id)}}"> {{$item->title}} </a></td>
+                                        <td>{{$item->description}}</td>
+                                        <!-- <td><img src="{{asset('images/projects/'.$item->project_image)}}" width="70px" height="70px" alt=""></td> -->
+                                        <td>{{$item->start_date}}</td>
+                                        <td>{{$item->end_date}}</td>
+                                        <td><a href="{{url('edit-project/'.$item->id)}}" class="text-success"><i class="fa fa-edit me-3"></i></a> <a href="{{url('delete-project/'.$item->id)}}"  class="text-danger"><i class="fa fa-trash"></i></a></td> 
+                                    </tr>                                    
+                                </tbody>
+                                @endforeach
+                            </table>
+                        </div>                    
                 </div>
 
                 <div class="page-numbers">

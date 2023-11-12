@@ -9,7 +9,7 @@
             <!-- dashboard/title  -->
             <div class=" text-light p-5 ps-4">
                 <h3>Dashboard</h3>
-                <p>Dashboard</p>
+                <p><a href="/dashboard" >Dashboard </a></p>
             </div>
         </div>
         <!-- profile  -->
@@ -32,8 +32,10 @@
             <div class="stats row">
                 <div class="col-md-6">
                     <div class="row">
-                    <!-- donations  -->
+                    <!-- users  -->
+                    
                     <div class="col-md-6 card" >
+                    <a href="/user-management">
                         <div class="card-body d-flex justify-content-between">
                             <div>
                                 <h5 class="card-title text-secondary">USERS</h5>
@@ -46,10 +48,13 @@
                                 </div>
                             </div>                   
                         </div>
+                        </a>
                     </div> 
+                    
 
                     <!-- programs  -->
                     <div class="col-md-6 card " >
+                    <a href="/dash-programs">
                         <div class="card-body d-flex justify-content-between">
                             <div>
                                 <h5 class="card-title text-secondary">PROGRAMS</h5>
@@ -62,6 +67,7 @@
                                 </div>
                             </div>                   
                         </div>
+                    </a>
                     </div> 
                     </div> 
                 </div>      
@@ -70,6 +76,7 @@
                     <div class="row">
                     <!-- projects  -->
                     <div class="col-md-6 card " >
+                    <a href="/dash-programs">
                         <div class="card-body d-flex justify-content-between">
                             <div>
                                 <h5 class="card-title text-secondary">PROJECTS</h5>
@@ -82,10 +89,12 @@
                                 </div>
                             </div>                   
                         </div>
+                    </a>
                     </div>        
                             
                     <!-- volunteers  -->
                     <div class="col-md-6 card " >
+                        <a href="/dash-volunteers">
                         <div class="card-body d-flex justify-content-between">
                             <div>
                                 <h5 class="card-title text-secondary">VOLUNTEERS</h5>
@@ -98,6 +107,7 @@
                                 </div>
                             </div>                   
                         </div>
+                        </a>
                     </div> 
                     </div>
                 </div>       
@@ -111,32 +121,33 @@
                 <table class="table table-hover" style="width: vw;">
                     <thead>
                         <tr>
-                        <th scope="col">Activity Name</th>
-                        <th scope="col">Description</th>
-                        <th scope="col">Date Created</th>
-                        <th scope="col">Action</th>
+                            <th scope="col">Activity Name</th>
+                            <th scope="col">Description</th>
+                            <th scope="col">Date Created</th>
+                            <th scope="col">Action</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                        <th scope="row">Program</th>
-                        <td>CIDO is working in...</td>
-                        <td>30/10/2023</td>
-                        <td><a href="/edit-dashprograms">Edit</a> <i class="fa fa-trash"><a href=""></a></i></td>
+                            <th scope="row">Program</th>
+                            <td>CIDO is working in...</td>
+                            <td>30/10/2023</td>
+                            <td><a href="/edit-dashprograms"><i class="fa fa-edit me-3"></i></a> <a href=""><i class="fa fa-trash"></i></a></td>
                         </tr>
+
                         <tr>
-                        <th scope="row">Project</th>
-                        <td>CIDO is working in...</td>
-                        <td>30/10/2023</td>
-                        <td><a href="/edit-dashprojects">Edit</a> <i class="fa fa-trash"><a href=""></a></i></td>
+                            <th scope="row">Project</th>
+                            <td>CIDO is working in...</td>
+                            <td>30/10/2023</td>
+                            <td><a href="/edit-dashprojects"><i class="fa fa-edit me-3"></i></a> <a href=""><i class="fa fa-trash"></i></a></td>
                         </tr>
+
                         <tr>
-                        <th scope="row">Program</th>
-                        <td>CIDO is working in...</td>
-                        <td>30/10/2023</td>
-                        <td><a href="/edit-dashprograms">Edit</a> <i class="fa fa-trash"><a href=""></a></i></td>
-                        </tr>
-                        
+                            <th scope="row">Program</th>
+                            <td>CIDO is working in...</td>
+                            <td>30/10/2023</td>
+                            <td><a href="/edit-dashprograms"><i class="fa fa-edit me-3"></i></a> <a href=""><i class="fa fa-trash"></i></a></td>
+                        </tr>                        
                     </tbody>
                 </table>
                 </div>
