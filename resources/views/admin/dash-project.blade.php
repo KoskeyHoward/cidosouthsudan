@@ -34,7 +34,7 @@
         <main class="programs-main p-4 pt-0">
             <div class="card pt-3 pb-2 mb-0 mt-0">
                 <h3 class="p-3 ps-0">Projects</h3>
-                    <div class="card p-2 pb-0 mb-3 text-light" style="background-color: #5E72E4; border:none;">
+                    <div class="card p-2 pb-0 mb-3 text-light" style="background-color: #00A651; border:none;">
                         <h4>100</h4>
                         <p>PROJECTS</p>
                     </div>   

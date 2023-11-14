@@ -9,7 +9,7 @@
             <!-- dashboard/title  -->
             <div class=" text-light p-4 pt-5">
                 <h3>Programs</h3>
-                <p><a href="/dashboard" style="color: #BFC7F4;">Dashboard / </a><a href="/dash-programs" style="color: #BFC7F4;">Programs /</a>
+                <p><a href="/dashboard" style="color: #BFC7F4;">Dashboard / </a><a href="/dash-programs" style="color: #00A651;">Programs /</a>
                 <!-- <a href="" class="text-light">Program</a> -->
             </p>
             </div>
