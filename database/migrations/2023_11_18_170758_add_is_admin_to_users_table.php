@@ -11,8 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::table('programs', function($table) {
-            $table->String('partners');
+        Schema::table('users', function (Blueprint $table) {
+            //
+            $table->boolean('is_admin')->default(0);
+
         });
     }
 
@@ -21,6 +23,8 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('columns_in');
+        Schema::table('users', function (Blueprint $table) {
+            //
+        });
     }
 };
