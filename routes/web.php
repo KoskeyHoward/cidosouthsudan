@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\programController;
 use App\Http\Controllers\projectsController;
 use App\Http\Controllers\volunteerApplicationController;
@@ -95,6 +96,14 @@ Route::get('/new-user', function (){
     return view('/admin.new-user');
 })->name('/new-user');
 
+Route::get('/user-profile', function (){
+    return view('/admin.user-profile');
+})->name('/user-profile');
+
+Route::get('/edit-profile', function (){
+    return view('/admin.edit-profile');
+})->name('/edit-profile');
+
 Route::post('/contact', [ContactController::class, 'store'])->name('contact.store');
 
 Route::post('/become-volunteer', [volunteerApplicationController::class, 'apply'])->name('volunteer.apply');
@@ -102,6 +111,19 @@ Route::post('/become-volunteer', [volunteerApplicationController::class, 'apply'
 Route::get('/health', function () {
     return response()->json(['status' => 'success']);
 });
+
+//admin dashboard
+Route::get('dashboard', [DashboardController::class, 'project_index']);
+Route::get('dashboard', [DashboardController::class, 'program_index']);
+
+
+Route::get('new-project', [DashboardController::class, 'create']);
+Route::post('new-project', [DashboardController::class, 'store']);
+
+Route::get('edit-project/{id}', [DashboardController::class, 'edit']);
+Route::put('update-project/{id}', [DashboardController::class, 'update']);
+
+Route::get('delete-project/{id}', [DashboardController::class, 'destroy']);
 
 //admin-project route
 Route::get('dash-projects', [projectsController::class, 'index']);

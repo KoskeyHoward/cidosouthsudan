@@ -39,7 +39,7 @@
                     <h6 class="alert alert-success">{{session('status')}}</h6>
                 @endif
                 <div class="p-5 pt-0">                    
-                <form action="{{url('new-program'}}" method="POST" enctype="multipart/form-data">
+                <form action="{{url('new-program')}}" method="POST" enctype="multipart/form-data">
                         @csrf                        
                         <div class="form-group mb-3">
                             <label for=""> Title</label>
