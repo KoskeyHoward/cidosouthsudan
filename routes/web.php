@@ -82,17 +82,13 @@ Route::get('/donationForm', function () {
 })->name('donationForm');
 Route::get('/read-more', function () {
     return view('read-more-projects');
-})->name('read-more');
+})->name('read-more');;
 
-Route::get('/dashboard', function (){
-    return view('/admin.dashboard');
-})->name('dashboard');
-
-Route::get('/user-management', function (){
+Route::get('/user-management', function () {
     return view('/admin.user-management');
 })->name('/user-management');
 
-Route::get('/new-user', function (){
+Route::get('/new-user', function () {
     return view('/admin.new-user');
 })->name('/new-user');
 
@@ -126,29 +122,34 @@ Route::put('update-project/{id}', [DashboardController::class, 'update']);
 Route::get('delete-project/{id}', [DashboardController::class, 'destroy']);
 
 //admin-project route
-Route::get('dash-projects', [projectsController::class, 'index']);
+Route::group(['middleware' => 'auth'],function () {
+    // Your routes here
+    Route::get('/dashboard', function () {
+        return view('/admin.dashboard'); })->name('dashboard');
+    Route::get('dash-projects', [projectsController::class, 'index']);
 
-Route::get('dash-project', [projectsController::class, 'indexproject']);
-Route::get('dash-projectItem/{id}', [projectsController::class, 'indexproject']);
+    Route::get('dash-project', [projectsController::class, 'indexproject']);
+    Route::get('dash-projectItem/{id}', [projectsController::class, 'indexproject']);
 
-Route::get('new-project', [projectsController::class, 'create']);
-Route::post('new-project', [projectsController::class, 'store']);
+    Route::get('new-project', [projectsController::class, 'create']);
+    Route::post('new-project', [projectsController::class, 'store']);
 
-Route::get('edit-project/{id}', [projectsController::class, 'edit']);
-Route::put('update-project/{id}', [projectsController::class, 'update']);
+    Route::get('edit-project/{id}', [projectsController::class, 'edit']);
+    Route::put('update-project/{id}', [projectsController::class, 'update']);
 
-Route::get('delete-project/{id}', [projectsController::class, 'destroy']);
+    Route::get('delete-project/{id}', [projectsController::class, 'destroy']);
 
-//admin-program routes
-Route::get('dash-programs', [programController::class, 'index']);
+    //admin-program routes
+    Route::get('dash-programs', [programController::class, 'index']);
 
-Route::get('dash-program', [programController::class, 'indexprogram']);
-Route::get('dash-programItem/{id}', [programController::class, 'indexprogram']);
+    Route::get('dash-program', [programController::class, 'indexprogram']);
+    Route::get('dash-programItem/{id}', [programController::class, 'indexprogram']);
 
-Route::get('new-program', [programController::class, 'create']);
-Route::post('new-program', [programController::class, 'store']);
+    Route::get('new-program', [programController::class, 'create']);
+    Route::post('new-program', [programController::class, 'store']);
 
-Route::get('edit-program/{id}', [programController::class, 'edit']);
-Route::put('update-program/{id}', [programController::class, 'update']);
+    Route::get('edit-program/{id}', [programController::class, 'edit']);
+    Route::put('update-program/{id}', [programController::class, 'update']);
 
-Route::get('delete-program/{id}', [programController::class, 'destroy']);
+    Route::get('delete-program/{id}', [programController::class, 'destroy']);
+});
