@@ -44,7 +44,7 @@
 
                     <div>
                         <div class="mb-3 mt-2">
-                            <button class="btn p-3" style="background-color: #F58220;"><a href="/new-project" style="text-decoration: none; color:white;">ADD PROJECT</a></button>
+                            <a href="/new-project" class="btn text-light ps-5 pe-5" style="text-decoration: none; background-color:#F58220">ADD PROJECT</a>
                         </div>
                         <form class="box">
                             <i class="fa fa-search" aria-hidden="true"></i>
@@ -58,7 +58,7 @@
                             <h2>projects</h2>
                         </div>
                         <div class="">
-                            <table class="table table-bodered table-striped">
+                            <table class="table activities-table table-bodered table-striped">
                                 <thead>
                                     <tr>
                                         <!-- <th>ID</th> -->

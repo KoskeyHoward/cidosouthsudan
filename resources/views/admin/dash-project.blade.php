@@ -10,8 +10,7 @@
             <div class=" text-light p-4 pt-5">
                 <h3>Projects</h3>
                 
-                <p><a href="/dashboard" style="color: #BFC7F4;">Dashboard / </a><a href="/dash-projects" style="color: #BFC7F4;">Projects /</a>
-                <!-- <a href="/dash-project" class="text-light">Project</a> -->
+                <p><a href="/dashboard" style="color: #BFC7F4;">Dashboard / </a><a href="/dash-projects" style="color: #BFC7F4;">Projects /</a><a href="{{url('dash-projectItem/'.$project->id)}}" class="text-light">Project</a>
             </p>
             </div>
         </div>
@@ -34,7 +33,7 @@
         <main class="programs-main p-4 pt-0">
             <div class="card pt-3 pb-2 mb-0 mt-0">
                 <h3 class="p-3 ps-0">Projects</h3>
-                    <div class="card p-2 pb-0 mb-3 text-light" style="background-color: #5E72E4; border:none;">
+                    <div class="card p-2 pb-0 mb-3 text-light" style="background-color: #00A651; border:none; width: 180px; margin-left:0">
                         <h4>100</h4>
                         <p>PROJECTS</p>
                     </div>   
@@ -52,7 +51,7 @@
                                 <p>{{$project->description}}</p>
                                 <div class="page-numbers">
                                     <p class="text-secondary">Duration:  {{$project->start_date}} To {{$project->end_date}}</p>
-                                    <button class="btn bg-light"> <a href="{{url('delete-project/'.$project->id)}}"><i class="fa fa-trash"></i> Remove</a></button>
+                                    <a href="{{url('delete-project/'.$project->id)}}" class="btn p-2 text-light" style="background-color: #f58220;" ><i class="fa fa-trash"></i> Remove</a>
                                 </div>
                             
                             </div>

@@ -44,7 +44,7 @@
 
                     <div>
                         <div class="mb-3 mt-2">
-                            <button class="btn p-3" style="background-color: #F58220;"><a href="/new-program" style="text-decoration: none; color:white;">ADD PROGRAM</a></button>
+                            <a href="/new-program" class="btn text-light ps-5 pe-5" style="text-decoration: none; background-color:#F58220">ADD PROGRAM</a>
                         </div>
                         <form class="box">
                             <i class="fa fa-search" aria-hidden="true"></i>
@@ -54,7 +54,7 @@
                 </div>
 
                 <div class="table-responsive mt-3">
-                <table class="table table-bodered table-striped">
+                <table class="table activities-table table-bodered table-striped">
                     <thead>
                         <tr>
                             <!-- <th>ID</th> -->
@@ -72,7 +72,7 @@
                     <tr> 
                     <!-- <td> {{$item->id}}</td> -->
                         <td><a href="{{url('dash-programItem/'.$item->id)}}"> {{$item->title}} </a></td>
-                        <td>{{$item->description}}</td>
+                        <td width="30%">{{$item->description}}</td>
                         <!-- <td><img src="{{asset('images/program/'.$item->program_image)}}" width="70px" height="70px" alt=""></td> -->
                         <td>{{$item->partners}}</td>
                         <td>{{$item->start_date}}</td>

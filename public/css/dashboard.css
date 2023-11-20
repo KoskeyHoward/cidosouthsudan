@@ -132,6 +132,21 @@ ul li a{
 .pages p a:hover{
     color: #F58220;
 }
+.activities-table a{
+    color: #00A651;
+}
+.activities-table a:hover{
+    color: #F58220;
+}
+table{
+    max-height:100px ;
+}
+td{
+    max-width: 130px;
+    overflow: hidden;
+    text-overflow: ellipsis; 
+    white-space: nowrap;
+}
 
 /* phones */
 @media (min-width: 320px){
