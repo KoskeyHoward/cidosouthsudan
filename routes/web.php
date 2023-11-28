@@ -4,6 +4,7 @@ use App\Http\Controllers\ContactController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\programController;
 use App\Http\Controllers\projectsController;
+use App\Http\Controllers\UserController;
 use App\Http\Controllers\volunteerApplicationController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -84,13 +85,9 @@ Route::get('/read-more', function () {
     return view('read-more-projects');
 })->name('read-more');;
 
-Route::get('/user-management', function () {
-    return view('/admin.user-management');
-})->name('/user-management');
 
-Route::get('/new-user', function () {
-    return view('/admin.new-user');
-})->name('/new-user');
+
+
 
 Route::get('/user-profile', function (){
     return view('/admin.user-profile');
@@ -126,7 +123,11 @@ Route::group(['middleware' => 'auth'],function () {
     // Your routes here
     Route::get('/dashboard', function () {
         return view('/admin.dashboard'); })->name('dashboard');
+        Route::get('new-user/{id?}',[UserController::class,'create'])->name('create-user');
+        Route::post('new-user/create/{id?}',[UserController::class,'store'])->name('store-user');
+        Route::post('new-user/edit/{id?}',[UserController::class,'edit'])->name('edit-user');
     Route::get('dash-projects', [projectsController::class, 'index']);
+    Route::get('user-management',[UserController::class, 'index'])->name('user.index');
 
     Route::get('dash-project', [projectsController::class, 'indexproject']);
     Route::get('dash-projectItem/{id}', [projectsController::class, 'indexproject']);

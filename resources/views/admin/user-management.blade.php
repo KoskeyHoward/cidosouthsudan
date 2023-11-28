@@ -64,31 +64,17 @@
                         </tr>
                     </thead>
                     <tbody>
+                        @foreach($usersArray as $user)
                         <tr>
-                            <td scope="row"><a href="">Ann Doe</a></td>
-                            <td>ann@gmail.com</td>
-                            <td>Admin</td>
-                            <td><a href=""><i class="fa fa-edit me-3"></i></a> <a href=""><i class="fa fa-trash"></i></a></td>
+                            <td scope="row">{{$user['name']}}</td>
+                            <td>{{$user['email']}}</td>
+                            <td>{{$user['role']}} </td>
+                            <td><a href="{!!route('create-user',$user['id'])!!}"><i class="fa fa-edit me-3"></i></a> <a href="" onclick="return confirm('Are you sure you want to delete this User?');"><i class="fa fa-trash"></i></a></td>
+                                
                         </tr>
+                        @endforeach
 
-                        <tr>
-                            <td scope="row"><a href="">John Doe</a></td>
-                            <td>john@gmail.com</td>
-                            <td>Admin</td>
-                            <td><a href=""><i class="fa fa-edit me-3"></i></a> <a href=""><i class="fa fa-trash"></i></a></td>
-                        </tr>
-                        <tr>
-                            <td scope="row"><a href="">Ann Doe</a></td>
-                            <td>ann@gmail.com</td>
-                            <td>Admin</td>
-                            <td><a href=""><i class="fa fa-edit me-3"></i></a> <a href=""><i class="fa fa-trash"></i></a></td>
-                        </tr>
-                        <tr>
-                            <td scope="row"><a href="">John Doe</a></td>
-                            <td>john@gmail.com</td>
-                            <td>Admin</td>
-                            <td><a href=""><i class="fa fa-edit me-3"></i></a> <a href=""><i class="fa fa-trash"></i></a></td>
-                        </tr>
+                       
                         
                     </tbody>
                 </table>

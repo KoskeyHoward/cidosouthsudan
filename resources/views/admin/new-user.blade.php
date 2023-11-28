@@ -33,23 +33,51 @@
                     <h2>Create User</h2>
                 </div>
 
-                <div class="p-5 pt-0">                    
-                    <form method="" action="" class="">
+                <div class="p-5 pt-0">       
+                    @if($user != null)
+                    <form method="POST" action="{{route('edit-user',$user->id ?? null)}}" class="">
+                        @elseif($user == null)
+                        <form method="POST" action="{{route('store-user',$user->id ?? null)}}" class="">
+                    @endif             
+                        @csrf
                         <div class="">                      
                             <div class="mb-3">
-                                <label for="name" class="form-label fw-bold">First name</label>
-                                <input type="name" class="form-control" placeholder="enter first name" id="exampleInputPassword1">
+                                <label for="name" class="form-label fw-bold">Full name</label>
+                                <input type="name" name="name" class="form-control" placeholder="Enter first name" id="exampleInputPassword1" value="{{$user['name'] ?? old('name')}}">
+                                @if ($errors->has('name'))
+                                <div class="error">{{ $errors->first('name') }}</div>
+                            @endif
                             </div>            
                             <div class="mb-3">
-                                <label for="name" class="form-label fw-bold">Last Name</label>
-                                <input type="name" class="form-control" placeholder="enter first name">
+                                <label for="email" class="form-label fw-bold">Email </label>
+                                @if($user != null)
+                                <input type="email" name="email" class="form-control muted" placeholder="Enter your email"  value="{{$user['email'] ?? old('email')}} " >
+                                @else
+                                <input type="email" name="email" class="form-control" placeholder="Enter your email"  value="{{$user['email'] ?? old('email')}}">
+                                
+                                @endif
+                            @if($errors->has('email'))
+                                <div class="text-danger">
+                                    {{$errors->first('email')}}
+                                </div>
+                            @endif
                             </div>            
                             <div class="mb-3">
                                 <label for="role" class="form-label fw-bold">Role</label>
-                                <input type="text" class="form-control" id="exampleInputPassword1">
+                                <select name="role"  id=" roles" class="form-select">
+                                    <option value="">Select an option</option>
+                                    <option value="1">Volunteer</option>
+                                    <option value="3">User</option>
+                                </select>
+                                @if($errors->has('role_id'))
+                                <div class="text-danger">
+                                    {{$errors->first('role_id')}}
+                                </div>
+                            @endif
+                                
                             </div> 
 
-                            <button type="submit" class="btn" style="background-color: #F58220; color:white;">Create User</button>
+                            <button type="submit" class="btn" style="background-color: #F58220; color:white;">Submit</button>
                         </div>
                     </form>
                 </div>
