@@ -8,8 +8,8 @@
             </div>
             <!-- dashboard/title  -->
             <div class=" text-light p-5 ps-4">
-                <h3>Users</h3>
-                <p><a href="/dashboard" style="color: #BFC7F4;">Dashboard / </a><a href="/user-management" class="text-light">Users</a></p>
+                <h3>Volunteers</h3>
+                <p><a href="/dashboard" style="color: #BFC7F4;">Dashboard / </a><a href="/dash-volunteers" class="text-light">Volunteers</a></p>
             </div>
         </div>
         <!-- profile  -->
@@ -30,21 +30,21 @@
 
         <main class="programs-main p-4 pt-0 ">
             <div class="card pt-3 pb-2 mb-0 mt-0">
-                <h3 class="p-3 ps-0">User Management</h3>
+                <h3 class="p-3 ps-0">Volunteers</h3>
                 <div class="top">
                     <div>
                         <!-- <div class="card p-2 pb-0 text-light" style="background-color: #5E72E4; border:none;">
                             <h4>200</h4>
                             <p>USERS</p>
                         </div> -->
-                        <div class="p-2 ps-0 ">
+                        <!-- <div class="p-2 ps-0 ">
                             <p class="fw-bold text-secondary">All Users</p>
-                        </div>
+                        </div> -->
                     </div>
 
                     <div>
                         <div class="mb-3 mt-2">
-                            <a href="/new-user" class="btn text-light ps-5 pe-5" style="text-decoration: none; background-color:#F58220">ADD USER</a>
+                            <a href="/new-volunteer" class="btn text-light ps-5 pe-5" style="text-decoration: none; background-color:#F58220">ADD VOLUNTEER</a>
                         </div>
                         <form class="box">
                             <i class="fa fa-search" aria-hidden="true"></i>
@@ -60,38 +60,24 @@
                         <tr>
                             <th scope="col">Name</th>
                             <th scope="col">Email</th>
-                            <th scope="col">Role</th>
+                            <th scope="col">Gender</th>
+                            <th scope="col">Phone number</th>
+                            <th scope="col">Profession</th>
                             <th scope="col">Action</th>
                         </tr>
                     </thead>
                     <tbody>
+                    @foreach($volunteer as $item)
                         <tr>
-                            <td scope="row"><a href="">Ann Doe</a></td>
-                            <td>ann@gmail.com</td>
-                            <td>Admin</td>
-                            <td><a href=""><i class="fa fa-edit me-3"></i></a> <a href=""><i class="fa fa-trash"></i></a></td>
-                        </tr>
-
-                        <tr>
-                            <td scope="row"><a href="">John Doe</a></td>
-                            <td>john@gmail.com</td>
-                            <td>Admin</td>
-                            <td><a href=""><i class="fa fa-edit me-3"></i></a> <a href=""><i class="fa fa-trash"></i></a></td>
-                        </tr>
-                        <tr>
-                            <td scope="row"><a href="">Ann Doe</a></td>
-                            <td>ann@gmail.com</td>
-                            <td>Admin</td>
-                            <td><a href=""><i class="fa fa-edit me-3"></i></a> <a href=""><i class="fa fa-trash"></i></a></td>
-                        </tr>
-                        <tr>
-                            <td scope="row"><a href="">John Doe</a></td>
-                            <td>john@gmail.com</td>
-                            <td>Admin</td>
-                            <td><a href=""><i class="fa fa-edit me-3"></i></a> <a href=""><i class="fa fa-trash"></i></a></td>
-                        </tr>
-                        
+                            <td scope="row"><a href="{{url('dash-volunteerItem/'.$item->id)}}">{{$item->name}}</a></td>
+                            <td>{{$item->email}}</td>
+                            <td>{{$item->gender}}</td>
+                            <td>{{$item->phone_number}}</td>
+                            <td>{{$item->profession}}</td>
+                            <td><a href="{{url('edit-volunteer/'.$item->id)}}"><i class="fa fa-edit me-3"></i></a> <a href="{{url('delete-volunteer/'.$item->id)}}"><i class="fa fa-trash"></i></a></td>
+                        </tr>                        
                     </tbody>
+                    @endforeach
                 </table>
                 </div>
 

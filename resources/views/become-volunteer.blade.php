@@ -56,7 +56,25 @@
                 <div class="mb-3">
                     <label for="exampleInputPassword1" class="form-label">Profession</label>
                     <input type="text" class="form-control" id="exampleInputPassword1">
-                </div>            
+                </div> 
+                <div class="row">
+                            <div class=" col-md-4 form-group mb-3">
+                                <label for=""> Facebook url</label>
+                                <input type="text" name="fabebook" value=""  class="form-control">
+                            </div>
+                            <div class=" col-md-4 form-group mb-3">
+                                <label for=""> Instagram url</label>
+                                <input type="text" name="instagram" value=""  class="form-control">
+                            </div>
+                            <div class="col-md-4 form-group mb-3">
+                                <label for=""> X url</label>
+                                <input type="text" name="twitter" value=""  class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group mb-3">
+                            <label for=""> Image</label>
+                            <input type="file" name="user_image" class="form-control">
+                        </div>           
                 <button type="submit" class="btn bg">Sign up</button>
             </div>
         </form>

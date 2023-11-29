@@ -42,25 +42,25 @@
                         @csrf 
                         @method('PUT')                       
                         <div class="form-group mb-3">
-                            <label for=""> Title</label>
+                            <label class="mb-2 fw-bold" for=""> Title</label>
                             <input type="text" name="title" value="{{ $project->title }}" class="form-control">
                         </div>
                         <div class="form-group mb-3">
-                            <label for=""> description</label>
+                            <label class="mb-2 fw-bold" for=""> Description</label>
                             <textarea type="text" name="description" value="{{$project->description}}" class="form-control"></textarea>
                         </div>
                         <div class="form-group mb-3">
-                            <label for=""> start date</label>
+                            <label class="mb-2 fw-bold" for=""> Start date</label>
                             <input type="date" name="start_date" value="{{$project->start_date}}" class="form-control">
                         </div>
                         <div class="form-group mb-3">
-                            <label for=""> End date</label>
+                            <label class="mb-2 fw-bold" for=""> End date</label>
                             <input type="date" name="end_date" value="{{$project->end_date}}"  class="form-control">
                         </div>
                         <div class="form-group mb-3">
-                            <label for=""> Image</label>
+                            <label class="mb-2 fw-bold" for=""> Image</label>
                             <input type="file" name="project_image" class="form-control">
-                            <img src="{{asset('images/projects/'.$project->project_image)}}" width="100px" height="100px" alt="project-image">
+                            <img src="{{asset('images/projects/'.$project->project_image)}}" class="mt-3" width="100px" height="100px" alt="project-image">
                         </div>
             
                         <p class="text-secondary fw-bold">Supported format: PNG,SVG</p>           

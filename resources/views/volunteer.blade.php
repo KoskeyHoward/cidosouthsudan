@@ -21,57 +21,18 @@
         </div>
 
         <div class="row  mb-4 ">
+        @foreach($volunteer as $item)
           <div class="col-lg-4 mb-4 mb-lg-0 c-program">
             <div class="card" style="width: 18rem;">
-                <img src="images/Testimonial-icon.webp" class="card-img-top" alt="...">
+                <img src="{{asset('images/volunteers/'.$item->volunteer_image)}}" class="card-img-top" alt=" volunteer">
                 <div class="card-body">
-                  <h5 class="card-title">John Doe</h5>
+                  <h5 class="card-title">{{$item->name}}</h5>
+                  <h6 class="card-title">{{$item->profession}}</h6>
                 </div>  
             </div>
           </div>
-          <div class="col-lg-4 mb-4 mb-lg-0 c-program">
-            <div class="card" style="width: 18rem;">
-                <img src="images/Testimonial-icon.webp" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Pius Munene</h5>
-                </div>  
-            </div>
-          </div>
-          <div class="col-lg-4 mb-4 mb-lg-0 c-program">
-            <div class="card" style="width: 18rem;">
-                <img src="images/Testimonial-icon.webp" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Thomas Reath</h5>
-                </div>  
-            </div>
-          </div>
+        @endforeach 
         </div>
-
+                
         
-        <div class="row mb-4">
-          <div class="col-lg-4 mb-4 mb-lg-0 c-program">
-            <div class="card" style="width: 18rem;">
-                <img src="images/Testimonial-icon.webp" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">John Doe</h5>
-                </div>  
-            </div>
-          </div>
-          <div class="col-lg-4 mb-4 mb-lg-0 c-program">
-            <div class="card" style="width: 18rem;">
-                <img src="images/Testimonial-icon.webp" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Pius Munene</h5>
-                </div>  
-            </div>
-          </div>
-          <div class="col-lg-4 mb-4 mb-lg-0 c-program">
-            <div class="card" style="width: 18rem;">
-                <img src="images/Testimonial-icon.webp" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Thomas Reath</h5>
-                </div>  
-            </div>
-          </div>
-        </div>
 @endsection

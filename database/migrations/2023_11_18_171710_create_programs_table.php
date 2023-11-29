@@ -13,9 +13,10 @@ return new class extends Migration
     {
         Schema::create('programs', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('project_image');
+            $table->string('program_image');
             $table->String('title');
             $table->longText('description');
+            $table->String('partners');
             $table->date('start_date');
             $table->date('end_date');
             $table->timestamps();

@@ -5,8 +5,8 @@
             Super Admin
         </button>
         <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Profile</a></li>
-            <li><a class="dropdown-item" href="#">Settings</a></li>
+            <li><a class="dropdown-item" href="/user-profile">Profile</a></li>
+            <!-- <li><a class="dropdown-item" href="#">Settings</a></li> -->
             <li><a class="dropdown-item" href="{{ route('logout') }}"
                 onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                 Logout</a></li>

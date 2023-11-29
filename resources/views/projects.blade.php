@@ -11,12 +11,14 @@
     </div>
 
     <div class="row text-center p-4 pb-0">
-      <div class="col-md-3 cont-project p-4 mb-4 mb-md-0">
-        <h5 class="fw-normal">"A STORY LIKE NO OTHER"</h5>
-        <P> <i class="bi bi-folder orange"></i> Shelter/Non-Food items <i class="bi bi-chat orange"></i>  Leave a comment</P>
-        <p>For years South Sudanese have been displaced by conflicts and the only place they can find safety is either...</p>
-        <a class="orange" href="{{route('read-more')}}" style="text-decoration: none;">READ MORE</a>
-      </div>
+      @foreach($project as $item)
+        <div class="col-md-3 cont-project p-4 mb-4 mb-md-0">
+          <h5 class="fw-normal">"{{$item->title}}"</h5>
+          <P> <i class="bi bi-folder orange"></i> Shelter/Non-Food items <i class="bi bi-chat orange"></i>  Leave a comment</P>
+          <p>{{$item->description}}</p>
+          <a class="orange" href="{{url('projectItem/'.$item->id)}}" style="text-decoration: none;">READ MORE</a>
+        </div>
+      @endforeach
 
       <div class="col-md-3 cont-project p-4 mb-4 mb-md-0">
         <h5 class="fw-normal">MAINSTREAMING COVID 19 FOR HUMANITARIAN FRONT-LINE WORKERS IN YEI.</h5>

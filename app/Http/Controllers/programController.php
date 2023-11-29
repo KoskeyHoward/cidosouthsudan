@@ -22,6 +22,17 @@ class programController extends Controller
         $program = programs::find($id);
         return view('admin.dash-program', compact('program'));
     }
+    public function home()
+    {
+        $program = programs::all();
+        return view('programs', compact('program'));
+    }
+
+    public function homeprogram(string $id)
+    {
+        $program = programs::find($id);
+        return view('program', compact('program'));
+    }
     /**
      * Show the form for creating a new resource.
      */

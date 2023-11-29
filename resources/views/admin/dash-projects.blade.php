@@ -30,7 +30,7 @@
 
         <main class="programs-main p-4 pt-0">
             <div class="card pt-3 pb-2 mb-0 mt-0">
-                <h3 class="p-3 ps-0">Projects</h3>
+                <h3 class="p-3 ps-0">Projects</h3>                      
                 <div class="top">
                     <div>
                         <div class="card p-2 pb-0 text-light" style="background-color: #00A651; border:none;">
@@ -54,9 +54,7 @@
                 </div>
 
                 <div class="table-responsive mt-3">
-                        <div class="">
-                            <h2>projects</h2>
-                        </div>
+                        
                         <div class="">
                             <table class="table activities-table table-bodered table-striped">
                                 <thead>

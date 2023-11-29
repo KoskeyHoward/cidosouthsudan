@@ -76,7 +76,7 @@
                     <div class="row">
                     <!-- projects  -->
                     <div class="col-md-6 card " >
-                    <a href="/dash-programs">
+                    <a href="/dash-projects">
                         <div class="card-body d-flex justify-content-between">
                             <div>
                                 <h5 class="card-title text-secondary">PROJECTS</h5>

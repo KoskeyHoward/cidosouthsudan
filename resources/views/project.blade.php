@@ -3,7 +3,7 @@
     <div id="" class="container">
         <div class="row">
             <div class="col-lg-8 pt-5 mt-5">
-                <h4 class="text-uppercase title">"A story like no other"</h4>
+                <h4 class="text-uppercase title">"{{$project->title}}"</h4>
                 <div class="d-flex fw-lighter">
                     <p><i class="bi bi-chat"></i> Leave a Comment</p>
                     <p class="ms-2">Share on</p>
@@ -32,7 +32,7 @@
                     light during the course of the project intervention in Nyori IDPs Settlement.
                 </p>
                 <div class="mt-5">
-                    <img src="{{ asset('images/volunteer-crl.jpg') }}" width="700"
+                    <img src="{{asset('images/projects/'.$project->project_image)}}" width="700"
                         class=" img-fluid mx-auto d-block mb-3" alt="Volunteer">
                     <p class="card-text fw-bold">Solomon (7) & John (5) (orphans) sharing a moment with one of CIDO’s Staff
                         during the post distribution monitoring activities in Nyori IDPs Settlement/ Camp in Lasu Payam of

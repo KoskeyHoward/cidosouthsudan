@@ -42,23 +42,23 @@
                 <form action="{{url('new-project')}}" method="POST" enctype="multipart/form-data">
                         @csrf                        
                         <div class="form-group mb-3">
-                            <label for=""> Title</label>
+                            <label class="mb-2 fw-bold" for=""> Title</label>
                             <input type="text" name="title" class="form-control">
                         </div>
                         <div class="form-group mb-3">
-                            <label for=""> description</label>
+                            <label class="mb-2 fw-bold" for=""> Description</label>
                             <textarea type="text" name="description" class="form-control"></textarea>
                         </div>
                         <div class="form-group mb-3">
-                            <label for=""> start date</label>
+                            <label class="mb-2 fw-bold" for=""> Start date</label>
                             <input type="date" name="start_date" class="form-control">
                         </div>
                         <div class="form-group mb-3">
-                            <label for=""> End date</label>
+                            <label class="mb-2 fw-bold" for=""> End date</label>
                             <input type="date" name="end_date" class="form-control">
                         </div>
                         <div class="form-group mb-3">
-                            <label for=""> Image</label>
+                            <label class="mb-2 fw-bold" for=""> Image</label>
                             <input type="file" name="project_image" class="form-control">
                         </div>
             

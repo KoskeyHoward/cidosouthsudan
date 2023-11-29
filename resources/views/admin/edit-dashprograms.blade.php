@@ -42,27 +42,27 @@
                         @csrf 
                         @method('PUT')                       
                         <div class="form-group mb-3">
-                            <label for=""> Title</label>
+                            <label class="mb-2 fw-bold" for=""> Title</label>
                             <input type="text" name="title" value="{{ $program->title }}" class="form-control">
                         </div>
                         <div class="form-group mb-3">
-                            <label for=""> description</label>
+                            <label class="mb-2 fw-bold" for=""> Description</label>
                             <input type="text" name="description" value="{{$program->description}}" class="form-control">
                         </div>
                         <div class="form-group mb-3">
-                            <label for=""> Partners</label>
+                            <label class="mb-2 fw-bold" for=""> Partners</label>
                             <input type="text" name="partners" value="{{$program->description}}" class="form-control">
                         </div>
                         <div class="form-group mb-3">
-                            <label for=""> start date</label>
+                            <label class="mb-2 fw-bold" for=""> Start date</label>
                             <input type="date" name="start_date" value="{{$program->start_date}}" class="form-control">
                         </div>
                         <div class="form-group mb-3">
-                            <label for=""> End date</label>
+                            <label class="mb-2 fw-bold" for=""> End date</label>
                             <input type="date" name="end_date" value="{{$program->end_date}}"  class="form-control">
                         </div>
                         <div class="form-group mb-3">
-                            <label for=""> Image</label>
+                            <label class="mb-2 fw-bold" for=""> Image</label>
                             <input type="file" name="program_image" class="form-control">
                             <img src="{{asset('images/programs/'.$program->program_image)}}" width="100px" height="100px" alt="program-image">
                         </div>

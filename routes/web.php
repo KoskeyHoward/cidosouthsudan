@@ -5,6 +5,7 @@ use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\programController;
 use App\Http\Controllers\projectsController;
 use App\Http\Controllers\volunteerApplicationController;
+use App\Http\Controllers\VolunteersController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -29,9 +30,13 @@ Route::get('/about', function () {
     return view('about');
 })->name('about');
 
-Route::get('/projects', function () {
-    return view('projects');
-})->name('projects');
+Route::get('projects', [projectsController::class, 'home']);
+Route::get('project', [projectsController::class, 'homeproject']);
+Route::get('projectItem/{id}', [projectsController::class, 'homeproject']);
+
+// Route::get('/projects', function () {
+//     return view('projects');
+// })->name('projects');
 
 Route::get('/story', function () {
     return view('story');
@@ -53,25 +58,15 @@ Route::get('/contact', function () {
     return view('contact');
 })->name('contact');
 
-Route::get('/programs', function () {
-    return view('programs');
-})->name('programs');
+// Route::get('/programs', function () {
+//     return view('programs');
+// })->name('programs');
 
-Route::get('/peace-building', function () {
-    return view('peace-building');
-})->name('peace-building');
+Route::get('programs', [programController::class, 'home']);
+Route::get('program', [programController::class, 'homeprogram']);
+Route::get('programItem/{id}', [programController::class, 'homeprogram']);
 
-Route::get('/women-rights', function () {
-    return view('women-rights');
-})->name('women-rights');
-
-Route::get('/health-and-nutrition', function () {
-    return view('health-and-nutrition');
-})->name('health-and-nutrition');
-
-Route::get('/volunteer', function () {
-    return view('volunteer');
-})->name('volunteer');
+Route::get('volunteer', [VolunteersController::class, 'home']);
 
 Route::get('/become-volunteer', function () {
     return view('become-volunteer');
@@ -80,6 +75,7 @@ Route::get('/become-volunteer', function () {
 Route::get('/donationForm', function () {
     return view('donationForm');
 })->name('donationForm');
+
 Route::get('/read-more', function () {
     return view('read-more-projects');
 })->name('read-more');;
@@ -126,6 +122,7 @@ Route::group(['middleware' => 'auth'],function () {
     // Your routes here
     Route::get('/dashboard', function () {
         return view('/admin.dashboard'); })->name('dashboard');
+
     Route::get('dash-projects', [projectsController::class, 'index']);
 
     Route::get('dash-project', [projectsController::class, 'indexproject']);
@@ -140,6 +137,7 @@ Route::group(['middleware' => 'auth'],function () {
     Route::get('delete-project/{id}', [projectsController::class, 'destroy']);
 
     //admin-program routes
+    
     Route::get('dash-programs', [programController::class, 'index']);
 
     Route::get('dash-program', [programController::class, 'indexprogram']);
@@ -152,4 +150,18 @@ Route::group(['middleware' => 'auth'],function () {
     Route::put('update-program/{id}', [programController::class, 'update']);
 
     Route::get('delete-program/{id}', [programController::class, 'destroy']);
+
+    //admin-volunteer routes
+    Route::get('dash-volunteers', [VolunteersController::class, 'index']);
+
+    Route::get('dash-volunteer', [VolunteersController::class, 'indexvolunteer']);
+    Route::get('dash-volunteerItem/{id}', [VolunteersController::class, 'indexvolunteer']);
+
+    Route::get('new-volunteer', [VolunteersController::class, 'create']);
+    Route::post('new-volunteer', [VolunteersController::class, 'store']);
+
+    Route::get('edit-volunteer/{id}', [VolunteersController::class, 'edit']);
+    Route::put('update-volunteer/{id}', [VolunteersController::class, 'update']);
+
+    Route::get('delete-volunteer/{id}', [VolunteersController::class, 'destroy']);
 });

@@ -13,11 +13,15 @@ return new class extends Migration
     {
         Schema::create('volunteers', function (Blueprint $table) {
             $table->id();
+            $table->string('volunteer_image')->default('person.png');
             $table->string('name');
             $table->string('email');
             $table->string('gender');
-            $table->integer('phone_number');
+            $table->string('phone_number');
             $table->string('profession');
+            $table->string('facebook')->nullable();
+            $table->string('instagram')->nullable();
+            $table->string('twitter')->nullable();
             $table->timestamps();
         });
     }

@@ -22,6 +22,16 @@ class projectsController extends Controller
         $project = Projects::find($id);
         return view('admin.dash-project', compact('project'));
     }
+    public function home()
+    {
+        $project = Projects::all();
+        return view('projects', compact('project'));
+    }
+    public function homeproject(string $id)
+    {
+        $project = Projects::find($id);
+        return view('project', compact('project'));
+    }
 
 
     /**

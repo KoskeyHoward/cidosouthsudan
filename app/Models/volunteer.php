@@ -9,5 +9,6 @@ class volunteer extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['name','email','phone_number','gender', 'profession'];
+    protected $fillable = ['volunteer_image','name','email','phone_number','gender', 'profession'];
+
 }
