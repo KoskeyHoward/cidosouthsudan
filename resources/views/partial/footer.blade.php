@@ -51,8 +51,8 @@
       <h5 style="color: #f58220;"> &copy; CIDO South Sudan | All rights reserved</h5>
     </div>
     <div class="d-flex">
-      <a href="" class="fa fa-facebook nav-link text-white" ></a>
-      <a href="" class="fa fa-twitter ms-4 nav-link text-white" ></a>
+      <a href="https://www.facebook.com/cidosouthsudan/" class="fa fa-facebook nav-link text-white" ></a>
+      <a href="https://twitter.com/CidoSouthsudan" class="fa fa-twitter ms-4 nav-link text-white" ></a>
     </div>
   </footer>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>

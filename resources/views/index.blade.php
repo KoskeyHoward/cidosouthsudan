@@ -127,39 +127,19 @@
 
       <div class="container text-center">
       <div class="row mb-4 mt-4 text-center">
+        @foreach($program as $item)
             <div class="col-lg-4 mb-4 mb-lg-0 c-program">
                 <div class="card" style="width: 100%;">
                   <div class="image-container" style="width: 100%;">
                     <div class="overlay d-inline-block" style="padding-top:55px;">
-                      <h5 class="text-light mb-3">Peace and Security</h5>
+                      <h5 class="text-light mb-3">{{$item->title}}</h5>
                       <a class="btn button" href="/peace-building">View Program</a>
                     </div>
-                    <img src="{{asset('images/Peacebuilding.jpeg')}}" alt="peace and security"id="zoomable-image">
+                    <img src="{{asset('images/programs/'.$item->program_image)}}" alt="program"id="zoomable-image">
                   </div>
                 </div>
             </div>
-            <div class="col-lg-4 mb-4 mb-lg-0 c-program">
-                <div class="card" style="width: 100%;">
-                  <div class="image-container" style="width: 100%;">
-                    <div class="overlay d-inline-block" style="padding-top:55px;">
-                      <h5 class="text-light mb-3">Women Rights and Empowerment</h5>
-                      <a class="btn button" href="/women-rights">View Program</a>
-                    </div>
-                    <img src="{{asset('images/Livelihood.jpeg')}}" alt="women's rights and empowerment"id="zoomable-image">
-                  </div>
-                </div>
-            </div>
-            <div class="col-lg-4 mb-4 mb-lg-0 c-program">
-                <div class="card" style="width: 100%;">
-                  <div class="image-container" style="width: 100%;">
-                    <div class="overlay d-inline-block" style="padding-top:55px;">
-                      <h5 class="text-light mb-3">Access to Justice</h5>
-                        <button class="button">View Program</button>
-                    </div>
-                    <img src="{{URL('images/GL.jpeg')}}" alt="access to justice"id="zoomable-image">
-                  </div>
-                </div>
-            </div>
+            @endforeach
           </div>
       </div>
 
@@ -173,42 +153,21 @@
       </div>
 
       <div class="container text-center">
-      <div class="row mb-4 mt-4 text-center">
-            <div class="col-lg-4 mb-4 mb-lg-0 c-program">
-                <div class="card" style="width: 100%;">
-                  <div class="image-container" style="width: 100%;">
-                    <div class="overlay d-inline-block" style="padding-top:55px;">
-                      <h5 class="text-light mb-3">A story like no other</h5>
-                      <a class="btn button" href="/story">View Project</a>
+        <div class="row mb-4 mt-4 text-center">
+          @foreach($project as $item)
+              <div class="col-lg-4 mb-4 mb-lg-0 c-program">
+                  <div class="card" style="width: 100%;">
+                    <div class="image-container" style="width: 100%;">
+                      <div class="overlay d-inline-block" style="padding-top:55px;">
+                        <h5 class="text-light mb-3">{{$item->title}}</h5>
+                        <a class="btn button" href="/story">View Project</a>
+                      </div>
+                      <img src="{{asset('images/projects/'.$item->project_image)}}" alt="project" id="zoomable-image">
                     </div>
-                    <img src="{{asset('images/2023.jpg')}}" alt="a story like no other" id="zoomable-image">
                   </div>
-                </div>
-            </div>
-            <div class="col-lg-4 mb-4 mb-lg-0 c-program">
-                <div class="card" style="width: 100%;">
-                  <div class="image-container" style="width: 100%;">
-                    <div class="overlay d-inline-block" style="padding-top:55px;">
-                      <h5 class="text-light mb-3">Power of integrated services in Akobo East</h5>
-                      <a class="btn button" href="/story">View Project</a>
-                    </div>
-                    <img src="{{asset('images/four_1.jpeg')}}" alt="cido-project" id="zoomable-image">
-                  </div>
-                </div>
-            </div>
-            <div class="col-lg-4 mb-4 mb-lg-0 c-program">
-                <div class="card" style="width: 100%;">
-                  <div class="image-container" style="width: 100%;">
-                    <div class="overlay d-inline-block" style="padding-top:55px;">
-                      <h5 class="text-light mb-3">CIDO saves a Woman 3 days of labor pain in Akobo.</h5>
-                      <a class="btn button" href="/story">View Project</a>
-                    </div>
-                    <img src="{{asset('images/SNFI.jpeg')}}" alt="cido-project" id="zoomable-image">
-                  </div>
-                </div>
-            </div>
-            
-          </div>
+              </div>
+              @endforeach              
+        </div>
       </div>
 
       <button class="btn programs-btn"> <a href="/projects" style="text-decoration: none; color: white;"> More Projects >></a></button>

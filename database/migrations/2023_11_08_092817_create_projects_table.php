@@ -15,7 +15,12 @@ return new class extends Migration
             $table->id();
             $table->string('project_image');
             $table->String('title');
+            $table->String('category');
             $table->longText('description');
+            $table->string('image1')->nullable();
+            $table->string('image1_description')->nullable();
+            $table->string('image2')->nullable();
+            $table->string('image2_description')->nullable();
             $table->date('start_date');
             $table->date('end_date');
             $table->timestamps();

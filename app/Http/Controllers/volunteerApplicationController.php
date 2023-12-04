@@ -17,16 +17,28 @@ class volunteerApplicationController extends Controller
             'profession'=> 'required',
         ]);
 
-        //create an application form in the database
-        $applicationForm = new volunteer;
-        $applicationForm->name = $request->name;
-        $applicationForm->email = $request->email;
-        $applicationForm->phone_number = $request->phone_number;
-        $applicationForm->gender = $request->gender;
-        $applicationForm->profession = $request->prfession;
-        $applicationForm->save();
+        $data = $request->all();
 
-        //return a response
-        return redirect('/become-volunteer')->with('Your application has been submitted successfully!');
+        // Store the form data in the database
+        $submission = new volunteer([
+            'name' => $request->input('name'),
+            'email' => $request->input('email'),
+            'phone_number' => $request->input('phone_number'),
+            'gender' => $request->input('gender'),
+            'profession' => $request->input('profession'),
+        ]);
+
+        if ($submission->save()) {
+            // Send an email to the admin
+            Mail::send('emails.volunteer', ['data' => $data], function ($message) use ($data) {
+                $message->to('info@cidosouthsudan.org');
+                $message->subject('Volunteer Application');
+            });
+
+            // You can add a success message or redirect back to the contact page
+            return redirect()->back()->with('success', 'Your application has been sent.');
+        }
+
+        return redirect()->back()->with('error', 'Your application could not be sent.');
     }
 }

@@ -29,8 +29,8 @@
     </div> -->
 
     <div class="d-flex justify-content-between m-3">
-        <button class="btn programs-btn"><a href="/women-rights">Prev</a></button>
-        <button class="btn programs-btn"><a href="/health-and-nutrition">Next</a></button>
+        <button class="btn programs-btn"><a href="{{ route('program.showPrev', ['id' => $program->id]) }}">Prev</a></button>
+        <button class="btn programs-btn"><a href="{{ route('program.showNext', ['id' => $program->id]) }}">Next</a></button>
         <!-- <button class="btn programs-btn"> <a href="/programs" > More Programs >></a></button> -->
     </div>
 @endsection

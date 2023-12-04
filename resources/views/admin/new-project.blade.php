@@ -40,27 +40,59 @@
                 @endif
                 <div class="p-5 pt-0">                    
                 <form action="{{url('new-project')}}" method="POST" enctype="multipart/form-data">
-                        @csrf                        
+                        @csrf   
+                        <!-- project image  -->
+                        <div class="form-group mb-3">
+                            <label class="mb-2 fw-bold" for="">Project Image</label>
+                            <input type="file" name="project_image" class="form-control">
+                        </div>       
+                        <!-- title -->
                         <div class="form-group mb-3">
                             <label class="mb-2 fw-bold" for=""> Title</label>
                             <input type="text" name="title" class="form-control">
                         </div>
+                        <!-- category  -->
+                        <div class="form-group mb-3">
+                            <label class="mb-2 fw-bold" for=""> Category</label>
+                            <input type="text" name="category" class="form-control">
+                        </div>
+                        <!-- description  -->
                         <div class="form-group mb-3">
                             <label class="mb-2 fw-bold" for=""> Description</label>
                             <textarea type="text" name="description" class="form-control"></textarea>
                         </div>
+                        <!-- images and description  -->
                         <div class="form-group mb-3">
-                            <label class="mb-2 fw-bold" for=""> Start date</label>
-                            <input type="date" name="start_date" class="form-control">
+                            <label class="mb-2 fw-bold" for="">Image 1</label>
+                            <input type="file" name="image1" class="form-control">
                         </div>
                         <div class="form-group mb-3">
-                            <label class="mb-2 fw-bold" for=""> End date</label>
-                            <input type="date" name="end_date" class="form-control">
+                            <label class="mb-2 fw-bold" for=""> Image 1 description</label>
+                            <input type="text" name="image1_description" class="form-control">
                         </div>
                         <div class="form-group mb-3">
-                            <label class="mb-2 fw-bold" for=""> Image</label>
-                            <input type="file" name="project_image" class="form-control">
+                            <label class="mb-2 fw-bold" for="">Image 2</label>
+                            <input type="file" name="image2" class="form-control">
                         </div>
+                        <div class="form-group mb-3">
+                            <label class="mb-2 fw-bold" for=""> Image 2 description</label>
+                            <input type="text" name="image2_description" class="form-control">
+                        </div>
+                        <!-- dates  -->
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="form-group mb-3">
+                                    <label class="mb-2 fw-bold" for=""> Start date</label>
+                                    <input type="date" name="start_date" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="form-group mb-3">
+                                    <label class="mb-2 fw-bold" for=""> End date</label>
+                                    <input type="date" name="end_date" class="form-control">
+                                </div>
+                            </div>
+                        </div>                       
             
                         <p class="text-secondary fw-bold">Supported format: PNG,SVG</p>           
                             <button class="btn" style="border: 1px solid #F58220; color:#F58220;">Cancel</button>

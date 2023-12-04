@@ -9,6 +9,9 @@
           </div>
         </div>
 
+        @if(session('success'))
+            <h6 class="alert alert-success">{{ session('success') }}</h6>
+        @endif
     <div class="p-5 pt-0">
         <h2 class="text-center pt-3">Volunteer Application</h2>
         <form method="POST" action="{{route('volunteer.apply')}}" class="border border-success rounded-4 mt-4 ">

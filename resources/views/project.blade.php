@@ -6,7 +6,7 @@
                 <h4 class="text-uppercase title">"{{$project->title}}"</h4>
                 <div class="d-flex fw-lighter">
                     <p><i class="bi bi-chat"></i> Leave a Comment</p>
-                    <p class="ms-2">Share on</p>
+                    <p class="ms-2">Share on</p>                    
                     <p class="ms-2"><i class="bi bi-facebook"></i></p>
                     <p class="ms-2"><i class="bi bi-twitter-x"></i></p>
                     <p class="ms-2"><i class="bi bi-google"></i></p>
@@ -14,61 +14,59 @@
                 </div>
                 <hr>
                 <p>
-                    For years South Sudanese have been displaced by conflicts and the only place they can find safety is
-                    either in the IDPs Settlement or Camp within or outside the country. Like any other war affected
-                    country, mostly women, children and the aged are heavily affected in the process of relocating from
-                    their original homes to a new environment that takes time for one to adapt. Recently CIDO received
-                    funding from Rapid Response Fund (RRF) in close coordination with IOM and USAID to address both basic
-                    needs including NFIs that would improve protection of those at risk of violations and the most
-                    vulnerable in Nyori IDPs Settlement/Camp of Lasu Payam in Yei River County. During the project
-                    activities in Nyori IDPs Settlement/Camp, CIDO paid special attention to people living with
-                    disabilities, children, child-headed and female-headed households. The organization (CIDO) is an active
-                    member of Protection Cluster where information and issues related to protection such as GBV are referred
-                    or shared, discussed and addressed. In the process, CIDO also carried out post distribution monitoring
-                    activities after distribution of the NFIs to ensure direct feedback from beneficiaries are considered
-                    with the impact that was brought by the project in the IDPs Settlement/Camp. As a measure to ensure no
-                    single beneficiary is left behind during the project intervention despite of his/her age, gender,
-                    ethnicity, religion and ways of life; the project team looked at all aspects that brought success in the
-                    light during the course of the project intervention in Nyori IDPs Settlement.
+                   {{$project->description}}
                 </p>
+                <!-- <div class="mt-5">
+                    @if($project->project_image)
+                    <img src="{{asset('images/projects/'.$project->project_image)}}" width="300" height="100"
+                        class=" img-fluid mx-auto d-block mb-3" alt="project image">
+                    @endif
+                </div> -->
                 <div class="mt-5">
-                    <img src="{{asset('images/projects/'.$project->project_image)}}" width="700"
-                        class=" img-fluid mx-auto d-block mb-3" alt="Volunteer">
-                    <p class="card-text fw-bold">Solomon (7) & John (5) (orphans) sharing a moment with one of CIDO’s Staff
-                        during the post distribution monitoring activities in Nyori IDPs Settlement/ Camp in Lasu Payam of
-                        Yei River County.</p>
+                    @if($project->image1)
+                    <img src="{{asset('images/projects/'.$project->image1)}}" width="300" height="100"
+                        class=" img-fluid mx-auto d-block mb-3" alt="project image">
+                    <p class="card-text fw-bold">{{$project->image1_description}}</p>
+                    @endif
                 </div>
-                <div class="my-5">
-                    <img src="{{ asset('images/volunteer-crl.jpg') }}" width="700"
-                        class=" img-fluid mx-auto d-block mb-3" alt="Volunteer">
-                    <p class="card-text fw-bold">Solomon (7) & John (5) (orphans) sharing a moment with one of CIDO’s Staff
-                        during the post distribution monitoring activities in Nyori IDPs Settlement/ Camp in Lasu Payam of
-                        Yei River County.</p>
+                <div class="mt-5">
+                    @if($project->image2)
+                    <img src="{{asset('images/projects/'.$project->image2)}}" width="400"
+                        class=" img-fluid mx-auto d-block mb-3" alt="project image">
+                    <p class="card-text fw-bold">{{$project->image2_description}}</p>
+                    @endif
                 </div>
+                <P> <i class="bi bi-folder orange"></i> {{$project->category}}</P>
                 @include('partial.share')
 
                 <div class="mt-5">
-                    <form action="">
+                    @if(session('success'))
+                        <div class="alert alert-success">
+                            {{ session('success') }}
+                        </div>
+                    @endif
+                    <form action="{{ route('project.comment') }}">
+                    @csrf
                         <h3>Leave a Comment</h3>
                         <div class="mb-3">
                             <label for="exampleInputEmail1" class="form-label rounded-1">Your email address will not be
                                 puublished. Required fields are marked*</label>
-                            <textarea type="text" class="form-control rounded-2" placeholder="Write a Comment" id="exampleInputPassword1"></textarea>
+                            <textarea type="text" class="form-control rounded-2" required name="comment" placeholder="Write a Comment" id="exampleInputPassword1"></textarea>
 
                         </div>
                         <div class="mb-3">
-                            <label for="exampleInputEmail1" class="form-label rounded-5">Name*</label>
-                            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                            <label for="exampleInputEmail1" class="form-label rounded-5">Name</label>
+                            <input type="text" class="form-control" required name="name" id="exampleInputEmail1" aria-describedby="emailHelp">
 
                         </div>
                         <div class="mb-3">
-                            <label for="exampleInputEmail1" class="form-label rounded-5">Email*</label>
-                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                            <label for="exampleInputEmail1" class="form-label rounded-5">Email</label>
+                            <input type="email" class="form-control" required name="email" id="exampleInputEmail1" aria-describedby="emailHelp">
 
                         </div>
                         <div class="mb-3">
-                            <label for="exampleInputEmail1" class="form-label rounded-5">Website*</label>
-                            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                            <label for="exampleInputEmail1" class="form-label rounded-5">Website</label>
+                            <input type="text" class="form-control" name="website" id="exampleInputEmail1" aria-describedby="emailHelp">
                         </div>
                         <div class="mb-3 form-check">
                             <input type="checkbox" class="form-check-input" id="exampleCheck1">
@@ -93,6 +91,7 @@
                         aria-valuemin="0" aria-valuemax="100" style="height: 5px">
                         <div class="progress-bar" style="width: 40%;background-color:#222222"></div>
                     </div>
+                    
                     <p><a href="" class="orangeish nav-link">“A STORY LIKE NO OTHER&#</a></p>
                     <p><a href="" class="orangeish nav-link">“MAINSTREAMING COVID 19 FOR HUM</a></p>
                     <p><a href="" class="orangeish nav-link">CIDO CONDUCTS TRAINING ON COVI

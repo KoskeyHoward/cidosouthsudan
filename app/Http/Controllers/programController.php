@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\programs;
+use App\Models\projects;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File;
 
@@ -32,6 +33,13 @@ class programController extends Controller
     {
         $program = programs::find($id);
         return view('program', compact('program'));
+    }
+
+    public function homepage()
+    {
+        $program = programs::take(3)->get();
+        $project = projects::take(3)->get();
+        return view('index', compact('program', 'project'));
     }
     /**
      * Show the form for creating a new resource.
@@ -67,10 +75,24 @@ class programController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show($id)
     {
-        //
+        $program = Programs::find($id);
+        return view('program', compact('program'));
     }
+
+    public function showPrev($id)
+    {
+        $program = Programs::where('id', '<', $id)->orderBy('id', 'desc')->first();
+        return $program ? redirect()->route('program', ['id' => $program->id]) : redirect()->back();
+    }
+
+    public function showNext($id)
+    {
+        $program = Programs::where('id', '>', $id)->orderBy('id')->first();
+        return $program ? redirect()->route('program', ['id' => $program->id]) : redirect()->back();
+    }
+
 
     /**
      * Show the form for editing the specified resource.
