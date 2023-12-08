@@ -133,7 +133,7 @@
                   <div class="image-container" style="width: 100%;">
                     <div class="overlay d-inline-block" style="padding-top:55px;">
                       <h5 class="text-light mb-3">{{$item->title}}</h5>
-                      <a class="btn button" href="/peace-building">View Program</a>
+                      <a class="btn button" href="{{url('programItem/'.$item->id)}}">View Program</a>
                     </div>
                     <img src="{{asset('images/programs/'.$item->program_image)}}" alt="program"id="zoomable-image">
                   </div>
@@ -160,7 +160,7 @@
                     <div class="image-container" style="width: 100%;">
                       <div class="overlay d-inline-block" style="padding-top:55px;">
                         <h5 class="text-light mb-3">{{$item->title}}</h5>
-                        <a class="btn button" href="/story">View Project</a>
+                        <a class="btn button" href="{{url('projectItem/'.$item->id)}}">View Project</a>
                       </div>
                       <img src="{{asset('images/projects/'.$item->project_image)}}" alt="project" id="zoomable-image">
                     </div>

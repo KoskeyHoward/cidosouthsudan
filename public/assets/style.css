@@ -345,6 +345,14 @@ ul li a{
     -webkit-line-clamp: 4; /* Number of lines to show */
     -webkit-box-orient: vertical;
 }
+.program-description{
+    max-height: 4.6em; /* 2 lines with a little extra for ellipsis */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* Number of lines to show */
+    -webkit-box-orient: vertical;
+}
 
 footer{
     display: flex;

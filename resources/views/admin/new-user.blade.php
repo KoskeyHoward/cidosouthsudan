@@ -41,42 +41,82 @@
                         <form method="POST" action="{{route('store-user',$user->id ?? null)}}" class="">
                     @endif             
                         @csrf
-                        <div class="">                      
-                            <div class="mb-3">
-                                <label for="name" class="form-label fw-bold">Full name</label>
-                                <input type="name" name="name" class="form-control" placeholder="Enter first name" id="exampleInputPassword1" value="{{$user['name'] ?? old('name')}}">
-                                @if ($errors->has('name'))
-                                <div class="error">{{ $errors->first('name') }}</div>
-                            @endif
-                            </div>            
-                            <div class="mb-3">
-                                <label for="email" class="form-label fw-bold">Email </label>
-                                @if($user != null)
-                                <input type="email" name="email" class="form-control muted" placeholder="Enter your email"  value="{{$user['email'] ?? old('email')}} " >
-                                @else
-                                <input type="email" name="email" class="form-control" placeholder="Enter your email"  value="{{$user['email'] ?? old('email')}}">
-                                
+                        <div class="">   
+                            <div class="row">                   
+                                <div class="col-md-6 mb-3">
+                                    <label for="name" class="form-label fw-bold">Full name</label>
+                                    <input type="name" name="name" class="form-control" placeholder="Enter first name" id="exampleInputPassword1" value="{{$user['name'] ?? old('name')}}">
+                                    @if ($errors->has('name'))
+                                    <div class="error">{{ $errors->first('name') }}</div>
                                 @endif
-                            @if($errors->has('email'))
-                                <div class="text-danger">
-                                    {{$errors->first('email')}}
+                                </div>            
+                                <div class=" col-md-6 mb-3">
+                                    <label for="email" class="form-label fw-bold">Email </label>
+                                    @if($user != null)
+                                    <input type="email" name="email" class="form-control muted" placeholder="Enter your email"  value="{{$user['email'] ?? old('email')}} " >
+                                    @else
+                                    <input type="email" name="email" class="form-control" placeholder="Enter your email"  value="{{$user['email'] ?? old('email')}}">
+                                    
+                                    @endif
+                                @if($errors->has('email'))
+                                    <div class="text-danger">
+                                        {{$errors->first('email')}}
+                                    </div>
+                                @endif
+                                </div>      
+                            </div>   
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="mb-3">
+                                        <label class="mb-2 fw-bold" for="exampleInputEmail1" class="form-label">Gender</label>
+                                        <br>
+                                        <select id="gender" name="gender" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                            <option value="" disabled selected class="text-secondary">Select Gender</option>    
+                                            <option value="male">Male</option>
+                                            <option value="female">Female</option>
+                                            <option value="preferNotToSay">Prefer Not to Say</option>
+                                        </select>
+                                        @if($errors->has('gender'))
+                                            <div class="text-danger">
+                                                {{$errors->first('gender')}}
+                                            </div>
+                                        @endif
+                                    </div>
                                 </div>
-                            @endif
-                            </div>            
-                            <div class="mb-3">
-                                <label for="role" class="form-label fw-bold">Role</label>
-                                <select name="role"  id=" roles" class="form-select">
-                                    <option value="">Select an option</option>
-                                    <option value="1">Volunteer</option>
-                                    <option value="3">User</option>
-                                </select>
-                                @if($errors->has('role_id'))
-                                <div class="text-danger">
-                                    {{$errors->first('role_id')}}
+                                <div class="col-lg-6">  
+                                    <div class="mb-3">
+                                        <label class="mb-2 fw-bold" for="phone_number" class="form-label">Phone Number</label>
+                                        <div>
+                                            <input type="tel" name="phone_number" class="form-control flex-3" id="phone_number"> 
+                                        </div>                           
+                                    </div>
                                 </div>
-                            @endif
-                                
-                            </div> 
+                            </div>   
+                            <div class="row">
+                                <div class="col-md-6 form-group mb-3">
+                                    <label class="mb-2 fw-bold" for=""> Profession</label>
+                                    <input type="text" name="profession" value=""  class="form-control">
+                                </div>
+                            
+                                <div class="col-md-6 mb-3">
+                                    <label for="role" class="form-label fw-bold">Role</label>
+                                    <select name="role"  id=" roles" class="form-select">
+                                        <option value="">Select an option</option>
+                                        <option value="1">Volunteer</option>
+                                        <option value="3">User</option>
+                                    </select>
+                                    @if($errors->has('role_id'))
+                                    <div class="text-danger">
+                                        {{$errors->first('role_id')}}
+                                    </div>
+                                @endif
+                                    
+                                </div> 
+                            </div>
+                            <div class="form-group mb-3">
+                                <label class="mb-2 fw-bold" for=""> Image</label>
+                                <input type="file" name="profile_image" class="form-control">
+                            </div>
 
                             <button type="submit" class="btn" style="background-color: #F58220; color:white;">Submit</button>
                         </div>

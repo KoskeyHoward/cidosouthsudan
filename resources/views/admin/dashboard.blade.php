@@ -39,7 +39,7 @@
                         <div class="card-body d-flex justify-content-between">
                             <div>
                                 <h5 class="card-title text-secondary">USERS</h5>
-                                <h6 class="card-subtitle mb-2 fs-3 fw-bold text-body-secondary">79</h6>
+                                <h6 class="card-subtitle mb-2 fs-3 fw-bold text-body-secondary">{{$userCount}}</h6>
                                 <p class="card-text"> <span>+55%</span> since yesterday</p>
                             </div> 
                             <div class="card-icon">
@@ -58,7 +58,7 @@
                         <div class="card-body d-flex justify-content-between">
                             <div>
                                 <h5 class="card-title text-secondary">PROGRAMS</h5>
-                                <h6 class="card-subtitle mb-2 fs-3 fw-bold text-body-secondary">200</h6>
+                                <h6 class="card-subtitle mb-2 fs-3 fw-bold text-body-secondary">{{$programCount}}</h6>
                                 <p class="card-text"><span>+55%</span> since yesterday</p>
                             </div> 
                             <div class="card-icon">
@@ -80,7 +80,7 @@
                         <div class="card-body d-flex justify-content-between">
                             <div>
                                 <h5 class="card-title text-secondary">PROJECTS</h5>
-                                <h6 class="card-subtitle mb-2 fs-3 fw-bold text-body-secondary">200</h6>
+                                <h6 class="card-subtitle mb-2 fs-3 fw-bold text-body-secondary">{{$projectCount}}</h6>
                                 <p class="card-text"><span>+55%</span> since yesterday</p>
                             </div> 
                             <div class="card-icon">
@@ -98,7 +98,7 @@
                         <div class="card-body d-flex justify-content-between">
                             <div>
                                 <h5 class="card-title text-secondary">VOLUNTEERS</h5>
-                                <h6 class="card-subtitle mb-2 fs-3 fw-bold text-body-secondary">200</h6>
+                                <h6 class="card-subtitle mb-2 fs-3 fw-bold text-body-secondary">{{$volunteerCount}}</h6>
                                 <p class="card-text"><span>+55%</span> since yesterday</p>
                             </div> 
                             <div class="card-icon">

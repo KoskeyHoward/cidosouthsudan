@@ -78,7 +78,7 @@
                                 <input type="text" name="profession" value=""  class="form-control">
                             </div>
                         </div>
-                        <div class="row">
+                        <!-- <div class="row">
                             <div class=" col-md-4 form-group mb-3">
                                 <label class="mb-2 fw-bold" for=""> Facebook url</label>
                                 <input type="text" name="facebook" value=""  class="form-control">
@@ -91,7 +91,7 @@
                                 <label class="mb-2 fw-bold" for=""> X url</label>
                                 <input type="text" name="twitter" value=""  class="form-control">
                             </div>
-                        </div>
+                        </div> -->
                         <div class="form-group mb-3">
                             <label class="mb-2 fw-bold" for=""> Image</label>
                             <input type="file" name="volunteer_image" class="form-control">

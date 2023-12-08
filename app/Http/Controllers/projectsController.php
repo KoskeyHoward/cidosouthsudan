@@ -17,7 +17,8 @@ class projectsController extends Controller
     public function index()
     {
         $project = Projects::all();
-        return view('admin.dash-projects', compact('project'));
+        $projectCount = projects::count();
+        return view('admin.dash-projects', compact('project', 'projectCount'));
     }
     public function indexproject(string $id)
     {

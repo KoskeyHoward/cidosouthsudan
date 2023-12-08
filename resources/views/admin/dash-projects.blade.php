@@ -34,7 +34,7 @@
                 <div class="top">
                     <div>
                         <div class="card p-2 pb-0 text-light" style="background-color: #00A651; border:none;">
-                            <h4>100</h4>
+                            <h4>{{$projectCount}}</h4>
                             <p>PROJECTS</p>
                         </div>
                         <div class="p-2 ps-0">

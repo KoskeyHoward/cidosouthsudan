@@ -68,7 +68,7 @@
                         </div>
                         <div class="form-group mb-3">
                             <label class="mb-2 fw-bold" for=""> Image 1 description</label>
-                            <input type="text" name="image1_description" class="form-control">
+                            <textarea type="text" name="image1_description" class="form-control"></textarea>
                         </div>
                         <div class="form-group mb-3">
                             <label class="mb-2 fw-bold" for="">Image 2</label>
@@ -76,7 +76,7 @@
                         </div>
                         <div class="form-group mb-3">
                             <label class="mb-2 fw-bold" for=""> Image 2 description</label>
-                            <input type="text" name="image2_description" class="form-control">
+                            <textarea type="text" name="image2_description" class="form-control"></textarea>
                         </div>
                         <!-- dates  -->
                         <div class="row">

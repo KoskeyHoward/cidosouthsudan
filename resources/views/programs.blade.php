@@ -14,13 +14,13 @@
             <div class="row programs mb-4">
                 @foreach($program as $item)
                 <div class="col-lg-4 mb-4 mb-lg-0 c-program">
-                    <div class="card" style="width: 100%;">
+                    <div class="card mb-4" style="width: 100%;">
                         <div class="image-container" style="width: 100%;">
                             <img src="{{asset('images/programs/'.$item->program_image)}}" alt="Your Image"id="zoomable-image">
                             </div>
                         <div class="card-body">
                             <h5 class="card-title">{{$item->title}}</h5>
-                            <p class="card-text">{{$item->description}}</p>
+                            <p class="program-description card-text">{{$item->description}}</p>
                             <a class="btn programs-btn" href="{{url('programItem/'.$item->id)}}">View Program</a>
                         </div>
                     </div>

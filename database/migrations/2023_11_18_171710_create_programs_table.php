@@ -16,9 +16,9 @@ return new class extends Migration
             $table->string('program_image');
             $table->String('title');
             $table->longText('description');
-            $table->String('partners');
-            $table->date('start_date');
-            $table->date('end_date');
+            $table->String('partners')->nullable();
+            $table->date('start_date')->nullable();
+            $table->date('end_date')->nullable();
             $table->timestamps();
         });
     }

@@ -12,7 +12,7 @@
 
     <div class="row text-center mb-4 p-4 pb-0">
       @foreach($project as $item)
-        <div class="col-md-3 cont-project p-4 mb-4 mb-md-0">
+        <div class="col-md-3 cont-project p-4 me-4 mb-4 mb-md-2">
           <h5 class="fw-normal">"{{$item->title}}"</h5>
           <P> <i class="bi bi-folder orange"></i> {{$item->category}} <i class="bi bi-chat orange"></i>  Leave a comment</P>
           <p class="project-description">{{$item->description}}</p>

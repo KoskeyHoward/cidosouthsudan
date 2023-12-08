@@ -15,7 +15,8 @@ class programController extends Controller
     public function index()
     {
         $program = programs::all();
-        return view('admin.dash-programs', compact('program'));
+        $programCount = programs::count();
+        return view('admin.dash-programs', compact('program', 'programCount'));
     }
 
     public function indexprogram(string $id)
@@ -37,8 +38,8 @@ class programController extends Controller
 
     public function homepage()
     {
-        $program = programs::take(3)->get();
-        $project = projects::take(3)->get();
+        $program = programs::take(3)->orderBy('id', 'DESC')->get();
+        $project = projects::take(3)->orderBy('id', 'DESC')->get();
         return view('index', compact('program', 'project'));
     }
     /**
@@ -146,4 +147,5 @@ class programController extends Controller
         $program->delete();
         return redirect()->back()->with('status','program deleted successfully');
     }
+
 }

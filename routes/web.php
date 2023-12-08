@@ -114,9 +114,6 @@ Route::get('/health', function () {
 });
 
 //admin dashboard
-Route::get('dashboard', [DashboardController::class, 'project_index']);
-Route::get('dashboard', [DashboardController::class, 'program_index']);
-
 
 Route::get('new-project', [DashboardController::class, 'create']);
 Route::post('new-project', [DashboardController::class, 'store']);
@@ -129,12 +126,14 @@ Route::get('delete-project/{id}', [DashboardController::class, 'destroy']);
 //admin-project route
 Route::group(['middleware' => 'auth'],function () {
     // Your routes here
-    Route::get('/dashboard', function () {
-        return view('/admin.dashboard'); })->name('dashboard');
+    // Route::get('/dashboard', function () {
+    //     return view('/admin.dashboard'); })->name('dashboard');
+    Route::get('dashboard', [DashboardController::class, 'index']);
         
         Route::get('new-user/{id?}',[UserController::class,'create'])->name('create-user');
         Route::post('new-user/create/{id?}',[UserController::class,'store'])->name('store-user');
         Route::post('new-user/edit/{id?}',[UserController::class,'edit'])->name('edit-user');
+        Route::post('new-user/delete/{id?}',[UserController::class,'destroy'])->name('delete-user');
 
     Route::get('dash-projects', [projectsController::class, 'index']);
     Route::get('user-management',[UserController::class, 'index'])->name('user.index');

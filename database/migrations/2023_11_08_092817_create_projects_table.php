@@ -18,9 +18,9 @@ return new class extends Migration
             $table->String('category');
             $table->longText('description');
             $table->string('image1')->nullable();
-            $table->string('image1_description')->nullable();
+            $table->longText('image1_description')->nullable();
             $table->string('image2')->nullable();
-            $table->string('image2_description')->nullable();
+            $table->longText('image2_description')->nullable();
             $table->date('start_date');
             $table->date('end_date');
             $table->timestamps();

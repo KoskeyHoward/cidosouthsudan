@@ -7,6 +7,7 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use Spatie\Permission\Models\Role;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\File;
 
 class UserController extends Controller
 {
@@ -24,6 +25,10 @@ class UserController extends Controller
                 'email'=>$user->email,
                 'id'=>$user->id,
                 'role'=>Role::query()->where('id',$user->role_id)->first()->name ?? '',
+                'profile_image' => $user->profile_image,
+                'phone_number' => $user->phone_number,
+                'profession' => $user->profession,
+                'gender' => $user->gender,
 
             ];
             $usersArray[]=$userItem;
@@ -57,18 +62,33 @@ class UserController extends Controller
         'email' => 'required|email|unique:users',
         'role_id' => 'integer',
         'password' => 'nullable|min:8',
+        'profile_image' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+        'phone_number' => 'nullable|string',
+        'profession' => 'nullable|string',
+        'gender' => 'nullable|string',
         ],
         [
             'name.regex'=>'Full name should be two name seperated with space. No digit and special character allowed.'
         ]
     );
     if($valid){
-        
+        $profileImage = null;
+
+            if ($request->hasFile('profile_image')) {
+                $image = $request->file('profile_image');
+                $profileImage = 'profile_' . time() . '.' . $image->getClientOriginalExtension();
+                $image->move(public_path('images/users'), $profileImage);
+            }
+
         $user=User::query()->updateOrCreate(['id'=>$id],[
             'name'=>$request->input('name'),
             'email'=>$request->input('email'),
             'role_id'=>$request->input('role'),
-            'password'=>'null'
+            'password'=>'null',
+            'profile_image' => $profileImage,
+            'phone_number' => $request->input('phone_number'),
+            'profession' => $request->input('profession'),
+            'gender' => $request->input('gender'),
             
         ]);
         $userRole =$request->input('role');
@@ -104,6 +124,10 @@ class UserController extends Controller
             'email' => 'required|email',
             'role_id' => 'integer',
             'password' => 'nullable|min:8',
+            'profile_image' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'phone_number' => 'nullable|string',
+            'profession' => 'nullable|string',
+            'gender' => 'nullable|string',
             ],
             [
                 'name.regex'=>'Full name should be two name seperated with space. No digit and special character allowed.'
@@ -116,8 +140,7 @@ class UserController extends Controller
                     'name'=>$request->name,
                     'email'=>$request->email,
                     'role_id'=>$request->role,
-                    'password'=>'null'
-                    
+                    'password'=>'null'                    
                 ]);
                 $userRole =$request->input('role');
                 if($userRole === '3'){
@@ -146,6 +169,18 @@ class UserController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $user = User::find($id);
+
+        if ($user) {
+            $destination = 'images/users'.$user->profile_image;
+
+            if(File::exists($destination)){
+                File::delete($destination);
+            }
+            $user->delete();
+            return redirect('/user-management')->with('status', 'User Deleted Successfully');
+        }
+
+        return redirect()->back()->with('error', 'User not found.');
     }
 }
