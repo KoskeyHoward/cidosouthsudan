@@ -44,7 +44,7 @@
 
                     <div>
                         <div class="mb-3 mt-2">
-                            <a href="/new-volunteer" class="btn text-light ps-5 pe-5" style="text-decoration: none; background-color:#F58220">ADD VOLUNTEER</a>
+                            <a href="/new-user" class="btn text-light ps-5 pe-5" style="text-decoration: none; background-color:#F58220">ADD VOLUNTEER</a>
                         </div>
                         <form class="box">
                             <i class="fa fa-search" aria-hidden="true"></i>
@@ -67,14 +67,14 @@
                         </tr>
                     </thead>
                     <tbody>
-                    @foreach($volunteer as $item)
+                    @foreach($usersArray as $user)
                         <tr>
-                            <td scope="row"><a href="{{url('dash-volunteerItem/'.$item->id)}}">{{$item->name}}</a></td>
-                            <td>{{$item->email}}</td>
-                            <td>{{$item->gender}}</td>
-                            <td>{{$item->phone_number}}</td>
-                            <td>{{$item->profession}}</td>
-                            <td><a href="{{url('edit-volunteer/'.$item->id)}}"><i class="fa fa-edit me-3"></i></a> <a href="{{url('delete-volunteer/'.$item->id)}}"><i class="fa fa-trash"></i></a></td>
+                            <td scope="row"><a href="{{ route('user-profile', $user['id']) }}">{{$user['name']}}</a></td>
+                            <td>{{$user['email']}}</td>
+                            <td>{{$user['gender']}}</td>
+                            <td>{{$user['phone_number']}}</td>
+                            <td>{{$user['profession']}}</td>
+                            <td><a href="{!!route('edit-profile',$user['id'])!!}"><i class="fa fa-edit me-3"></i></a> <a href="{{url('delete-user/'.$user['id'])}}"><i class="fa fa-trash"></i></a></td>
                         </tr>                        
                     </tbody>
                     @endforeach

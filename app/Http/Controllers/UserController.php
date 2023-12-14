@@ -37,6 +37,79 @@ class UserController extends Controller
        return view('admin.user-management',compact('usersArray','roles'));
     }
 
+    public function profile(string $id){
+        $user = User::find($id);
+        $userCount = User::count();
+        $roleName = Role::query()->where('id', $user->role_id)->first()->name ?? '';
+        return view('admin.user-profile', compact('user', 'roleName', 'userCount'));
+    }
+    public function Volunteers()
+    {
+        //
+        $volunteers = User::query()->where('role_id', 3)->get();;
+        $usersArray =[];
+        foreach($volunteers as $user){
+            $userItem = [
+                'name'=>$user->name,
+                'email'=>$user->email,
+                'id'=>$user->id,
+                'role'=>Role::query()->where('id',$user->role_id)->first()->name ?? '',
+                'profile_image' => $user->profile_image,
+                'phone_number' => $user->phone_number,
+                'profession' => $user->profession,
+                'gender' => $user->gender,
+
+            ];
+            $usersArray[]=$userItem;
+            $roles = Role::all();
+        }
+       return view('volunteer',compact('usersArray','roles'));
+    }
+    public function VolunteersIndex()
+    {
+        //
+        $volunteers = User::query()->where('role_id', 3)->get();;
+        $usersArray =[];
+        foreach($volunteers as $user){
+            $userItem = [
+                'name'=>$user->name,
+                'email'=>$user->email,
+                'id'=>$user->id,
+                'role'=>Role::query()->where('id',$user->role_id)->first()->name ?? '',
+                'profile_image' => $user->profile_image,
+                'phone_number' => $user->phone_number,
+                'profession' => $user->profession,
+                'gender' => $user->gender,
+
+            ];
+            $usersArray[]=$userItem;
+            $roles = Role::all();
+        }
+       return view('admin.dash-volunteers',compact('usersArray','roles'));
+    }
+    public function employees()
+    {
+        //
+        $employees = User::query()->where('role_id', 1)->get();;
+        $usersArray =[];
+        foreach($employees as $user){
+            $userItem = [
+                'name'=>$user->name,
+                'email'=>$user->email,
+                'id'=>$user->id,
+                'role'=>Role::query()->where('id',$user->role_id)->first()->name ?? '',
+                'profile_image' => $user->profile_image,
+                'phone_number' => $user->phone_number,
+                'profession' => $user->profession,
+                'gender' => $user->gender,
+
+            ];
+            $usersArray[]=$userItem;
+            $roles = Role::all();
+        }
+       return view('about',compact('usersArray','roles'));
+    }
+
     /**
      * Show the form for creating a new resource.
      */
@@ -57,6 +130,7 @@ class UserController extends Controller
     public function store(Request $request,$id=null)
     {
         //  
+        $user = new User;
         $valid=$request->validate([
         'name'=>'required|string|regex:/^[a-zA-Z]+(?:\s[a-zA-Z]+)+$/',
         'email' => 'required|email|unique:users',
@@ -72,25 +146,46 @@ class UserController extends Controller
         ]
     );
     if($valid){
-        $profileImage = null;
+        
+        if($request->hasFile('profile_image'))
+        {
+            $file = $request->file('profile_image');
+            $extension = $file->getClientOriginalExtension();
+            $profileImage = time().'.'.$extension;
+            $file->move('images/users/', $profileImage);
+            $user->profile_image = $profileImage;
+        }else{
+            $profileImage = asset('images/users/person.png');
+        }
+            // if ($request->hasFile('profile_image')) {
 
-            if ($request->hasFile('profile_image')) {
-                $image = $request->file('profile_image');
-                $profileImage = 'profile_' . time() . '.' . $image->getClientOriginalExtension();
-                $image->move(public_path('images/users'), $profileImage);
-            }
+            //     $image = $request->file('profile_image');
+            //     $profileImage = 'profile_' . time() . '.' . $image->getClientOriginalExtension();
+            //     $image->move(public_path('images/users'), $profileImage);
+            // }else{
+            //     $profileImage = asset('images/users/person.png');
+            // }
 
-        $user=User::query()->updateOrCreate(['id'=>$id],[
-            'name'=>$request->input('name'),
-            'email'=>$request->input('email'),
-            'role_id'=>$request->input('role'),
-            'password'=>'null',
-            'profile_image' => $profileImage,
-            'phone_number' => $request->input('phone_number'),
-            'profession' => $request->input('profession'),
-            'gender' => $request->input('gender'),
+        // $user=User::query()->updateOrCreate(['id'=>$id],[
+        //     'name'=>$request->input('name'),
+        //     'email'=>$request->input('email'),
+        //     'role_id'=>$request->input('role'),
+        //     'password'=>'null',
+        //     'profile_image' => $profileImage,
+        //     'phone_number' => $request->input('phone_number'),
+        //     'profession' => $request->input('profession'),
+        //     'gender' => $request->input('gender'),
             
-        ]);
+        // ]);
+        $user->name = $request->input('name');
+        $user->email = $request->input('email');
+        $user->role_id = $request->input('role');
+        $user->phone_number = $request->input('phone_number');
+        $user->profession = $request->input('profession');
+        $user->gender = $request->input('gender');
+        $user->password =('null');
+
+
         $userRole =$request->input('role');
         if($userRole === '3'){
             $user->assignRole('user');
@@ -99,6 +194,7 @@ class UserController extends Controller
             $user->assignRole('volunteer');
 
         }
+        $user->save();
         return redirect('/user-management')->with('status','User Created Successfully');
     }
         return redirect()->back()->with('error','Something went wrong');
@@ -116,12 +212,23 @@ class UserController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Request $request,  $id= null)
+
+     public function edit(string $id){
+        $user = User::find($id);
+        return view('admin.edit-profile', compact('user'));
+     }
+    
+
+    /**
+     * Update the specified resource in storage.
+     */
+    public function update(Request $request, string $id)
     {
         //
+        $user = User::find($id);
         $valid=$request->validate([
             'name'=>'required|string|regex:/^[a-zA-Z]+(?:\s[a-zA-Z]+)+$/',
-            'email' => 'required|email',
+            'email' => 'required|email|unique:users',
             'role_id' => 'integer',
             'password' => 'nullable|min:8',
             'profile_image' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
@@ -134,34 +241,52 @@ class UserController extends Controller
             ]
         );
         if($valid){
-            $userId = Auth::user();
-            if($userId){
-                $user=User::updateOrCreate(['id'=>$id],[
-                    'name'=>$request->name,
-                    'email'=>$request->email,
-                    'role_id'=>$request->role,
-                    'password'=>'null'                    
-                ]);
-                $userRole =$request->input('role');
-                if($userRole === '3'){
-                    $user->assignRole('user');
-                }
-                elseif($userRole === '1'){
-                    $user->assignRole('volunteer');
-        
-                }
-                return redirect('/user-management')->with('status','User Updated Successfully');
+            $user = User::findOrFail($id);
+            $profileImage = null;
+    
+            if($request->hasFile('profile_image'))
+            {
+                $file = $request->file('profile_image');
+                $extension = $file->getClientOriginalExtension();
+                $profileImage = time().'.'.$extension;
+                $file->move('images/users/', $profileImage);
+                $user->profile_image = $profileImage;
+            }else{
+                $profileImage = asset('images/users/person.png');
             }
-            return redirect()->back()->with('error','Something went wrong');
-        }
-    }
+    
+            // $user=User::query()->updateOrCreate(['id'=>$id],[
+            //     'name'=>$request->input('name'),
+            //     'email'=>$request->input('email'),
+            //     'role_id'=>$request->input('role'),
+            //     'password'=>'null',
+            //     'profile_image' => $profileImage,
+            //     'phone_number' => $request->input('phone_number'),
+            //     'profession' => $request->input('profession'),
+            //     'gender' => $request->input('gender'),
+                
+            // ]);
 
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, string $id)
-    {
-        //
+            $user->name = $request->input('name');
+            $user->email = $request->input('email');
+            $user->role_id = $request->input('role');
+            $user->phone_number = $request->input('phone_number');
+            $user->profession = $request->input('profession');
+            $user->gender = $request->input('gender');
+            $user->password =('null');
+
+            $userRole =$request->input('role');
+            if($userRole === '3'){
+                $user->assignRole('user');
+            }
+            elseif($userRole === '1'){
+                $user->assignRole('volunteer');
+    
+            }
+            $user->update();
+            return redirect('/user-management')->with('status','User Created Successfully');
+        }
+            return redirect()->back()->with('error','Something went wrong');
     }
 
     /**

@@ -67,16 +67,12 @@
                     <tbody>
                         @foreach($usersArray as $user)
                         <tr>
-                            <td scope="row">{{$user['name']}}</td>
+                            <td scope="row"><a href="{{ route('user-profile', $user['id']) }}">{{$user['name']}}</a></td>
                             <td>{{$user['email']}}</td>
                             <td>{{$user['role']}} </td>
-                            <td><a href="{!!route('create-user',$user['id'])!!}"><i class="fa fa-edit me-3"></i></a> <a href="" onclick="return confirm('Are you sure you want to delete this User?');"><i class="fa fa-trash"></i></a></td>
-                                
+                            <td><a href="{!!route('edit-profile',$user['id'])!!}"><i class="fa fa-edit me-3"></i></a> <a href="{{url('delete-user/'.$user['id'])}}" onclick="return confirm('Are you sure you want to delete this User?');"><i class="fa fa-trash"></i></a></td>       
                         </tr>
-                        @endforeach
-
-                       
-                        
+                        @endforeach                                  
                     </tbody>
                 </table>
                 </div>

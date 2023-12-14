@@ -36,11 +36,11 @@
                     
                     <div class="col-md-6 card" >
                     <a href="/user-management">
-                        <div class="card-body d-flex justify-content-between">
+                        <div class="card-body d-flex justify-content-between mb-4">
                             <div>
                                 <h5 class="card-title text-secondary">USERS</h5>
                                 <h6 class="card-subtitle mb-2 fs-3 fw-bold text-body-secondary">{{$userCount}}</h6>
-                                <p class="card-text"> <span>+55%</span> since yesterday</p>
+                                <!-- <p class="card-text"> <span>+55%</span> since yesterday</p> -->
                             </div> 
                             <div class="card-icon">
                                 <div class="container" style="background-color: #6C6AE4;">
@@ -55,11 +55,11 @@
                     <!-- programs  -->
                     <div class="col-md-6 card " >
                     <a href="/dash-programs">
-                        <div class="card-body d-flex justify-content-between">
+                        <div class="card-body d-flex justify-content-between mb-4">
                             <div>
                                 <h5 class="card-title text-secondary">PROGRAMS</h5>
                                 <h6 class="card-subtitle mb-2 fs-3 fw-bold text-body-secondary">{{$programCount}}</h6>
-                                <p class="card-text"><span>+55%</span> since yesterday</p>
+                                <!-- <p class="card-text"><span>+55%</span> since yesterday</p> -->
                             </div> 
                             <div class="card-icon">
                                 <div class="container" style="background-color: #F5474E;">
@@ -77,11 +77,11 @@
                     <!-- projects  -->
                     <div class="col-md-6 card " >
                     <a href="/dash-projects">
-                        <div class="card-body d-flex justify-content-between">
+                        <div class="card-body d-flex justify-content-between mb-4">
                             <div>
                                 <h5 class="card-title text-secondary">PROJECTS</h5>
                                 <h6 class="card-subtitle mb-2 fs-3 fw-bold text-body-secondary">{{$projectCount}}</h6>
-                                <p class="card-text"><span>+55%</span> since yesterday</p>
+                                <!-- <p class="card-text"><span>+55%</span> since yesterday</p> -->
                             </div> 
                             <div class="card-icon">
                                 <div class="container" style="background-color: #2DCFB8;">
@@ -95,11 +95,11 @@
                     <!-- volunteers  -->
                     <div class="col-md-6 card " >
                         <a href="/dash-volunteers">
-                        <div class="card-body d-flex justify-content-between">
+                        <div class="card-body d-flex justify-content-between mb-4">
                             <div>
                                 <h5 class="card-title text-secondary">VOLUNTEERS</h5>
                                 <h6 class="card-subtitle mb-2 fs-3 fw-bold text-body-secondary">{{$volunteerCount}}</h6>
-                                <p class="card-text"><span>+55%</span> since yesterday</p>
+                                <!-- <p class="card-text"><span>+55%</span> since yesterday</p> -->
                             </div> 
                             <div class="card-icon">
                                 <div class="container" style="background-color: #FB7E40;">
@@ -128,26 +128,23 @@
                         </tr>
                     </thead>
                     <tbody>
+                        @foreach($program as $item)
                         <tr>
                             <th scope="row">Program</th>
-                            <td>CIDO is working in...</td>
-                            <td>30/10/2023</td>
-                            <td><a href="/edit-dashprograms"><i class="fa fa-edit me-3"></i></a> <a href=""><i class="fa fa-trash"></i></a></td>
+                            <td>{{$item->description}}</td>
+                            <td>{{$item->created_at}}</td>
+                            <td><a href="{{url('edit-program/'.$item->id)}}" class="text-success"><i class="fa fa-edit me-3"></i></a> <a href="{{url('delete-program/'.$item->id)}}"  class="text-danger"><i class="fa fa-trash"></i></a></td> 
                         </tr>
+                        @endforeach
 
+                        @foreach($project as $item)
                         <tr>
                             <th scope="row">Project</th>
-                            <td>CIDO is working in...</td>
-                            <td>30/10/2023</td>
-                            <td><a href="/edit-dashprojects"><i class="fa fa-edit me-3"></i></a> <a href=""><i class="fa fa-trash"></i></a></td>
+                            <td>{{$item->description}}</td>
+                            <td>{{$item->created_at}}</td>
+                            <td><a href="{{url('edit-project/'.$item->id)}}" class="text-success"><i class="fa fa-edit me-3"></i></a> <a href="{{url('delete-project/'.$item->id)}}"  class="text-danger"><i class="fa fa-trash"></i></a></td>
                         </tr>
-
-                        <tr>
-                            <th scope="row">Program</th>
-                            <td>CIDO is working in...</td>
-                            <td>30/10/2023</td>
-                            <td><a href="/edit-dashprograms"><i class="fa fa-edit me-3"></i></a> <a href=""><i class="fa fa-trash"></i></a></td>
-                        </tr>                        
+                        @endforeach
                     </tbody>
                 </table>
                 </div>

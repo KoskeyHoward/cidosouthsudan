@@ -73,13 +73,6 @@
       <div class="below-hero text-center bg-black">
         <h1 class="slogan mb-4">Support to Local Solutions</h1>
       </div>
-
-      <!-- who we are  -->
-        <!-- image  -->
-        <!-- <div class="container col-md-6 pt-2 ps-4 pb-2 mb-md-0 mb-lg-0" style="height: 100%;">
-            <img class="who-img" src="{{URL('images/SV-launch2.webp')}}" alt="who we are" >
-        </div> -->
-
         <!-- who we are text  -->
         <div class=" p-5 pb-3" style="height: 100%">
               <div class="container text-center" style="height: 100%">
@@ -91,31 +84,6 @@
                 
               </div>
             </div>
-
-      <!-- <div class="row text-center p-5" style="background-color: #00A651;">
-        <div class="col-md-6 text-light mb-4 mb-md-0">
-          <h1>Since 2013 we are helping <br> people around the world.</h1>
-        </div>
-        <div class="col-md-6">
-          <div class="row">
-            <div class="col-md-4 mb-4 mb-md-0 counter">
-              <img src="{{URL('images/projects-100.png')}}" alt="Projects" width="100px">
-              <h3 class="count text-light" data-target="30">0</h3>
-              <h5 class="text-black">Total Projects</h5>
-            </div>
-            <div class="col-md-4 mb-4 mb-md-0 counter">
-              <img src="{{URL('images/people.png')}}" alt="people-reached" width="100px">
-              <h3 class="count text-light" data-target="3545">0</h3>
-              <h5 class="text-black">People Reached</h5>
-            </div>
-            <div class="col-md-4 mb-4 mb-md-0 counter">
-              <img src="{{URL('images/causes.png')}}" alt="causes" width="100px">
-              <h3 class="count text-light" data-target="8">0</h3>
-              <h5 class="text-black">Causes</h5>
-            </div>
-          </div>
-        </div>
-      </div> -->
     </section>
 
     <!-- programs  -->
@@ -155,7 +123,7 @@
       <div class="container text-center">
         <div class="row mb-4 mt-4 text-center">
           @foreach($project as $item)
-              <div class="col-lg-4 mb-4 mb-lg-0 c-program">
+              <div class="col-lg-4 mb-4 mb-lg-0 c-projects">
                   <div class="card" style="width: 100%;">
                     <div class="image-container" style="width: 100%;">
                       <div class="overlay d-inline-block" style="padding-top:55px;">
@@ -172,92 +140,6 @@
 
       <button class="btn programs-btn"> <a href="/projects" style="text-decoration: none; color: white;"> More Projects >></a></button>
     </section>
-
-    <!-- team  -->
-    <!-- <section class="text-center">
-      <div >
-        <h2>OUR TEAM</h2>
-        <h5>Meet our team of selfless, dedicated men and women</h5>
-      </div>
-    </section> -->
-
-    <!-- projects  -->
-    <!-- <section class="text-center pb-1 projects">
-      <div class="mb-4">
-        <h2 style="color: #00A651;">OUR PROJECTS</h2>
-        <h5>We continue to reach out to as many people as possible by extending our services which range from nutrition,access to justice, <br> adult literacy to women empowerement, health services and protection.</h5>
-      </div>
-
-      <div class="row">
-        <div class="col-lg-6 mb-4 mb-lg-0">
-          <div class="mb-3 pr-partner">
-            <img src="{{asset('images/cido-ahec_staff.jpg')}}" alt="project">
-          </div>
-
-          <div class="text-black mb-4 mb-md-0">
-            <h4>CIDO Partners with IntraHealth to Strengthen HIV Services in South Sudan</h4>
-          </div>
-        </div>
-
-        <div class="col-lg-6 c-projects">
-          <div class="row mb-4">
-            <div class="col-lg-6 mb-4 mb-lg-0">
-              <div class="card" style="width: 19rem;">
-                <div class="image-container">
-                  <div class="overlay">
-                    <a class="text-light" href="#" style="text-decoration: none;"><h5 class="card-title">Power of integrated services in Akobo East</h5></a>
-                  </div>
-                  <img src="{{asset('images/four_1.jpeg')}}" alt="project"id="zoomable-image">
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-6">
-              <div class="card" style="width: 19rem;">
-                <div class="image-container">
-                  <div class="overlay">
-                    <a class="text-light" href="#" style="text-decoration: none;"><h5 class="card-title">CIDO saves a Woman 3 days of labor pain in Akobo.</h5></a>
-                  </div>
-                  <img src="{{asset('images/SNFI.jpeg')}}" alt="project"id="zoomable-image">
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="row mb-4">
-            <div class="col-lg-6 mb-4 mb-lg-0">
-              <div class="card" style="width: 19rem;">
-                <div class="image-container">
-                  <div class="overlay">
-                    <a class="text-light" href="/story" style="text-decoration: none;"><h5 class="card-title">"A Story like no other"</h5></a>
-                  </div>
-                  <img src="{{asset('images/2023.jpg')}}" alt="project"id="zoomable-image">
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-6">
-              <div class="card" style="width: 19rem;">
-                <div class="image-container">
-                  <div class="overlay">
-                    <a class="text-light" href="#" style="text-decoration: none;"><h5 class="card-title">CIDO response to flood affected population in Pibor & Akobo counties in South Sudan.</h5></a>
-                  </div>
-                  <img src="{{asset('images/Np-CIDO.jpeg')}}" alt="project"id="zoomable-image">
-                </div>
-              </div>
-            </div>
-          </div>
-
-           <!-- more projects -->
-          <!-- <div class="row mb-4 mb-md-0">
-            <div class="col-12">
-            <button class="btn project-btn"><a href="/projects" style="text-decoration: none; color:white;"> More projects >></a></button>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </section>   --> 
 
     <script>
       const counters = document.querySelectorAll('.count');

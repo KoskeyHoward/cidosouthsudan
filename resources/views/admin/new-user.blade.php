@@ -33,13 +33,13 @@
                 <div class="pb-4 p-5">
                     <h2>Create User</h2>
                 </div>
+                @if (session('status'))
+                    <h6 class="alert alert-success">{{session('status')}}</h6>
+                @endif
 
                 <div class="p-5 pt-0">       
-                    @if($user != null)
-                    <form method="POST" action="{{route('edit-user',$user->id ?? null)}}" class="">
-                        @elseif($user == null)
-                        <form method="POST" action="{{route('store-user',$user->id ?? null)}}" class="">
-                    @endif             
+                        <form method="POST" action="{{route('store-user',$user->id ?? null)}}" class="" enctype="multipart/form-data">
+                                
                         @csrf
                         <div class="">   
                             <div class="row">                   
@@ -102,8 +102,8 @@
                                     <label for="role" class="form-label fw-bold">Role</label>
                                     <select name="role"  id=" roles" class="form-select">
                                         <option value="">Select an option</option>
-                                        <option value="1">Volunteer</option>
-                                        <option value="3">User</option>
+                                        <option value="3">Volunteer</option>
+                                        <option value="1">User</option>
                                     </select>
                                     @if($errors->has('role_id'))
                                     <div class="text-danger">

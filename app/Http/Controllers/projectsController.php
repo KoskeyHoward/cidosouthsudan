@@ -33,7 +33,22 @@ class projectsController extends Controller
     public function homeproject(string $id)
     {
         $project = Projects::find($id);
-        return view('project', compact('project'));
+        $programside = programs::take(3)->get();
+        $projectside = projects::take(3)->get();
+
+        // Prepare the sharing data
+        $shareData = [
+            'title' => $project->title,
+            'description' => $project->description,
+            'media' => $project->project_image,
+            // Add links to different social media platforms with dynamic URL parameters
+            'facebook' => 'https://www.facebook.com/sharer.php?u=' . urlencode(route('project', $id)),
+            'twitter' => 'https://twitter.com/intent/tweet?text=' . urlencode($project->title) . '&url=' . urlencode(route('project', $id)),
+            'pinterest' => 'https://pinterest.com/pin/create/button/?url=' . urlencode(route('project', $id)) . '&description=' . urlencode($project->description) . '&media=' . urlencode($project->project_image),
+            'linkedin' => 'https://www.linkedin.com/share?mini=true&url=' . urlencode(route('project', $id)) . '&title=' . urlencode($project->title) . '&summary=' . urlencode($project->description),
+            // Add more social media platforms as needed
+            ];
+        return view('project', compact('project', 'programside', 'projectside', 'shareData'));
     }
 
     /**
@@ -48,25 +63,16 @@ class projectsController extends Controller
      * Share in socials.
      */
 
-    //  public function share($id){
+    //  public function shareToSocials($id)
+    //     {
+    //         // Get the content from your table based on the ID
+    //         $project = projects::find($id);
 
-    //     $project = Projects::find($id);
+            
 
-    //     // Check if the project exists
-    //     if (!$project) {
-    //         abort(404); // Or handle the case where the project is not found
+    //         // Return the view with share data
+    //         return view('project', compact('shareData'));
     //     }
-
-    //     $shareButtons = \Share::page(
-    //         url('/project'.$id),
-    //     )
-    //     ->facebook()
-    //     // ->instagram()
-    //     ->twitter()
-    //     ->whatsapp();
-
-    //     return view('project', compact('project', 'shareButtons'));
-    // }
     /**
      * Store a newly created resource in storage.
      */
@@ -118,6 +124,20 @@ class projectsController extends Controller
     public function show(string $id)
     {
         //
+        $project = Projects::find($id);
+        return view('project', compact('project'));
+    }
+
+    public function showPrev($id)
+    {
+        $project = Projects::where('id', '<', $id)->orderBy('id', 'desc')->first();
+        return $project ? redirect()->route('project', ['id' => $project->id]) : redirect()->back();
+    }
+
+    public function showNext($id)
+    {
+        $project = Projects::where('id', '>', $id)->orderBy('id')->first();
+        return $project ? redirect()->route('project', ['id' => $project->id]) : redirect()->back();
     }
 
     /**
@@ -206,12 +226,5 @@ class projectsController extends Controller
         // Delete the project record
         $project->delete();
         return redirect()->back()->with('status','project deleted successfully');
-    }
-
-    public function sidebar()
-    {
-        $program = programs::take(3)->get();
-        $project = projects::take(3)->get();
-        return view('project', compact('program', 'project'));
     }
 }

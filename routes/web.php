@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\programController;
 use App\Http\Controllers\projectsController;
 use App\Http\Controllers\leaveCommentController;
@@ -35,9 +36,9 @@ Route::get('/about', function () {
 Route::get('projects', [projectsController::class, 'home']);
 Route::get('project', [projectsController::class, 'homeproject']);
 Route::get('projectItem/{id}', [projectsController::class, 'homeproject']);
-Route::get('project', [projectsController::class, 'sidebar']);
+Route::get('footer', [HomeController::class, 'footerList']);
 // web.php
-// Route::get('projectItem/{id}', [projectsController::class, 'share'])->name('project');
+// Route::get('projectItem/{id}', [projectsController::class, 'shareToSocials'])->name('share.socials');
 
 Route::post('project', [leaveCommentController::class, 'comment'])->name('project.comment');
 
@@ -78,8 +79,12 @@ Route::get('/program/{id}', [programController::class, 'show'])->name('program')
 Route::get('/program/{id}/prev', [programController::class, 'showPrev'])->name('program.showPrev');
 Route::get('/program/{id}/next', [programController::class, 'showNext'])->name('program.showNext');
 
+Route::get('/project/{id}', [projectsController::class, 'show'])->name('project');
+Route::get('/project/{id}/prev', [projectsController::class, 'showPrev'])->name('project.showPrev');
+Route::get('/project/{id}/next', [projectsController::class, 'showNext'])->name('project.showNext');
 
-Route::get('volunteer', [VolunteersController::class, 'home']);
+Route::get('volunteer', [UserController::class, 'Volunteers']);
+Route::get('about', [UserController::class, 'employees']);
 
 Route::get('/become-volunteer', function () {
     return view('become-volunteer');
@@ -93,17 +98,6 @@ Route::get('/read-more', function () {
     return view('read-more-projects');
 })->name('read-more');;
 
-
-
-
-
-Route::get('/user-profile', function (){
-    return view('/admin.user-profile');
-})->name('/user-profile');
-
-Route::get('/edit-profile', function (){
-    return view('/admin.edit-profile');
-})->name('/edit-profile');
 
 Route::post('/contact', [ContactController::class, 'store'])->name('contact.store');
 
@@ -126,15 +120,20 @@ Route::get('delete-project/{id}', [DashboardController::class, 'destroy']);
 //admin-project route
 Route::group(['middleware' => 'auth'],function () {
     // Your routes here
-    // Route::get('/dashboard', function () {
-    //     return view('/admin.dashboard'); })->name('dashboard');
-    Route::get('dashboard', [DashboardController::class, 'index']);
-        
-        Route::get('new-user/{id?}',[UserController::class,'create'])->name('create-user');
-        Route::post('new-user/create/{id?}',[UserController::class,'store'])->name('store-user');
-        Route::post('new-user/edit/{id?}',[UserController::class,'edit'])->name('edit-user');
-        Route::post('new-user/delete/{id?}',[UserController::class,'destroy'])->name('delete-user');
+    //dashboard
+    Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard');
+    //users    
+    Route::get('new-user/{id?}',[UserController::class,'create'])->name('create-user');
+    Route::post('new-user/create/{id?}',[UserController::class,'store'])->name('store-user');
+       
+    Route::get('edit-profile/{id}', [UserController::class, 'edit'])->name('edit-profile');
+    Route::put('update-profile/{id}', [UserController::class, 'update']);
+    Route::get('delete-user/{id}', [UserController::class, 'destroy']);
+    Route::get('/user-profile/{user}', [UserController::class, 'profile'])->name('user-profile');
 
+    Route::get('dash-volunteers', [UserController::class, 'VolunteersIndex']);
+
+    //projects
     Route::get('dash-projects', [projectsController::class, 'index']);
     Route::get('user-management',[UserController::class, 'index'])->name('user.index');
 
@@ -165,7 +164,7 @@ Route::group(['middleware' => 'auth'],function () {
     Route::get('delete-program/{id}', [programController::class, 'destroy']);
 
     //admin-volunteer routes
-    Route::get('dash-volunteers', [VolunteersController::class, 'index']);
+    // Route::get('dash-volunteers', [VolunteersController::class, 'index']);
 
     Route::get('dash-volunteer', [VolunteersController::class, 'indexvolunteer']);
     Route::get('dash-volunteerItem/{id}', [VolunteersController::class, 'indexvolunteer']);

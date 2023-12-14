@@ -110,43 +110,19 @@
     <section class="text-center">
       <H1 class="text-black ms-4 pt-5">Our Team</H1>
       <h5 class="p-3">The organization is headed by an Executive Director and governed by a 7member Board of Directors <br> who meets thrice a year and on ad hoc basis. </h5>
+      
       <div class="row ps-4 pe-3 pt-3 pb-4 mb-4">
+      @foreach($usersArray as $user)
         <div class="col-lg-3 mb-4 mb-lg-0 c-program">
           <div class="card" style="width: 18rem;">
-              <img src="{{URL('images/Testimonial-icon.webp')}}" class="card-img-top" alt="...">
-              <div class="card-body">
-                <h5 class="card-title">name</h5>
-                <p class="card-text">Role</p>
+              <img src="{{asset('images/users/'.$user['profile_image'])}}" class="card-img-top" alt="..." height="300px" style="object-fit: cover;">
+              <div class="card-body bg-success text-light">
+                <h5 class="card-title">{{$user['name']}}</h5>
+                <p class="card-text">{{$user['profession']}}</p>
               </div>  
           </div>
         </div>
-        <div class="col-lg-3 mb-4 mb-lg-0 c-program">
-          <div class="card" style="width: 18rem;">
-              <img src="{{URL('images/Testimonial-icon.webp')}}" class="card-img-top" alt="...">
-              <div class="card-body">
-                <h5 class="card-title">name</h5>
-                <p class="card-text">Role</p>
-              </div>  
-          </div>
-        </div>
-        <div class="col-lg-3 mb-4 mb-lg-0 c-program">
-          <div class="card" style="width: 18rem;">
-              <img src="{{URL('images/Testimonial-icon.webp')}}" class="card-img-top" alt="...">
-              <div class="card-body">
-                <h5 class="card-title">name</h5>
-                <p class="card-text">Role</p>
-              </div>  
-          </div>
-        </div>
-        <div class="col-lg-3 c-program">
-          <div class="card" style="width: 18rem;">
-              <img src="{{URL('images/Testimonial-icon.webp')}}" class="card-img-top" alt="...">
-              <div class="card-body">
-                <h5 class="card-title">name</h5>
-                <p class="card-text">Role</p>
-              </div>  
-          </div>
-        </div>
+        @endforeach
       </div>
     </section>
 

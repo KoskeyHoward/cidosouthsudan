@@ -9,7 +9,7 @@
             <!-- dashboard/title  -->
             <div class=" text-light p-4 pt-5">
                 <h3>Profile</h3>
-                <p><a href="/dashboard" style="color: #BFC7F4;">Dashboard / </a><a href="/user-profile" style="color: #BFC7F4;">User Profile /</a><a href="/edit-profile" class="text-light"> Edit-Profile</a></p>
+                <p><a href="/dashboard" style="color: #BFC7F4;">Dashboard / </a><a href="{{ route('user-profile', $user['id']) }}" style="color: #BFC7F4;">User Profile /</a><a href="/edit-profile" class="text-light"> Edit-Profile</a></p>
             </div>
         </div>
         <!-- profile  -->
@@ -34,21 +34,21 @@
                     <h3>Edit Profile</h3>
                 </div>
 
-                <!-- @if (session('status'))
+                @if (session('status'))
                     <h6 class="alert alert-success">{{session('status')}}</h6>
-                @endif -->
+                @endif
                 <div class="p-3 pt-0">                    
-                <form action="" method="POST" enctype="multipart/form-data">
-                        <!-- @csrf  -->
-                        <!-- @method('PUT')                        -->
+                <form action="{{url('update-profile/'.$user->id)}}" method="POST" enctype="multipart/form-data">
+                        @csrf 
+                        @method('PUT')                       
                         <div class="row">
                         <div class="col-md-6 form-group mb-3">
                             <label for=""> Name</label>
-                            <input type="text" name="name" value="" class="form-control">
+                            <input type="text" name="name" value="{{$user->name}}" class="form-control">
                         </div>
                         <div class="col-md-6 form-group mb-3">
                             <label for=""> Email</label>
-                            <input type="email" name="email" value="" class="form-control">
+                            <input type="email" name="email" value="{{$user->email}}" class="form-control">
                         </div>
                         </div>
                         <div class="row">
@@ -68,39 +68,35 @@
                                 <div class="mb-3">
                                     <label for="phone_number" class="form-label">Phone Number</label>
                                     <div>
-                                        <input type="tel" class="form-control flex-3" id="phone_number"> 
+                                        <input type="tel" class="form-control flex-3" name="phone_number" value="{{$user->phone_number}}" id="phone_number"> 
                                     </div>                           
                                 </div>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-md-6 form-group mb-3">
-                                <label for=""> Category</label>
-                                <input type="text" name="role" value=""  class="form-control">
+                                <label for=""> Profession</label>
+                                <input type="text" name="profession" value="{{$user->profession}}"  class="form-control">
                             </div>
                             <div class="col-md-6 form-group mb-3">
                                 <label for=""> Role</label>
-                                <input type="text" name="role" value=""  class="form-control">
+                                <select name="role"  id=" roles" class="form-select">
+                                        <option value="">Select an option</option>
+                                        <option value="3">Volunteer</option>
+                                        <option value="1">User</option>
+                                </select>
+                                @if($errors->has('role_id'))
+                                    <div class="text-danger">
+                                        {{$errors->first('role_id')}}
+                                    </div>
+                                @endif
                             </div>
                         </div>
-                        <div class="row">
-                            <div class=" col-md-4 form-group mb-3">
-                                <label for=""> Facebook url</label>
-                                <input type="text" name="fabebook" value=""  class="form-control">
-                            </div>
-                            <div class=" col-md-4 form-group mb-3">
-                                <label for=""> Instagram url</label>
-                                <input type="text" name="instagram" value=""  class="form-control">
-                            </div>
-                            <div class="col-md-4 form-group mb-3">
-                                <label for=""> X url</label>
-                                <input type="text" name="twitter" value=""  class="form-control">
-                            </div>
-                        </div>
+                        
                         <div class="form-group mb-3">
                             <label for=""> Image</label>
-                            <input type="file" name="user_image" class="form-control">
-                            <img src="" width="100px" height="100px" alt="user-image">
+                            <input type="file" name="profile_image" class="form-control">
+                            <img src="{{asset('images/users/'.$user->profile_image)}}" width="100px" height="100px" alt="user image">
                         </div>
             
                         <p class="text-secondary fw-bold">Supported format: PNG,SVG</p>           

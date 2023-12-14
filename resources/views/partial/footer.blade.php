@@ -7,9 +7,8 @@
         </div>
         <div class="col-lg-3 f-recent mb-3 mb-md-0">
             <h6 class="text-uppercase" style="color:#f06f17">Recent Projects</h6>
-            <div >
-                <a href="">CIDO RESPONSE TO FLOOD AFFECTED POPULATION</a>
-            </div>
+            
+            
             <div>
                 <a href="/story">"A STORY LIKE NO OTHER"</a>
             </div>
@@ -25,6 +24,7 @@
     </div>
         <div class="col-lg-3 f-recent mb-3 mb-md-0">
             <h6 class="text-uppercase" style="color:#f06f17">Recent causes</h6>
+           
             <div >
                 <a href="/peace-building">PEACE AND SECURITY</a>
             </div>

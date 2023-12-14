@@ -7,10 +7,10 @@
                 <div class="d-flex fw-lighter">
                     <p><i class="bi bi-chat"></i> Leave a Comment</p>
                     <p class="ms-2">Share on</p>                    
-                    <p class="ms-2"><i class="bi bi-facebook"></i></p>
-                    <p class="ms-2"><i class="bi bi-twitter-x"></i></p>
-                    <p class="ms-2"><i class="bi bi-google"></i></p>
-                    <p class="ms-2"><i class="bi bi-pinterest"></i></p>
+                    <p class="ms-2"> <a href="{{ $shareData['facebook'] }}" target="_blank"><i class="bi bi-facebook"></a></i></p>
+                    <p class="ms-2"><a href="{{ $shareData['twitter'] }}" target="_blank"><i class="bi bi-twitter-x"></a></i></p>
+                    <p class="ms-2"><a href="{{ $shareData['linkedin'] }}" target="_blank"><i class="bi bi-linkedin"></i></a></p>
+                    <p class="ms-2"><a href="{{ $shareData['pinterest'] }}" target="_blank"><i class="bi bi-pinterest"></i></a></p>
                 </div>
                 <hr>
                 <p>
@@ -50,7 +50,7 @@
                         <h3>Leave a Comment</h3>
                         <div class="mb-3">
                             <label for="exampleInputEmail1" class="form-label rounded-1">Your email address will not be
-                                puublished. Required fields are marked*</label>
+                                published. </label>
                             <textarea type="text" class="form-control rounded-2" required name="comment" placeholder="Write a Comment" id="exampleInputPassword1"></textarea>
 
                         </div>
@@ -77,9 +77,9 @@
 
                     </form>
                     <div class="d-flex my-5">
-                        <div class="flex-grow-1"><a href="" class="btn btn-outline-dark rounded-pill ">Prev</a>
+                        <div class="flex-grow-1"><a href="{{ route('project.showPrev', ['id' => $project->id]) }}" class="btn btn-outline-dark rounded-pill ">Prev</a>
                         </div>
-                        <div class=""><a href="" class="btn btn-outline-dark rounded-pill">Next</a></div>
+                        <div class=""><a href="{{ route('project.showNext', ['id' => $project->id]) }}" class="btn btn-outline-dark rounded-pill">Next</a></div>
                     </div>
                 </div>
             </div>
@@ -91,11 +91,12 @@
                         aria-valuemin="0" aria-valuemax="100" style="height: 5px">
                         <div class="progress-bar" style="width: 40%;background-color:#222222"></div>
                     </div>
-                    
-                    <p><a href="" class="orangeish nav-link">“A STORY LIKE NO OTHER&#</a></p>
+                    @foreach($projectside as $item)
+                    <p><a href="{{url('projectItem/'.$item->id)}}" class="orangeish nav-link">{{$item->title}}</a></p>
+                    @endforeach
+                    <!-- <p><a href="" class="orangeish nav-link">“A STORY LIKE NO OTHER&#</a></p>
                     <p><a href="" class="orangeish nav-link">“MAINSTREAMING COVID 19 FOR HUM</a></p>
-                    <p><a href="" class="orangeish nav-link">CIDO CONDUCTS TRAINING ON COVI
-                        </a></p>
+                    <p><a href="" class="orangeish nav-link">CIDO CONDUCTS TRAINING ON COVID</a></p> -->
                 </div>
                 <div class="grey p-4 my-5 grey">
                     <h5>PROGRAMS</h5>

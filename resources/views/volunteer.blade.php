@@ -21,13 +21,13 @@
         </div>
 
         <div class="row  mb-4 ">
-        @foreach($volunteer as $item)
+        @foreach($usersArray as $user)
           <div class="col-lg-4 mb-4 mb-lg-0 c-program">
             <div class="card" style="width: 18rem;">
-                <img src="{{asset('images/volunteers/'.$item->volunteer_image)}}" class="card-img-top" alt=" volunteer">
-                <div class="card-body">
-                  <h5 class="card-title">{{$item->name}}</h5>
-                  <h6 class="card-title">{{$item->profession}}</h6>
+                <img src="{{asset('images/users/'.$user['profile_image'])}}" class="card-img-top" alt=" volunteer" height="300px" style="object-fit: cover;">
+                <div class="card-body bg-success text-light">
+                  <h5 class="card-title">{{$user['name']}}</h5>
+                  <h6 class="card-title">{{$user['profession']}}</h6>
                 </div>  
             </div>
           </div>

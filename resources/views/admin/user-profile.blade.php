@@ -35,50 +35,50 @@
             <div class="card pt-1 pb-2 mb-0 mt-0">
                 <h3 class="p-1 ps-0">Profile</h3>
                     <div class="card p-2 pb-0 mb-3 text-light" style="background-color: #00A651; border:none; width: 180px; margin-left:0">
-                        <h4>10</h4>
+                        <h4>{{$userCount}}</h4>
                         <p>Users</p>
                     </div>   
                     
                     <div class="card p-4 mb-3">                                          
-                        <div class="top">                            
+                        <div class="top"> 
+                            @if($user->profile_image)                           
                             <div class="">
-                                <img src="{{URL('images/testimonial-icon.webp')}}" alt="profile" width="110px">
-
-                                
-                            </div>                               
+                                <img src="{{asset('images/users/'.$user->profile_image)}}" alt="profile" width="110px">                                
+                            </div>
+                            @endif                               
                                                         
                             <div class="ms-1 mt-3">                      
                         
                                 <div class="page-numbers">
-                                    <a class="btn text-light" href="/edit-profile" style="background-color: #f58220;"> Edit Profile</a>
+                                    <a class="btn text-light" href="{!!route('edit-profile',$user['id'])!!}" style="background-color: #f58220;"> Edit Profile</a>
                                 </div>                            
                             </div>                            
                         </div>
                         <div class="row mt-3">
                             <div class="col-md-6 mb-3">
                                 <div class="mb-4">
-                                    <h5 class="card">Name: John Doe</h5>
+                                    <h5 class="card">Name: {{$user->name}}</h5>
                                 </div>
                                 <div class="">
-                                    <h5 class="card">Email: johndoe@gmail.com</h5>
+                                    <h5 class="card">Email: {{$user->email}}</h5>
                                 </div>                                    
                             </div>
                             <div class="col-md-6 mb-3">
                                 <div class="mb-4">
-                                    <h5 class="card">Gender: Male</h5>
+                                    <h5 class="card">Gender: {{$user->gender}}</h5>
                                 </div>
                                 <div class="">
-                                    <h5 class="card">Phone: +254712345678</h5>
+                                    <h5 class="card">Phone: {{$user->phone_number}}</h5>
                                 </div>                                    
                             </div>
                             <div class="col-md-6 mb-3">
                                 <div class="mb-1">
-                                    <h5 class="card">Category: Employee</h5>
+                                    <h5 class="card">Profession: {{$user->profession}}</h5>
                                 </div>
                             </div>
                             <div class="col-md-6 mb-3">
                                 <div class="">
-                                    <h5 class="card">Role: General Manager</h5>
+                                    <h5 class="card">Role: {{$roleName}}</h5>
                                 </div>                                    
                             </div>
                             

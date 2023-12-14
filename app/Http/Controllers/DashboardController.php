@@ -17,23 +17,11 @@ class DashboardController extends Controller
         $project = Projects::all();
         $program = programs::all();
         $projectCount = projects::count();
-        $userCount = User::where('role_id', '1')->count();
+        $userCount = User::count();
         $volunteerCount = User::where('role_id', '3')->count();
         $programCount = programs::count();
         return view('admin.dashboard', compact('programCount', 'project', 'program', 'projectCount', 'userCount', 'volunteerCount'));
     }
-    // public function project_index()
-    // {
-    //     $project = Projects::all();
-        
-    //     return view('admin.dashboard', compact('project'));
-    // }
-    // public function program_index()
-    // {
-    //     $program = programs::all();
-        
-    //     return view('admin.dashboard', compact('program'));
-    // }
 
     /**
      * Show the form for creating a new resource.
