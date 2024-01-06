@@ -44,7 +44,6 @@
                             <div class="col-md-6">
                                 <select name="role"  id="role" class="form-select">
                                     <option value="">Select an option</option>
-                                    <option value="2">admin</option>
                                     <option value="3">Volunteer</option>
                                     <option value="1">User</option>
                                 </select>
