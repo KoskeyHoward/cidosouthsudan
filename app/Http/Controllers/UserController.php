@@ -18,6 +18,7 @@ class UserController extends Controller
     {
         //
        $users=User::query()->where('role_id','<>',2)->get();
+    //    $users=User::get();
         $usersArray =[];
         foreach($users as $user){
             $userItem = [
@@ -39,7 +40,7 @@ class UserController extends Controller
 
     public function profile(string $id){
         $user = User::find($id);
-        $userCount = User::count();
+        $userCount = User::query()->where('role_id','<>',2)->count();
         $roleName = Role::query()->where('id', $user->role_id)->first()->name ?? '';
         return view('admin.user-profile', compact('user', 'roleName', 'userCount'));
     }
@@ -157,26 +158,7 @@ class UserController extends Controller
         }else{
             $profileImage = asset('images/users/person.png');
         }
-            // if ($request->hasFile('profile_image')) {
-
-            //     $image = $request->file('profile_image');
-            //     $profileImage = 'profile_' . time() . '.' . $image->getClientOriginalExtension();
-            //     $image->move(public_path('images/users'), $profileImage);
-            // }else{
-            //     $profileImage = asset('images/users/person.png');
-            // }
-
-        // $user=User::query()->updateOrCreate(['id'=>$id],[
-        //     'name'=>$request->input('name'),
-        //     'email'=>$request->input('email'),
-        //     'role_id'=>$request->input('role'),
-        //     'password'=>'null',
-        //     'profile_image' => $profileImage,
-        //     'phone_number' => $request->input('phone_number'),
-        //     'profession' => $request->input('profession'),
-        //     'gender' => $request->input('gender'),
             
-        // ]);
         $user->name = $request->input('name');
         $user->email = $request->input('email');
         $user->role_id = $request->input('role');
@@ -228,7 +210,7 @@ class UserController extends Controller
         $user = User::find($id);
         $valid=$request->validate([
             'name'=>'required|string|regex:/^[a-zA-Z]+(?:\s[a-zA-Z]+)+$/',
-            'email' => 'required|email|unique:users',
+            'email' => 'required|email',
             'role_id' => 'integer',
             'password' => 'nullable|min:8',
             'profile_image' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
@@ -254,18 +236,6 @@ class UserController extends Controller
             }else{
                 $profileImage = asset('images/users/person.png');
             }
-    
-            // $user=User::query()->updateOrCreate(['id'=>$id],[
-            //     'name'=>$request->input('name'),
-            //     'email'=>$request->input('email'),
-            //     'role_id'=>$request->input('role'),
-            //     'password'=>'null',
-            //     'profile_image' => $profileImage,
-            //     'phone_number' => $request->input('phone_number'),
-            //     'profession' => $request->input('profession'),
-            //     'gender' => $request->input('gender'),
-                
-            // ]);
 
             $user->name = $request->input('name');
             $user->email = $request->input('email');

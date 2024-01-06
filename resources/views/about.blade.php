@@ -113,9 +113,9 @@
       
       <div class="row ps-4 pe-3 pt-3 pb-4 mb-4">
       @foreach($usersArray as $user)
-        <div class="col-lg-3 mb-4 mb-lg-0 c-program">
-          <div class="card" style="width: 18rem;">
-              <img src="{{asset('images/users/'.$user['profile_image'])}}" class="card-img-top" alt="..." height="300px" style="object-fit: cover;">
+        <div class="col-lg-3 mb-5 mb-lg-0" >
+          <div class="card" style="width: 18rem; margin:auto">
+              <img src="{{asset('images/users/'.$user['profile_image'])}}" alt="..." height="300px" width="100%" style="object-fit: cover;">
               <div class="card-body bg-success text-light">
                 <h5 class="card-title">{{$user['name']}}</h5>
                 <p class="card-text">{{$user['profession']}}</p>

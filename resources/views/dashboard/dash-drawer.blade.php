@@ -5,7 +5,7 @@
             Super Admin
         </button>
         <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="/user-profile">Profile</a></li>
+            <li><a class="dropdown-item" href="/admin-profile">Profile</a></li>
             <!-- <li><a class="dropdown-item" href="#">Settings</a></li> -->
             <li><a class="dropdown-item" href="{{ route('logout') }}"
                 onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
@@ -37,7 +37,7 @@
                     <li><a href="/dash-programs"><i class="material-icons">layers</i> Programs</a></li>
                     <li><a href="/dash-projects"><i class="material-icons">layers</i> Projects</a></li>
                     <li><a href="/user-management"><i class="material-icons">person</i> Users</a></li>
-                    <li><a href="/dash-volunteers"><i class="material-icons">person</i> Volunteers</a></li>
+                    <li><a href="/dash-partners"><i class="material-icons">handshake</i> Partners</a></li>
                 </ul>
             </div>
         </div>

@@ -21,8 +21,6 @@ return new class extends Migration
             $table->longText('image1_description')->nullable();
             $table->string('image2')->nullable();
             $table->longText('image2_description')->nullable();
-            $table->date('start_date');
-            $table->date('end_date');
             $table->timestamps();
         });
     }

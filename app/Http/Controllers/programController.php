@@ -22,7 +22,8 @@ class programController extends Controller
     public function indexprogram(string $id)
     {
         $program = programs::find($id);
-        return view('admin.dash-program', compact('program'));
+        $programCount = programs::count();
+        return view('admin.dash-program', compact('program', 'programCount'));
     }
     public function home()
     {

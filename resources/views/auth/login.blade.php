@@ -27,9 +27,12 @@
 
                         <div class="row mb-3">
                             <label for="password" class="col-md-4 col-form-label text-md-end">{{ __('Password') }}</label>
-
+                            <!-- <i class="material-icons">visibility</i> -->
+                            
                             <div class="col-md-6">
                                 <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
+                                <input type="checkbox" id="password" class="mb-3" onclick="showPassword()">
+                                <label for="">Show password</label>
 
                                 @error('password')
                                     <span class="invalid-feedback" role="alert">
@@ -49,11 +52,11 @@
                                     </label>
                                 </div>
                             </div>
-                        </div>
+                        </div>                        
 
                         <div class="row mb-0">
                             <div class="col-md-8 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
+                                <button type="submit" class="btn" style="background-color: orange;">
                                     {{ __('Login') }}
                                 </button>
 

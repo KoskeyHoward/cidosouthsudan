@@ -9,7 +9,7 @@
             <!-- dashboard/title  -->
             <div class=" text-light p-4 pt-5">
                 <h3>Programs</h3>
-                <p><a href="/dashboard" style="color: #BFC7F4;">Dashboard / </a><a href="/dash-programs" style="color: #BFC7F4;">Programs /</a><a href="/new-program" class="text-light"> New-Program</a></p>
+                <p><a href="/dashboard" style="color: #BFC7F4;">Dashboard / </a><a href="/dash-programs" style="color: #BFC7F4;">Programs /</a><a href="/new-program" class="text-light"> new-Program</a></p>
             </div>
         </div>
         <!-- profile  -->
@@ -18,21 +18,13 @@
     <!-- content  -->
     <div class="content">
         <!-- side-bar  -->
-        <div class="sidebar pt-4 ps-5 pe-5">
-            <ul class="text-light">
-                <li><a href="/dashboard"><i class="material-icons active">speed</i> Dashboard</a></li>
-                <li><a href="/dash-programs"><i class="material-icons">layers</i> Programs</a></li>
-                <li><a href="/dash-projects"><i class="material-icons">layers</i> Projects</a></li>
-                <li><a href="/user-management"><i class="material-icons">person</i> Users</a></li>
-                <li><a href="/dash-volunteers"><i class="material-icons">person</i> volunteers</a></li>
-            </ul>
-        </div>
+        @include('dashboard.sidebar')
 
         <main class="programs-main p-4 pt-0">
             <div class="card" style="border: none;">
                 <div class="pb-4 p-5">
-                    <h3>Programs</h3>
-                    <p>These are programs provided by CIDO.</p>
+                    <h3>Program</h3>
+                    <!-- <p>These are programs provided by CIDO.</p> -->
                 </div>
 
                 @if (session('status'))
@@ -51,7 +43,12 @@
                         </div>
                         <div class="form-group mb-3">
                             <label class="mb-2 fw-bold" for=""> Partners</label>
-                            <textarea type="text" name="partners" class="form-control"></textarea>
+                            <select name="partners" class="form-control" >
+                                <option value="">Select partner</option>
+                                @foreach($partner as $item)
+                                <option value="">{{$item->name}}</option>
+                                @endforeach
+                            </select>
                         </div>
                         <div class="form-group mb-3">
                             <label class="mb-2 fw-bold" for=""> Start date</label>

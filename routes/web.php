@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\AdminController;
+use App\Http\Controllers\ChangePasswordController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\HomeController;
@@ -8,7 +10,7 @@ use App\Http\Controllers\projectsController;
 use App\Http\Controllers\leaveCommentController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\volunteerApplicationController;
-use App\Http\Controllers\VolunteersController;
+use App\Http\Controllers\PartnerController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -127,11 +129,20 @@ Route::group(['middleware' => 'auth'],function () {
     Route::post('new-user/create/{id?}',[UserController::class,'store'])->name('store-user');
        
     Route::get('edit-profile/{id}', [UserController::class, 'edit'])->name('edit-profile');
+    
     Route::put('update-profile/{id}', [UserController::class, 'update']);
     Route::get('delete-user/{id}', [UserController::class, 'destroy']);
     Route::get('/user-profile/{user}', [UserController::class, 'profile'])->name('user-profile');
 
-    Route::get('dash-volunteers', [UserController::class, 'VolunteersIndex']);
+    // Route::get('dash-partners', [UserController::class, 'partnersIndex']);
+    Route::get('edit-admin/{id}', [AdminController::class, 'edit'])->name('edit-admin');
+    Route::put('update-admin/{id}', [AdminController::class, 'update'])->name('update-admin');
+    Route::get('admin-profile', [AdminController::class, 'index'])->name('admin-profile');
+
+    Route::get('/change-password', function () {
+        return view('admin.change-password');
+    })->name('change-password');
+    Route::put('update-password',[ChangePasswordController::class, 'changePassword'])->name('update-password');
 
     //projects
     Route::get('dash-projects', [projectsController::class, 'index']);
@@ -163,17 +174,18 @@ Route::group(['middleware' => 'auth'],function () {
 
     Route::get('delete-program/{id}', [programController::class, 'destroy']);
 
-    //admin-volunteer routes
-    // Route::get('dash-volunteers', [VolunteersController::class, 'index']);
+    //admin-partners routes
+    Route::get('dash-partners', [PartnerController::class, 'index']);
 
-    Route::get('dash-volunteer', [VolunteersController::class, 'indexvolunteer']);
-    Route::get('dash-volunteerItem/{id}', [VolunteersController::class, 'indexvolunteer']);
+    Route::get('dash-partner', [PartnerController::class, 'indexPartners']);
+    Route::get('dash-partnerItem/{id}', [PartnerController::class, 'indexPartners']);
+    Route::get('new-program', [PartnerController::class, 'partnerProgram']);
 
-    Route::get('new-volunteer', [VolunteersController::class, 'create']);
-    Route::post('new-volunteer', [VolunteersController::class, 'store']);
+    Route::get('new-partner', [PartnerController::class, 'create']);
+    Route::post('new-partner', [PartnerController::class, 'store']);
 
-    Route::get('edit-volunteer/{id}', [VolunteersController::class, 'edit']);
-    Route::put('update-volunteer/{id}', [VolunteersController::class, 'update']);
+    Route::get('edit-partner/{id}', [PartnerController::class, 'edit']);
+    Route::put('update-partner/{id}', [PartnerController::class, 'update']);
 
-    Route::get('delete-volunteer/{id}', [VolunteersController::class, 'destroy']);
+    Route::get('delete-partner/{id}', [PartnerController::class, 'destroy']);
 });

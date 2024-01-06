@@ -18,15 +18,7 @@
     <!-- content  -->
     <div class="content">
         <!-- side-bar  -->
-        <div class="sidebar pt-4 ps-5 pe-5">
-            <ul class="text-light">
-                <li><a href="/dashboard"><i class="material-icons active">speed</i> Dashboard</a></li>
-                <li><a href="/dash-programs"><i class="material-icons">layers</i> Programs</a></li>
-                <li><a href="/dash-projects"><i class="material-icons">layers</i> Projects</a></li>
-                <li><a href="/user-management"><i class="material-icons">person</i> Users</a></li>
-                <li><a href="/dash-volunteers"><i class="material-icons">person</i> volunteers</a></li>
-            </ul>
-        </div>
+        @include('dashboard.sidebar')
 
         <main class="programs-main p-4 pt-0">
             <div class="card" style="border: none;">
@@ -92,20 +84,6 @@
                                     <label class="mb-2 fw-bold" for=""> Image2</label>
                                     <input type="file" name="image2" class="form-control">
                                     <img src="{{asset('images/projects/'.$project->image2)}}" class="mt-3" width="100px" height="100px" alt="project-image">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-lg-6">
-                                <div class="form-group mb-3">
-                                <label class="mb-2 fw-bold" for=""> Start date</label>
-                                <input type="date" name="start_date" value="{{$project->start_date}}" class="form-control">
-                                </div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="form-group mb-3">
-                                    <label class="mb-2 fw-bold" for=""> End date</label>
-                                    <input type="date" name="end_date" value="{{$project->end_date}}"  class="form-control">
                                 </div>
                             </div>
                         </div>

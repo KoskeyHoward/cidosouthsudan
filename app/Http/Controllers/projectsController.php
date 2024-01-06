@@ -23,7 +23,8 @@ class projectsController extends Controller
     public function indexproject(string $id)
     {
         $project = Projects::find($id);
-        return view('admin.dash-project', compact('project'));
+        $projectCount = projects::count();
+        return view('admin.dash-project', compact('project', 'projectCount'));
     }
     public function home()
     {
@@ -84,8 +85,6 @@ class projectsController extends Controller
         $project->category = $request->input('category');
         $project->image1_description = $request->input('image1_description');
         $project->image2_description = $request->input('image2_description');
-        $project->start_date = $request->input('start_date');
-        $project->end_date = $request->input('end_date');
         
         if($request->hasFile('image1'))
         {
@@ -161,8 +160,6 @@ class projectsController extends Controller
         $project->category = $request->input('category');
         $project->image1_description = $request->input('image1_description');
         $project->image2_description = $request->input('image2_description');
-        $project->start_date = $request->input('start_date');
-        $project->end_date = $request->input('end_date');
         if($request->hasFile('project_image'))
         {
             $destination = 'images/projects'.$project->project_image;

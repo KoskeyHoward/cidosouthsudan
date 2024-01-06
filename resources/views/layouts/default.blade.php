@@ -30,7 +30,7 @@
                 </div>
               <li><a href="/about">ABOUT US</a></li>
               <li><a href="/contact">CONTACT</a></li>
-              <li class="donate text-light mt-2"><a href="/donationForm" class="btn bg-success"> DONATE</a></li>
+              <!-- <li class="donate text-light mt-2"><a href="/donationForm" class="btn" style="background-color: #f58220;"> DONATE</a></li> -->
                 
               </ul>
             </div>

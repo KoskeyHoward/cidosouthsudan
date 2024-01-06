@@ -18,15 +18,7 @@
     </header>
     <!-- content  -->
     <div class="content">
-        <div class="sidebar pt-4 ps-5 pe-5">
-            <ul class="text-light">
-                <li><a href="/dashboard"><i class="material-icons active">speed</i> Dashboard</a></li>
-                <li><a href="/dash-programs"><i class="material-icons">layers</i> Programs</a></li>
-                <li><a href="/dash-projects"><i class="material-icons">layers</i> Projects</a></li>
-                <li><a href="/user-management"><i class="material-icons">person</i> Users</a></li>
-                <li><a href="/dash-volunteers"><i class="material-icons">person</i> volunteers</a></li>
-            </ul>
-        </div>
+        @include('dashboard.sidebar')
 
         <main class="main p-5 pt-0 ">
             <div class="stats row">
@@ -147,6 +139,7 @@
                         @endforeach
                     </tbody>
                 </table>
+                <h6>See more <a href="/dash-programs" style="color: #f58220;">Programs</a> and <a href="dash-projects" style="color: #f58220;">Projects</a></h6>
                 </div>
             </div>
         </main>

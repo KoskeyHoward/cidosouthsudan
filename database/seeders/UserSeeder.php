@@ -35,7 +35,7 @@ class UserSeeder extends Seeder
         $userRole = Role::query()->updateOrCreate(['name' => UserRole::USER]);
 
         User::query()->updateOrCreate(['email' => 'user@cidosouthsudan.org'], [
-            'name' => 'User',
+            'name' => 'employee',
             'password' => Hash::make('12345678'),
             'role_id' => $userRole->id,
             
@@ -47,7 +47,7 @@ class UserSeeder extends Seeder
         $volunteerRole = Role::query()->updateOrCreate(['name' => UserRole::VOLUNTEER]);
 
         User::query()->updateOrCreate(['email' => 'volunteer@cidosouthsudan.org'], [
-            'name' => 'User',
+            'name' => 'Volunteer',
             'password' => Hash::make('12345678'),
             'role_id' => $volunteerRole->id,
             

@@ -18,24 +18,20 @@
     <!-- content  -->
     <div class="content">
         <!-- side-bar  -->
-        <div class="sidebar pt-4 ps-5 pe-5">
-            <ul class="text-light">
-                <li><a href="/dashboard"><i class="material-icons active">speed</i> Dashboard</a></li>
-                <li><a href="/dash-programs"><i class="material-icons">layers</i> Programs</a></li>
-                <li><a href="/dash-projects"><i class="material-icons">layers</i> Projects</a></li>
-                <li><a href="/user-management"><i class="material-icons">person</i> Users</a></li>
-                <li><a href="/dash-volunteers"><i class="material-icons">person</i> volunteers</a></li>
-            </ul>
-        </div>
+        @include('dashboard.sidebar')
 
         <main class="programs-main p-4 pt-0">
             <div class="card " style="border: none;">
                 <div class="mb-4 p-3 rounded-3" style="background-color: #E8E8E8;">
                     <h3>Edit Profile</h3>
+                    <p>You can change account information here. Fill all the fields</p>
                 </div>
 
                 @if (session('status'))
                     <h6 class="alert alert-success">{{session('status')}}</h6>
+                @endif
+                @if (session('error'))
+                    <h6 class="alert alert-success">{{session('error')}}</h6>
                 @endif
                 <div class="p-3 pt-0">                    
                 <form action="{{url('update-profile/'.$user->id)}}" method="POST" enctype="multipart/form-data">
@@ -43,18 +39,18 @@
                         @method('PUT')                       
                         <div class="row">
                         <div class="col-md-6 form-group mb-3">
-                            <label for=""> Name</label>
+                            <label for="" class="fw-bold"> Name <span style="color: red;">*</span></label>
                             <input type="text" name="name" value="{{$user->name}}" class="form-control">
                         </div>
                         <div class="col-md-6 form-group mb-3">
-                            <label for=""> Email</label>
+                            <label for="" class="fw-bold"> Email <span style="color: red;">*</span></label>
                             <input type="email" name="email" value="{{$user->email}}" class="form-control">
                         </div>
                         </div>
                         <div class="row">
                             <div class="col-lg-6">
                                 <div class="mb-3">
-                                    <label for="exampleInputEmail1" class="form-label">Gender</label>
+                                    <label for="exampleInputEmail1" class="form-label fw-bold">Gender <span style="color: red;">*</span></label>
                                     <br>
                                     <select id="gender" name="gender" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
                                         <option value="" disabled selected class="text-secondary">Select Gender</option>    
@@ -66,7 +62,7 @@
                             </div>
                             <div class="col-lg-6">  
                                 <div class="mb-3">
-                                    <label for="phone_number" class="form-label">Phone Number</label>
+                                    <label for="phone_number" class="form-label fw-bold">Phone Number <span style="color: red;">*</span></label>
                                     <div>
                                         <input type="tel" class="form-control flex-3" name="phone_number" value="{{$user->phone_number}}" id="phone_number"> 
                                     </div>                           
@@ -75,11 +71,11 @@
                         </div>
                         <div class="row">
                             <div class="col-md-6 form-group mb-3">
-                                <label for=""> Profession</label>
+                                <label for="" class="fw-bold"> Profession <span style="color: red;">*</span></label>
                                 <input type="text" name="profession" value="{{$user->profession}}"  class="form-control">
                             </div>
                             <div class="col-md-6 form-group mb-3">
-                                <label for=""> Role</label>
+                                <label for="" class="fw-bold"> Role <span style="color: red;">*</span></label>
                                 <select name="role"  id=" roles" class="form-select">
                                         <option value="">Select an option</option>
                                         <option value="3">Volunteer</option>
@@ -94,8 +90,8 @@
                         </div>
                         
                         <div class="form-group mb-3">
-                            <label for=""> Image</label>
-                            <input type="file" name="profile_image" class="form-control">
+                            <label for="" class="fw-bold" > Image</label>
+                            <input type="file" name="profile_image" class="form-control mb-3">
                             <img src="{{asset('images/users/'.$user->profile_image)}}" width="100px" height="100px" alt="user image">
                         </div>
             

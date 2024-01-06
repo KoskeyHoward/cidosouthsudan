@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use App\Models\User;
 use App\Providers\RouteServiceProvider;
+use Illuminate\Auth\Events\Login;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
@@ -29,7 +30,7 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = RouteServiceProvider::HOME;
+    protected $redirectTo = '/login';
 
     /**
      * Create a new controller instance.
@@ -62,10 +63,21 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
+        $user = new User;
+        $userRole = $data['role'];
         return User::create([
             'name' => $data['name'],
             'email' => $data['email'],
+            'role_id' => $data['role'],
             'password' => Hash::make($data['password']),
+            
         ]);
+        if ($userRole === '3') {
+            $user->assignRole('user');
+        } elseif ($userRole === '1') {
+            $user->assignRole('volunteer');
+        }elseif ($userRole === '2') {
+            $user->assignRole('super-admin');
+        }
     }
 }

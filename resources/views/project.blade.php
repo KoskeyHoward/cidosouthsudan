@@ -26,14 +26,14 @@
                     @if($project->image1)
                     <img src="{{asset('images/projects/'.$project->image1)}}" width="300" height="100"
                         class=" img-fluid mx-auto d-block mb-3" alt="project image">
-                    <p class="card-text fw-bold">{{$project->image1_description}}</p>
+                    <p class="card-text ">{{$project->image1_description}}</p>
                     @endif
                 </div>
                 <div class="mt-5">
                     @if($project->image2)
                     <img src="{{asset('images/projects/'.$project->image2)}}" width="400"
                         class=" img-fluid mx-auto d-block mb-3" alt="project image">
-                    <p class="card-text fw-bold">{{$project->image2_description}}</p>
+                    <p class="card-text">{{$project->image2_description}}</p>
                     @endif
                 </div>
                 <P> <i class="bi bi-folder orange"></i> {{$project->category}}</P>

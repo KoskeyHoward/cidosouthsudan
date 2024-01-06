@@ -19,21 +19,13 @@
     <!-- content  -->
     <div class="content">
         <!-- side-bar  -->
-        <div class="sidebar pt-4 ps-5 pe-5">
-            <ul class="text-light">
-                <li><a href="/dashboard"><i class="material-icons active">speed</i> Dashboard</a></li>
-                <li><a href="/dash-programs"><i class="material-icons">layers</i> Programs</a></li>
-                <li><a href="/dash-projects"><i class="material-icons">layers</i> Projects</a></li>
-                <li><a href="/user-management"><i class="material-icons">person</i> Users</a></li>
-                <li><a href="/dash-volunteers"><i class="material-icons">person</i> volunteers</a></li>
-            </ul>
-        </div>
+        @include('dashboard.sidebar')
 
         <main class="programs-main p-4 pt-0">
             <div class="card pt-3 pb-2 mb-0 mt-0">
                 <h3 class="p-3 ps-0">Programs</h3>
                     <div class="card p-2 pb-0 mb-3 text-light" style="background-color: #00A651; border:none; width: 180px; margin-left:0">
-                        <h4>200</h4>
+                        <h4>{{$programCount}}</h4>
                         <p>PROGRAMS</p>
                     </div>   
                     

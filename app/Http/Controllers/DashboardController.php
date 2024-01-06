@@ -14,10 +14,10 @@ class DashboardController extends Controller
      * Display a listing of the resource.
      */
     public function index(){
-        $project = Projects::all();
-        $program = programs::all();
+        $project = Projects::take(3)->get();
+        $program = programs::take(3)->get();
         $projectCount = projects::count();
-        $userCount = User::count();
+        $userCount = User::query()->where('role_id','<>',2)->count();
         $volunteerCount = User::where('role_id', '3')->count();
         $programCount = programs::count();
         return view('admin.dashboard', compact('programCount', 'project', 'program', 'projectCount', 'userCount', 'volunteerCount'));

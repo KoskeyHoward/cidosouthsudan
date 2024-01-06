@@ -18,15 +18,7 @@
     <!-- content  -->
     <div class="content">
         <!-- side-bar  -->
-        <div class="sidebar pt-4 ps-5 pe-5">
-            <ul class="text-light">
-                <li><a href="/dashboard"><i class="material-icons active">speed</i> Dashboard</a></li>
-                <li><a href="/dash-programs"><i class="material-icons">layers</i> Programs</a></li>
-                <li><a href="/dash-projects"><i class="material-icons">layers</i> Projects</a></li>
-                <li><a href="/user-management"><i class="material-icons">person</i> Users</a></li>
-                <li><a href="/dash-volunteers"><i class="material-icons">person</i> volunteers</a></li>
-            </ul>
-        </div>
+        @include('dashboard.sidebar')
 
         <main class="programs-main p-4 pt-0 ">
             <div class="card pt-3 pb-2 mb-0 mt-0">
@@ -38,7 +30,16 @@
                             <p>PROGRAMS</p>
                         </div>
                         <div class="p-2 ps-0">
-                            <p>Show 5 <i class="fa fa-caret-down"></i> entries of 25</p>
+                            <p> Show 
+                                <select id="rowCount">
+                                    <option value="{{$programCount}}"> All</option>
+                                    <option value="3"> 3</option>
+                                    <option value="5"> 5</option>
+                                    <option value="10">10 </option>
+                                    <option value="25">25</option>
+                                </select>
+                                entries
+                            </p>
                         </div>
                     </div>
 
@@ -48,7 +49,7 @@
                         </div>
                         <form class="box">
                             <i class="fa fa-search" aria-hidden="true"></i>
-                            <input type="search" placeholder="Search...">
+                            <input type="search" id="searchInput" placeholder="Search...">
                         </form>
                     </div>
                 </div>
@@ -84,25 +85,52 @@
                 </table>
                 </div>
 
-                <div class="page-numbers">
-                    <p>Showing 1 to 10 of 57 entries</p>
-                    <div class="pages">
-                        <p>
-                            <a href="">Previous</a>
-                            <a href="">1</a>
-                            <a href="">2</a>
-                            <a href="">3</a>
-                            <a href="">4</a>
-                            <a href="">5</a>
-                            <a href="">Next</a>
-                        </p>
-                    </div>
-                </div>
+                <!-- <div class="page-numbers">
+                    <p>Showing <span id="displayRange" class="pagination-link"></span>  of {{$programCount}} entries</p>
+                </div> -->
 
             </div>
         </main>
 
     </div>
     @include('dashboard.dash-footer')
+    <script>
+        document.getElementById('searchInput').addEventListener('keyup', function() {
+            let filterValue = this.value.toLowerCase();
+            let tableRows = document.querySelectorAll('.activities-table tbody tr');
+
+            tableRows.forEach(row => {
+                let title = row.querySelector('td:first-child').textContent.toLowerCase();
+                let description = row.querySelector('td:nth-child(2)').textContent.toLowerCase();
+
+                if (title.includes(filterValue) || description.includes(filterValue)) {
+                    row.style.display = '';
+                } else {
+                    row.style.display = 'none';
+                }
+            });
+        });
+
+        document.getElementById('rowCount').addEventListener('change', function() {
+            let selectedValue = parseInt(this.value);
+            let tableRows = document.querySelectorAll('.activities-table tbody tr');
+            
+            tableRows.forEach((row, index) => {
+                if (index < selectedValue) {
+                    row.style.display = '';
+                } else {
+                    row.style.display = 'none';
+                }
+            });
+        });
+        
+        // function updateDisplayRange() {
+        //     let totalVisibleRows = document.querySelectorAll('.activities-table tbody tr').length; 
+        //     document.getElementById('displayRange').innerText = `${totalVisibleRows}`;
+        // }
+        // // Initial update when the page loads
+        // updateDisplayRange();
+        
+    </script>
 </body>
 </html>

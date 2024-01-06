@@ -16,9 +16,7 @@ return new class extends Migration
             $table->string('volunteer_image')->default('person.png');
             $table->string('name');
             $table->string('email');
-            $table->string('gender');
-            $table->string('phone_number');
-            $table->string('profession');
+            $table->string('link');
             $table->string('facebook')->nullable();
             $table->string('instagram')->nullable();
             $table->string('twitter')->nullable();

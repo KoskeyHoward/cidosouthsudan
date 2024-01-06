@@ -65,10 +65,10 @@ ul li a{
 }
 
 .offcanvas-header button{
-    background-color: #00A651;
+    background-color: #f58220;
 }
 .offcanvas-header button:hover{
-    background-color: #f58220;
+    background-color: #00A651;
 }
 
 .offcanvas-body ul li a{
@@ -473,7 +473,7 @@ footer{
     .logo img{
         margin-left: unset;
     }
-    .donate button{
+    .donate a{
         display: none;
     }
     .section-2 .who-img{

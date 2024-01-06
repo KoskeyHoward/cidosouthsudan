@@ -8,7 +8,7 @@
             </div>
             <!-- dashboard/title  -->
             <div class=" text-light p-4 pt-5">
-                <h3>Projects</h3>
+                <h3>User Profile</h3>
                 
                 <p><a href="/dashboard" style="color: #BFC7F4;">Dashboard / </a><a href="/user-profile" class="text-light">User Profile/</a>
                 <!-- <a href="/dash-project" class="text-light">Project</a> -->
@@ -21,15 +21,7 @@
     <!-- content  -->
     <div class="content">
         <!-- side-bar  -->
-        <div class="sidebar pt-4 ps-5 pe-5">
-            <ul class="text-light">
-                <li><a href="/dashboard"><i class="material-icons active">speed</i> Dashboard</a></li>
-                <li><a href="/dash-programs"><i class="material-icons">layers</i> Programs</a></li>
-                <li><a href="/dash-projects"><i class="material-icons">layers</i> Projects</a></li>
-                <li><a href="/user-management"><i class="material-icons">person</i> Users</a></li>
-                <li><a href="/dash-volunteers"><i class="material-icons">person</i> volunteers</a></li>
-            </ul>
-        </div>
+        @include('dashboard.sidebar')
 
         <main class="programs-main p-1 pt-0">
             <div class="card pt-1 pb-2 mb-0 mt-0">
@@ -82,11 +74,11 @@
                                 </div>                                    
                             </div>
                             
-                            <div class=" socials">
+                            <!-- <div class=" socials">
                                 <a class="me-3" href=""><i class="fa fa-facebook"> @johndoe</i></a>
                                 <a class="me-3" href=""><i class="fa fa-instagram"> @johndoe</i></a>
                                 <a href=""><i class="fa fa-twitter"> @john_doe</i></a>
-                            </div>                            
+                            </div>                             -->
                         </div>                       
                     </div>
             </div>
